@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<link rel="shortcut icon" href="icon/S myicon.ico"><!-- 标题图标-->
+<html lang="zh-cn"><!--网站语言-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>八嘎八嘎</title><!--网站标题-->
+    <link rel="stylesheet" href="./layui/css/layui.css">
+</head>
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo layui-hide-xs layui-bg-black"><img src="icon/L myicon.ico" alt="icon" />八嘎八嘎</div>
+            <!-- 头部区域（可配合layui 已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+                <!-- 移动端显示 -->
+                <li class="layui-nav-item layui-show-xs-inline-block layui-hide-sm" lay-header-event="menuLeft">
+                    <i class="layui-icon layui-icon-spread-left"></i>
+                </li>
+
+                <li class="layui-nav-item layui-hide-xs"><a href="">开发中...</a></li>
+                <li class="layui-nav-item layui-hide-xs"><a href="">开发中...</a></li>
+                <li class="layui-nav-item layui-hide-xs"><a href="">开发中...</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">语言</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">中文</a></dd>
+                        <dd><a href="javascript:;">英语</a></dd>
+                        <dd><a href="javascript:;">繁体中文</a></dd>
+                        <dd><a href="javascript:;">德语</a></dd>
+                        <dd><a href="javascript:;">西班牙语</a></dd>
+                        <dd><a href="javascript:;">俄罗斯语</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+                    <a href="javascript:;">
+                        <img src="images/1.jfif" class="layui-nav-img">
+                        超级管理员
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">你的个人资料</a></dd>
+                        <dd><a href="">设置</a></dd>
+                        <dd><a href="">退出</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect>
+                    <a href="javascript:;">
+                        <i class="layui-icon layui-icon-more-vertical"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;">开发中...</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="baokao.html" target="rightArea">开发中...</a></dd>
+                            <dd><a href="beikao.html" target="rightArea">开发中...</a></dd>
+                            <dd><a href="javascript:;">开发中...</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">开发中...</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="Student management.html" target="rightArea">开发中...</a></dd>
+                            <dd><a href="javascript:;">开发中...</a></dd>
+                            <dd><a href="">开发中...</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">用户权限</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="Student management.html" target="rightArea">开发中...</a></dd>
+                            <dd><a href="javascript:;">开发中...</a></dd>
+                        </dl>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <div>
+                <iframe id="rightArea" name="rightArea" frameborder="0" height="700px" width="100%" style=" background-color: white"></iframe>
+            </div>
+        </div>
+
+        <div class="layui-footer " style="text-align:center">
+            <!-- 底部固定区域 -->
+            本网站归本人所有
+        </div>
+    </div>
+    <script src="./layui/layui.js"></script>
+    <script>
+        //JS
+        layui.use(['element', 'layer', 'util'], function () {
+            var element = layui.element
+                , layer = layui.layer
+                , util = layui.util
+                , $ = layui.$;
+
+            //头部事件
+            util.event('lay-header-event', {
+                //左侧菜单事件
+                menuLeft: function (othis) {
+                    layer.msg('展开左侧菜单的操作', { icon: 0 });
+                }
+                , menuRight: function () {
+                    layer.open({
+                        type: 1
+                        , content: '<div style="padding: 15px;">处理右侧面板的操作</div>'
+                        , area: ['260px', '100%']
+                        , offset: 'rt' //右上角
+                        , anim: 5
+                        , shadeClose: true
+                    });
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
