@@ -9,9 +9,19 @@
     <title>八嘎八嘎</title>
     <!--网站标题-->
     <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById("myCanvas");
+        if (canvas.getContext) {
+            alert("欢迎登陆王晨阳");
+        } else {
+            alert("欢迎登陆王晨阳");
+        }
+    </script>
     <div class="layui-layout layui-layout-admin">
         <div class="layui-header">
             <div class="layui-logo layui-hide-xs layui-bg-black"><img src="icon/L myicon.ico" alt="icon" />八嘎八嘎</div>
@@ -96,9 +106,9 @@
             </div>
         </div>
 
-        <div class="layui-footer " style="text-align:center">
+        <div class="layui-footer" style="text-align: center;">
             <!-- 底部固定区域 -->
-            本网站归八嘎八嘎所有
+            ©2021 主办：八嘎八嘎官方 承办：八嘎八嘎官方 <a href="./Add QQ.html" target="rightArea"><img src="./images/QQs.png"></a>
         </div>
     </div>
     <script src="./layui/layui.js"></script>
