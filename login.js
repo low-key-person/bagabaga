@@ -4,7 +4,7 @@ function check() {
   if (name == "admin" && pass == "2007221") //超级管理员 用户名:admin 密码:2007221
   {
     alert("登入成功");
-    window.document.f.action = "./index/index.html";
+    window.document.f.action = "./Home/user/index.html";
     window.document.f.submit();
   }
   //else {
@@ -13,7 +13,7 @@ function check() {
   if (name == "1" && pass == "1") //游客 用户名:1 密码:1 
   {
     alert("登入成功");
-    window.document.f.action = "./index/index 1.html";
+    window.document.f.action = "./Home/user/index 1.html";
     window.document.f.submit();
   }
   //else {
@@ -22,7 +22,7 @@ function check() {
   if (name == "wangchenyang" && pass == "250250") //普通成员 用户名:wangchenyang 密码:250250
   {
     alert("登入成功");
-    window.document.f.action = "./index/index wcy.html";
+    window.document.f.action = "./Home/user/index wcy.html";
     window.document.f.submit();
   }
   //else {
