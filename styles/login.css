@@ -18,7 +18,7 @@
     position: relative;
     width: 800px;
     height: 360px;
-    background-color: rgb(52, 0, 73);
+    background-color: lightseagreen;
     border-radius: 30px;
     padding: 30px;
 }
@@ -54,7 +54,7 @@
     color: #fff;
 }
 
-.login-box>input {
+.login-box>.input1 {
     margin-bottom: 20px;
     width: 200px;
     height: 36px;
@@ -63,6 +63,7 @@
     border: none;
     outline: none;
     font-size: 18px;
+    margin-top: -10px;
 }
 
 .btn {
@@ -114,4 +115,13 @@
 }
 .a1{
     color: red;
+}
+.input2{
+    width: 20px;
+    height: 20px;
+    margin-right: 200px;   /* input2往左平移200个像素 */
+}
+.p2{
+    margin-top: -22px;  /* p2往上平移22个像素 */
+    margin-right: 30px;  /* p2往左平移30个像素 */
 }

@@ -9,6 +9,7 @@
     <title>登录</title>
     <link rel="stylesheet" href="./styles/login.css">
     <script src="./login.js"></script>
+    <script src="./cookie.js"></script>
 </head>
 
 <body>
@@ -18,8 +19,9 @@
                 <a href="" class="banner-box"></a>
                 <div class="login-box">
                     <h1>账号登录</h1>
-                    <input type="text" required="required" id="name" placeholder="账号">
-                    <input type="password" required="required" id="pass" placeholder="密码">
+                    <input type="text" required="required" class="input1" id="username" placeholder="账号">
+                    <input type="password" required="required" class="input1" id="pass" placeholder="密码">
+                    <input type="checkbox" id="remember" class="input2"><p class="p2">记住用户名和密码</p>
                     <button class="btn" value="登录" onclick="check()" type="submit">登录</button><br>
                     <p class="p1">没有账号？<a href="./register.html" class="a1">点击注册</a></p>
                 </div>

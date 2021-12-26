@@ -1,5 +1,5 @@
 function check() {
-  var name = document.getElementById("name").value;
+  var name = document.getElementById("username").value;
   var pass = document.getElementById("pass").value;
   if (name == "admin" && pass == "2007221") //超级管理员 用户名:admin 密码:2007221
   {
