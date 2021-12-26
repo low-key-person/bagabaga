@@ -1,15 +1,49 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>注册</title>
+    <title>欢迎注册</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/public.css">
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
-
-<body>
-    <h1>注册</h1>
-</body>
-
-</html>
+<div class="find_back_pwd">
+    <div class="register_box" style="height: 660px;">
+        <div class="find_title">
+            <p>欢迎注册</p>
+        </div><a href="./index.html" class="go_login">登录</a>
+        <div class="password_form">
+            <div class="item">
+                <p class="tips">手机号码不正确</p><span class="name"><img src="./images/icon_user.png"
+                        alt=""></span><input type="text" placeholder="请输入手机号" id="register_tel" class="input_text">
+            </div>
+            <div class="item">
+                <p class="tips"></p><span class="name"><img src="./images/icon_code.png" alt=""></span><input
+                    type="text" placeholder="请输入验证码" id="register_pic_code" class="input_text w243"> <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAAAwCAIAAABSYzXUAAAXU0lEQVR42u1b93Mb6XnWX5bxb5lMMslMYseO47HPdnK+FvlOPt/pKOkkWqJVKB0lkpIoFknsBSBIohAdIIjee+8dWGABLOoWAMpLro6iSIr9yni88w4HAywW3z7P9z7P+37f8sKrvx8/guPC3yE4+9GhqEa+QNYbf7M0kB2iTmE/woFROF5L5xCnN6HQBrniIEeE+sPfOQ0dimzjjW6b+p7v1l+xcRNT5qICI9Effk7UG1gilbe5YlIl4L4TIZ4kqTZgifR3TgNZLzfyUYgmEm+VskQNpVq1DkW8etX9Tu/cUzbxktOcxCSEHpGgeP57Bb7bxStYORLPmmwR0cZu6MN8WVpnLgUjTbTU7XROJmLdbrlOxpBGIF21Rsr6AHpcGqhWHS/nmoUETcabQGItNENUi1Sz2iFxGPe5Q9FqN9xl43pyliZDnefnW6nvEPlOB5AtBSKAMmC9G3pgImuyAyt4pXq6Oy3VCHcCU7gQnb/oTWLRfL2A4ViDvHDyUbbbRJNsVPAK0iym9rKSj7bQFIEhcEKbaJ10mhxqEjgIlCC1QJOhyLLTjWj3nHKR9tiiNwDaAgqzG3rQH1Ah0KKTOnCSMBQo/45aNPC2KVSCiR9HGnWcOmeL7gLSZItqYgRWaKHpRj62h5VmMYlX8qBp52ItVJcKV93iNIMmg5ec4CZ62fEP2PH3ZZmvbegU0vJ0Xx2L+/0e+zq4YngH3odP4ZzTjbPUjnpb3AAuorpbVyhWCbW3kCu33pVCF85dTMEwqGYNZKpVyoBk7WWlEAdxI2ulBooiCaSYKpXzWBUF72viTQLqgO5RyZ5qGKTpa+LMgDA1Q5MBrISqriIeDmFCZe6ONH0VzjmFxxa9QcgJyIwzYoB3q77WOtBQ6+Tod0CFQHx+yIK10ybbrTrgfqC11LKRYiSUcgdCRq9L6TGLnCah0yJxOxQ+tzrg04eDlljEkYx70qlALhPJWXxspWcsnnHVK81mvZWohECdaDJAr0C1QLsgIeSZG+bCWKdL7vHYAFfklbD9At4ZPfawefiqE8E3gYMs6dh5U2zL/bj6BkgWUCfQqDqSrmX35ko9Fy3FwxlvMGL2edQei2SLlSNDo1WLAiyaDG58RhOQ+a12p0LgEfNDPCkgHljnuxUsm3nG5B81hp6Gw5JTe+yRR57yAAdhXN551d5WB1BiatOeRoqVVr3WrFbqFbSKFjCQqFwazSSKqRgSD//A7RtMQ3By8HNwdfD2/YZfz8eruXQ5k/X5N812QcQdD9sSAVPUqwu5lAG73GsWu4AJs9BhUGxK3YxvyZhUWhlOOdulZlgck8bQCKD/OjwvTTqRVeZxbiWc36sP+k2Qc+GwLRJ1RmOuaMITTvogQil/IBXwpQLelN+V9DnibmvMaYrY9WGLNmhS+Q0Kn1buUUtcSqFzY90u41rFazb9CnDgbXJNG4va1Wk1a1K9/PI4cQIauq1mp4x2KfLs6M/cHBn5vB8Cb7T2VCzgK3gVbZZyjUKygUT3p0s1EymnQoWYP+NzxAyGsGIzJJTteKxLylO65hSRMW342RvogQbnjEnLM8k0RoH9OBm2J7a+JbAY+QbjutawrjLwFHquTMcR6zgCHZurW1vTrrF0XKa7wgEaLHbGDr4a1qRubUbPmddxFtXsRf36slXMdsi5TgXfrRJ5NVKfTh4wbF44hulCjUpRJEHEwy2jaitshqbXUY/4sWS0lEkW07FCIpyPBbMRXyboTvmdCY8t7jJHHYawVRcyqwNGpU+3AT8JP+zaFNgknL5fftL3Xx/f/tVF4/qSAYa4NqtZmdo/RzSsl2Y+w6Pkx6zKfMBWSwf3spIJl4KevMOa1KvcWpbZ9MLofzPxDaGnysioOPZc6JpUiN6amJrVOR2bYeCtGfk8s1BoEUutYoVVorJKtVapwSo1WaUWq8RqkdgtYof5eFQ5kzLgwJUXg8NBjtrk4HYByFrIXcjgmDsV8WTMpoRaF3O7s5lkqVpqNGst0II21bkAaeVWioAcoMgmYVtEK2YB08hb3CJwbUazK618wmVEKarrla/J2I6GQVlUieNSrpvPNK7OHCcB2Y8f9v7H/0I8vvjFno8gkXXsOQN3wcRnmIUsq3jVIeXYJCsWwXxAKArwRFGRPKXW5K3mkt9VTQVLWXciKXdHl0zhN+jbw1PhuCibcRQKMVtOyUm8pJVKleVlazFoe06RvoAU4AWo1cqNClJFM2UkgWbCSNKfBXwBZX/IuiVH9XWHxkHr5IniwtHAsSa1qzN6QIe3aOIzLeJVr5wbU4ryWhmm39xNyRYrRlXFoi3YDTm3NeN3ZcPeXDSAxEOFZBTsyKszLd2b0KxJspFYAyujmaxJqJ3qHZPMCiicOFEfm86anPH5HehN4WeeGAMoKWfde3rJYtHuz0l1aT4/MXfufd/rOrjb8LcEQEOlnXytrlClEVsrD1DRYcVaKVspJNFctAD1HlR9UPtBBejWhmwKv1nmMYlcFwCdcj4Nxg32DSYOVg6GTrQaFIGDFB1ZxUMd0MHKVDpBBNy4VfcWKyY14baR8XC7iHTxVswdneh5lo/vLd3wJr48sLg2zKznkAP7WJ+InTBr9vSxadQI6FsjzyM5CVoLtTvEcXrJUt4fy5pc6Q1rVpqsBjrdc6lTuzFozlrcFGn+sSx0g423i3kyFiLcVqBhNysVlaJiMVGZBND2alsZdvrY+IYmsAv3PX0sJ/7BVgfw9kFQ1Wozc8Sk3u4lyWbVn2Ye2Eti+WC5GMZrRehsoL853S0XqABwEMQl7S75Y6FhT+fWqVaobJIMequ612TUdMri5kZGIovyJXv6WOMsO2Gw7+9j2fH3zziQnSvs9JJYETgIHbBMWfp2mZIijtNYtDplX4sHNDQ6xR/37lu32yyVeQMzCZU+IpB5Wev3/vOPEI9+/WWYK04KJciGvKJT4j5nRmfUzvH2F8Q72UCRVAUpt96ucY/T1r6LSKSZdOWVrrQclArN+/Z1LTFQNtA3qoGB1nW3FQyYIam2R+MTjUkWe5cmrj2avPdQvLqWQyq1bmf62gIdpU672GnDhEI6VL5DZTtUpkOlO2SyQybaZLxNxtpEpE2E20SoTQTaxHFpKMRzRq6K95i50Ds+f2Ns6dZz+dS6X+860Dxoj0UDkdQ+j9U8X3rw3uWB979mDU7WMol62Nu0G/f4fN1hrIS9xVwyXSuHsarct26xOy0qm1Goh7AHYl4K91C4m8KdVMtBtexUy0a1THjt+bJ4aIw1OMaalWp1ZENLNtRkQ4Yjy1WdgqxvEHU5URdipYdTnKEFvqBZERA1PlHl1aLcnADcGzxcleLYEEsYjSPFRH1fL4kU4rZQYOzu0jeXJ29/NfWoZ/hZT//jnoG+nqm+q9NPNi19PdN0zLTKJ4oL9HA1ZENFNpRkY5Osw4hhuDKiLiVqEqLG8gcHhxfuXhm+c2X4NkTPVvy1Z6hvOwZGlhh1lIFXluuoIBlTOp0WpSbwtse6JAqt2SIMB5hodkC2+flnfRD3Vng7g2DWCjIkbo/6kx4rZtagGnVyU+uXaS0iPQ09HQaxYVPnYMfi77qZF0j61svVm6NMiKcO14Hn3OfKb44xJ1J7LzJfj7HyEk5iaru6nYLXS7XYer2oxvLuciZVSFaRaCniZ16fmv18HELJXLMjq94mT4NGXuidAwOrd3um7/VM9/fMQPCIKhAMNAuJmmgbRgATIIWpAPACyMrtKaLZBl9PNi4cSVRvz1Dv1aEHs+wRq32qlId3purFZzZH3+2Jm18+uvNZ/+Jzpn1DFdi1Vgyv7XKVymYTxiLMMjJXReerRSZQhWP9U8zLn/V99VnfC6OFi1d5eHWdqAprJXkqrXSH1CqbQfgW9Fax3i/XppSaklbdNKqqNkM+4I5mYp5KwUbUbdupAAkBaeHeThFlNP50fGVkfGX0OduGFCHxBSjT3oqADoAgaFyBifHVTbM7t60VIBogHWinXeq2K9021m3nyYoZVe/s92kRSR7PUa+29AjKgc1p+XzPzPzlKSt/09/cqlBzZTNZL9M+qFvWLV5bpOPE3hDclicQqWibAMGC4YJ4pTokCFlmW9Q4M+uxYoke8Zbk1aq5eCJlcxpm1p7+5hrE9MU7tMcm1IaCN1jPF9rfemy307Usm/Qz2rT39T7tytAsvYyR8MeQRD7iCDk2bbtxNwr0bo0z7omhmSLRxKEgblfQgO9lzavDLfsKYs92QYxuFcQ7t2TRu+Yn2BBchjRbc0nTV+kdCKxSW3rJFaxsHNkzHLjfh6ZRGmLBsADuDAqkJK5v443OLjM7BQ3b2wKNC8fx2AP3YwNs4dP3ro/9oW/y0jfvWisuhBHgQD4qaYOvUW2sWHn44c27713p++/LBoFuB3qL1OQ3+dKhVKVQGb44cOAegyzzNdGpbRXEha2CGHftLYhxq54IeqhMsoNVxGwF0DA7sfJ85Qa99wAexmdtLL7gViu10+33zc2Pv/hqHCD2q/3v+gp8unB1Ye6ruVq5WsqhSCKXDiZj7nDQ4vNonXaFxSzW67hK5bJMNi8UvuTyRle4z1gQF86yHzt77Rkd7xqWg2fTM3SSSQFMcKNIv8GQ3vzFnyEefnQLkgBSARKiWW3snp6PPrp/4KUsxQltfoDezHqrIM4kAX3gYDclJZWcMTg1/mDo2cOHQfsWala9G4jxuyMn33wlA0WHKMB43He//6O+bz68qxRJQza/z+B2Km0WqVG/rlavbmwsisXT6/d/dq//p3chaHCPE4LnbOksfy8N0Kwefz92Pw0w6eqVei6WDdmCVpl5t9qYxAbZnPD+/1x/9PEt4cvVgzuNTuddNEDNqkeGgQmyc/CeMOgSqBNoFCgVJEpMKJi5Mwoxd3fMtcab/WZSssjrVEpdioLCt1VvVlEMzRZhqKlAPOoMBcxet8Zhk5tMQq2WvbnJlEpnBYIX7B28Hvz8NcSckeV3YQqf3v/Z3W9+0S9fFKlWNoAhi8TgVFp9elfIFoh7o5lwqpDKV5BSHasTLQJE++C+AfWHDtyPbWJ1v86lWpLwhhmLN5/P3xjf4YCmoZAu+Awes9j4ltDz9U6FnTe6lo1kAGKTSE0bg1WuPxBKrIhN9Dx793MlJOQEqFO+5dpDHrhIvVIr50tIMuf16sSaYY1icf3l2vD1kcErjx/2DD+68kQ4zhJOrPBGWcefqhCgG8KXHNmc4NGvB4Z+8+jRewNCwQpXtMiVLfBVDJNdlY4lQH9qpSreaC1cWTilRe/frd3Tx5I4aeAo566P7sYdWgeI3TSAstPQO1WOqCuSCab08zrjvJ7CKdYgI+GNwTmiKTZNQ9QZPHA0QYt/dZi59aNbaxAN8JJiGslG0wlfLGwP+o0el8qmFgnWV16sM2bE86twQf7E2rsQhGnb/8XQ3c8HIQavPN15nz/GEj9f25hkq2Y5ugWeeVXsEKp8SnPY6oMfgp8rpgvw0+CcFPHGfhk3GDsQg2ODb9OeAU4Ofg6ufjqLPlYXDeOA6U9jzbw96ZCZisn8Tsu2mwZobqHFhXz/9rkHKuVIJm0JeL2xKNWva+CEyRtPHn10c+CDXrCsqCscNINxOewbZpNIp17bFM2IuWNc7ijAunKiCcsZXea+WODNzIsYDCVHYBbrHJtWr97FnROOPZh9ObT0YnBxcphhVNqJFpRe7U6j1s5nyIgfd5j2dI643UiGfVQu3alXX7298Ld2d42GGCzptXLgeT0i+fYZkWlP2fRd0WAR6GigRWOrcA+7PLwL0jb55eMXfx6cuPQQJC/uiYL8gQiCFIIg6nlq1YocJFI0xaPrAZibPf/ySc8/f3z1Xz85Etn1cTZvnCdfkGg5myDWQBUIN8g3iDhIOQg6yDqIO0g8FGAHjjweToMnq2SmfLZI168Q2TSy11EoCgyDSsUJv6tl0e4riO1kItJGC10CVy+oaYiL8beWjzASNRcV3MSUH7N9VzTMfv1s+P3bg7/vUyyJNWsKBUMimeGDudNg3f7pV3QcPWFHWMyB2ev//mnvTy8NX7wLBYZTZYNiI2wPBK0RKdMddafNEiP7CQs0kM42FME3eFmsfJplyypWZ06tQ99AZ6fPFaZpYM0KmocuSXWbjXYhR0aDuMuyJ1HcM5z5Pz6b/9Nz17oBirQ9X6xTVZBlmoOl60vnTMPTj+8dCDRMcNEkt/+X1x786vrAb3qhHHYoLB6dE9Qm5o5AsQwlczmPQvmMN3HIYiVrY+72S9oY5Iv83T9hUhaSkXoDq49dfook33pENR1rGBTIKRZ2+StbLUIZffMouEKkp5kQc5TH3fIB+cLKVIbeStHXNJuMi4/nPni0/NmTikpBuK3QvrSLeWhltjobd4rZy6RpABc5ZxoWbk6MfNw/evGBW2lDMwUMBeNq0lMsHUjseMO7lGHngG/d/Pnl+7//Gmjw6Ow771dKhFKYg05yeWARLGT/F9WiXKlwskfnDCo7wB32J97anyDItUUxzYRF5zrNSjHeCsks85+NzX/yhPPVaJIjaBlUEPBC0T8zf3FE9mh14cvpxavzyzeXz5kG54aFBnr57hTg3t0+MoGEfJoPtRN3cIn+FEg68pfm70x8+g+/ffjhXxLeNz2U11r22UpQSkG0yQMel4NEcRpLx78f2hK0G5b9H6FIGVKEZiIVz55u2d4td29N+asLC5enQaBApuY+HoYU4V8bx1QKeAHBvPSMjAbaSLbbrB/zaaijFzOUC2IAeubqSP9v//L5P1385Cd/uPSPnwx++gAq9Hw0s5MQy3emDr/Oi2tD/b+7duknv9esboJYwTvwV8KKzt1hiqb4YAkHfgvSBRLiRJawzpK/KzsDnihNA5wGJ5+OCbBozYKGdYsFHgBCpJhShDQ+sHEqEZn/v6dzHw6Kbjx/YypmLeFzgnadw7ZP2Oq/9bu/9Pzb56OXHkIemOTGseH5JwPToE5Qwi70jkNszAiOcylo0CQzwqne50OffDPypyH+YizuSxz6SERXxEod3xIYgO+hq0aaDTPNBJzcPtVTGocs0tHeoJnZ2CqIw28KYiqdOAca1pgiGvTdjevIo9mVRcEZh85fSp7LOeV2Q1BzPkFlDwqC4aJkDbOkyNKr7/eIWCI0DfBiV0FMbj1jt23jZ6Ihlche+/xBFds7xXCcgPdj4eRZhi5ZScN8P2M2+PEcEKBqBLH21t3iXcraik+UNrlVO9ltfz8ctKotzn0OcLDStwJpcf570ZNjzE3Zwc+pa5WWiSeLZxm9RpwvF4lDTjjSGxIkOlZSIFR1r0R0O8uYCdKC6p7b09qGFYOBZYg74lgee70q132FIZhX6V29s0qnQsKVOP9HAqDZuXKpnyKpdy2IQkI0T7hHv/uASinoOuwfPY+slCZLqjh58FMRNBO6Rui8aICZvtMn7w/49HQcHE2DXm0DNz6s/hlhwDmnvjG6bzikqDu8b8hQ5bmy7pDr1zs46BUtVmc/qoVqQBuAMkkwJIDmANo0iLW7a+oFdVAfpPDT/3/KETTMvVyVCTWHnAB6NfeOzYNjHnQXfeBHR3bR8roXbODw68M5mkbw1Y/7OIKGwXsvErH04QY+cGfiLCOoV6kNXhZF8H3d1tFrSi9KSkiIw6+fo7CZsuYE3XKXaDRtxTIjiwymcn9NZL5OZm9l8t8g6FS9ael0Wj8ADbeuDqHFw+6zXMJufDlwxkGA7EjX0m5LuVHbyutWs+2zV2TszH5u9hxQmx5ZC8EJg0XxsdaQOrUSxgPQtxBvmEgq39ne6QPoSarQaDqKpQX4tFThwJnfKw2XPrjZOer/wj59v/fs4wACHIYS1K/QJUCFatejtcrRa6vQJRzn4sc5rVrXpHJ3ypiQapcPpwrOgSzBapvfHw3HgfhcaDjdcV7ZAMiCBMH0P+bvwplZZBjS4tWrzt9UNpzuOBdvAA7yxfFO52T/fQ5KpdUt9N0UXv5CeLNXZrFkznIj/w+UvWnmsdk1HAAAAABJRU5ErkJggg=="
+                    class="get_pic_code">
+            </div>
+            <div class="item">
+                <p class="tips"></p><span class="name"><img src="./images/icon_code.png" alt=""></span><input
+                    type="text" placeholder="请输入验证码" id="register_code" class="input_text w243"> <span
+                    class="get_code">获取验证码</span> <span class="get_code disabled" style="display: none;">0s后重新获取</span>
+            </div>
+            <div class="item">
+                <p class="tips">密码由字母加数字或符号至少两种以上字符组成的8-20位字符
+                </p><span class="name"><img src="./images/icon_pwd.png" alt=""></span><input type="password"
+                    placeholder="请输入密码" id="register_pwd_one" class="input_text">
+            </div>
+            <div class="item mb10">
+                <p class="tips"></p><span class="name"><img src="./images/icon_pwd.png" alt=""></span><input
+                    type="password" placeholder="请再次输入密码" id="register_pwd_two" class="input_text">
+            </div>
+            <div class="reader item" style="margin-bottom: 0px; height: 20px; display: none;">
+                <p class="tips" style="left: 164px; top: -1px;"></p><span id="agree" class="selected on"></span> <span
+                    class="font">已阅读并同意<a href="javascript:;">注册协议</a></span>
+            </div>
+            <!--注册页说明-->
+            <div class="login-user">注册即表示您已阅读、理解并同意<br><a target="_blank"
+                    href="">《八嘎八嘎共和国服务协议》</a>及<a target="_blank"
+                    href="">《八嘎八嘎共和国隐私政策》</a></div>
+            <div class="next">注册</div>
+        </div>
+    </div>
+</div>

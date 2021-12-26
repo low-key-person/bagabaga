@@ -1,0 +1,363 @@
+@charset "UTF-8";
+
+.b_btn,
+.btn,
+.foot .copyright,
+.full_popup .box .icon_close,
+.full_popup .box .pop_btns,
+.zto_alert {
+    text-align: center
+}
+
+* {
+    background: 0 0
+}
+
+body {
+    background: #eef1f4;
+    min-width: 1200px;
+    font-size: 14px;
+    color: #282828
+}
+
+a {
+    color: #b3b3b3;
+    text-decoration: none
+}
+
+em,
+i {
+    font-style: normal
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.cb:after {
+    display: block;
+    clear: both;
+    content: "";
+    overflow: hidden;
+    height: 0
+}
+
+.b_btn {
+    display: block;
+    background: #33a2f7;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer
+}
+
+.zto_alert {
+    width: 400px;
+    height: 200px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -200px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #e5e9f8;
+    color: #333
+}
+
+.zto_alert .zto_alert_close {
+    display: block;
+    width: 23px;
+    height: 25px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    cursor: pointer;
+    background: url(/pc/img/pub/pclose.png) no-repeat
+}
+
+.zto_alert h2 {
+    font-size: 22px;
+    margin: 40px 0 20px;
+    color: #0099d9
+}
+
+.zto_alert .zto_alert_confirm {
+    display: block;
+    width: 90px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background: #0099d9;
+    border-radius: 15px;
+    margin: 30px auto 0;
+    cursor: pointer
+}
+
+.foot,
+.head {
+    background: #fff
+}
+
+.head {
+    width: 100%;
+    height: 75px
+}
+
+.head .box {
+    width: 1200px;
+    margin: 0 auto
+}
+
+.head .box .logo {
+    display: block;
+    float: left;
+    margin: 22px 100px 0 0
+}
+
+.head .box .link {
+    float: left
+}
+
+.head .box .link a {
+    display: block;
+    line-height: 75px;
+    float: left;
+    margin-right: 55px;
+    color: #202027;
+    font-size: 14px
+}
+
+.head .box .login {
+    float: right;
+    font-size: 12px;
+    line-height: 75px;
+    color: #5e5e5e
+}
+
+.head .box .login em {
+    color: #33a2f7
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto
+}
+
+.foot {
+    width: 100%;
+    height: 245px
+}
+
+.foot .box {
+    width: 1200px;
+    height: 215px;
+    padding-top: 50px;
+    margin: 0 auto
+}
+
+.foot .box div {
+    float: left
+}
+
+.foot .box .link {
+    width: 305px;
+    padding: 20px 0 25px 65px;
+    border-right: 1px solid #f1f1f1
+}
+
+.foot .box .link a {
+    display: block;
+    float: left;
+    line-height: 30px;
+    padding-left: 28px;
+    margin-right: 25px;
+    font-size: 14px;
+    color: #545454
+}
+
+.foot .box .link a:nth-child(1) {
+    background: url(/pc/img/pub/gpsIcon.png) left center no-repeat
+}
+
+.foot .box .link a:nth-child(2) {
+    background: url(/pc/img/pub/clock.png) left center no-repeat
+}
+
+.foot .box .link a:nth-child(3) {
+    background: url(/pc/img/pub/service.png) left center no-repeat
+}
+
+.foot .box .link a:nth-child(4) {
+    background: url(/pc/img/pub/forbid.png) left center no-repeat
+}
+
+.foot .box .qrcode {
+    width: 555px;
+    padding-left: 35px
+}
+
+.foot .box .qrcode ul li {
+    float: left;
+    margin-right: 30px
+}
+
+.foot .box .qrcode ul li img {
+    display: block
+}
+
+.foot .box .qrcode ul li p {
+    line-height: 20px;
+    padding-left: 25px;
+    font-size: 12px;
+    color: #545454
+}
+
+.foot .box .qrcode ul li .wechat {
+    background: url(/pc/img/pub/wechat.png) left center no-repeat
+}
+
+.foot .box .qrcode ul li .qq {
+    background: url(/pc/img/pub/qq.png) 5px center no-repeat
+}
+
+.foot .box .qrcode ul li .alipay {
+    background: url(/pc/img/pub/alipay.png) 5px center no-repeat
+}
+
+.foot .box .qrcode ul li .app {
+    background: url(/pc/img/pub/phone.png) 8px center no-repeat
+}
+
+.foot .box .tel {
+    width: 340px;
+    padding: 25px 0 25px 45px;
+    border-left: 1px solid #f1f1f1
+}
+
+.foot .copyright {
+    font-size: 12px;
+    line-height: 30px;
+    background: #707070;
+    color: #b3b3b3
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 15px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    outline: 0;
+    cursor: pointer
+}
+
+.btn-info {
+    background: #33a2f7
+}
+
+.btn-primary {
+    background: #1db6f6
+}
+
+.btn-cancel {
+    background: #909399
+}
+
+.full_popup .gray {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4)
+}
+
+.full_popup .box {
+    padding: 25px;
+    position: fixed;
+    left: 50%;
+    margin-left: -200px;
+    top: 30%;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+    min-width: 400px
+}
+
+.full_popup .box .icon_close,
+.full_popup .box em.close {
+    display: block;
+    width: 51px;
+    height: 47px;
+    position: absolute;
+    cursor: pointer
+}
+
+.full_popup .box h2 {
+    padding: 0 0 10px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+    border-bottom: 1px solid #cdcfd7
+}
+
+.full_popup .box .icon_close {
+    line-height: 47px;
+    right: 10px;
+    top: 15px;
+    font-size: 18px;
+    color: #6b6b6b
+}
+
+.full_popup .box .icon_close:hover {
+    color: #33a2f7
+}
+
+.full_popup .box em.close {
+    right: 0;
+    top: 0;
+    background: url(/pc/img/pub/close.png) no-repeat
+}
+
+.full_popup .box em.close:hover {
+    background: url(/pc/img/pub/close_hover.png) left bottom no-repeat
+}
+
+.full_popup .box .pop_wrap {
+    margin: 20px 0;
+    overflow: hidden
+}
+
+[v-cloak] {
+    display: none
+}
+
+.message-box-dialog {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: fixed;
+    min-width: 380px;
+    height: 50px;
+    line-height: 48px;
+    text-indent: 50px;
+    top: -10%;
+    left: 50%;
+    margin-left: -190px;
+    border: 1px solid #ebeef5;
+    background-color: #edf2fc;
+    border-radius: 4px;
+    transition: all .5s;
+    z-index: 99
+}
+.message-box-dialog.show {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    top: 2%
+}
