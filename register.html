@@ -1,19 +1,21 @@
 <head>
     <meta charset="UTF-8">
     <title>欢迎注册</title>
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/public.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/register/register.css">
+    <link rel="stylesheet" href="./styles/register/public.css">
+    <link rel="stylesheet" href="./styles/register/reset.css">
+    
 </head>
 <div class="find_back_pwd">
     <div class="register_box" style="height: 660px;">
         <div class="find_title">
             <p>欢迎注册</p>
-        </div><a href="./index.html" class="go_login">登录</a>
+        </div>
+        <a href="./index.html" class="go_login"></a>
         <div class="password_form">
             <div class="item">
-                <p class="tips">手机号码不正确</p><span class="name"><img src="./images/icon_user.png"
-                        alt=""></span><input type="text" placeholder="请输入手机号" id="register_tel" class="input_text">
+                <p class="tips">手机号码不正确</p><span class="name"><img src="./images/icon_user.png" alt=""></span><input
+                    type="text" placeholder="请输入手机号" id="register_tel" class="input_text">
             </div>
             <div class="item">
                 <p class="tips"></p><span class="name"><img src="./images/icon_code.png" alt=""></span><input
@@ -22,9 +24,30 @@
                     class="get_pic_code">
             </div>
             <div class="item">
-                <p class="tips"></p><span class="name"><img src="./images/icon_code.png" alt=""></span><input
-                    type="text" placeholder="请输入验证码" id="register_code" class="input_text w243"> <span
-                    class="get_code">获取验证码</span> <span class="get_code disabled" style="display: none;">0s后重新获取</span>
+                <p class="tips"></p><span class="name"><img src="./images/icon_code.png" alt=""></span>
+                <input type="text" placeholder="请输入验证码" id="register_code" class="input_text w243"> 
+                <button class="get_code" id="btn" onclick="check()">获取验证码</button>
+                <script>
+                    var btn = document.querySelector('button');
+                    var time = 60; //定义剩下的秒数
+                    btn.addEventListener('click', function() {
+                        btn.disabled =true;
+                        var timer =setInterval(function() {
+                            if (time == 0) {
+                                //清除定时器和复原按钮
+                                clearInterval(timer);
+                                btn.disabled = false;
+                                btn.innerHTML = '获取验证码';
+                                time = 60;//重新开始从60秒开始计算
+                            }
+                            else{
+                                btn.innerHTML = '还剩下' + time + '秒';
+                                time--;
+                            }
+                        }, 1000);
+                        
+                    })
+                </script>
             </div>
             <div class="item">
                 <p class="tips">密码由字母加数字或符号至少两种以上字符组成的8-20位字符
@@ -40,8 +63,7 @@
                     class="font">已阅读并同意<a href="javascript:;">注册协议</a></span>
             </div>
             <!--注册页说明-->
-            <div class="login-user">注册即表示您已阅读、理解并同意<br><a target="_blank"
-                    href="">《八嘎八嘎共和国服务协议》</a>及<a target="_blank"
+            <div class="login-user">注册即表示您已阅读、理解并同意<br><a target="_blank" href="">《八嘎八嘎共和国服务协议》</a>及<a target="_blank"
                     href="">《八嘎八嘎共和国隐私政策》</a></div>
             <div class="next">注册</div>
         </div>
