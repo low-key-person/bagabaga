@@ -9,7 +9,6 @@
     <title>登录</title>
     <link rel="stylesheet" href="./styles/login.css">
     <script src="./login.js"></script>
-    <script src="./cookie.js"></script>
 </head>
 
 <body>
@@ -21,7 +20,32 @@
                     <h1>账号登录</h1>
                     <input type="text" required="required" class="input1" id="username" placeholder="账号">
                     <input type="password" required="required" class="input1" id="pass" placeholder="密码">
-                    <input type="checkbox" id="remember" class="input2"><p class="p2">记住用户名和密码</p>
+                    <input type="checkbox" id="remember" class="input2">
+                    <script>
+                        var name = document.getElementById("username").value;
+                        var pass = document.getElementById("pass").value;
+                        var pass = document.getElementById("remember").value;
+                        if (localStorage.getItem('username')) {
+                            username.value = localStorage.getItem('username');
+                            pass.value = localStorage.getItem('pass');
+                            pass.check = true;
+                        }
+                        if (localStorage.getItem('pass')) {
+                           pass.check = true;
+                           username.value = localStorage.getItem('username');
+                           //pass.value = localStorage.getItem('pass');
+                        }
+                        remember.addEventListener('change', function () {
+                            if (this.checked) {
+                                localStorage.setItem('username', username.value)
+                                //localStorage.setItem('pass', pass.value)
+                            } else {
+                                localStorage.removeItem('username');
+                                //localStorage.removeItem('pass');
+                            }
+                        })
+                    </script>
+                    <p class="p2">记住用户名</p>
                     <button class="btn" value="登录" onclick="check()" type="submit">登录</button><br>
                     <p class="p1">没有账号？<a href="./register.html" class="a1">点击注册</a></p>
                 </div>
