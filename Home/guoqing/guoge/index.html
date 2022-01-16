@@ -1,0 +1,1406 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0041)http://www.gov.cn/guoqing/guoge/index.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style type="text/css" title="audiojs">
+		.audiojs audio {
+			position: absolute;
+			left: -1px;
+		}
+
+		.audiojs {
+			width: 460px;
+			height: 36px;
+			background: #404040;
+			overflow: hidden;
+			font-family: monospace;
+			font-size: 12px;
+			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #444), color-stop(0.5, #555), color-stop(0.51, #444), color-stop(1, #444));
+			background-image: -moz-linear-gradient(center top, #444 0%, #555 50%, #444 51%, #444 100%);
+			-webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+			-moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+			-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+			box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+		}
+
+		.audiojs .play-pause {
+			width: 25px;
+			height: 40px;
+			padding: 4px 6px;
+			margin: 0px;
+			float: left;
+			overflow: hidden;
+			border-right: 1px solid #000;
+		}
+
+		.audiojs p {
+			display: none;
+			width: 25px;
+			height: 40px;
+			margin: 0px;
+			cursor: pointer;
+		}
+
+		.audiojs .play {
+			display: block;
+		}
+
+		.audiojs .scrubber {
+			position: relative;
+			float: left;
+			width: 280px;
+			background: #5a5a5a;
+			height: 14px;
+			margin: 10px;
+			border-top: 1px solid #3f3f3f;
+			border-left: 0px;
+			border-bottom: 0px;
+			overflow: hidden;
+		}
+
+		.audiojs .progress {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			height: 14px;
+			width: 0px;
+			background: #ccc;
+			z-index: 1;
+			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ccc), color-stop(0.5, #ddd), color-stop(0.51, #ccc), color-stop(1, #ccc));
+			background-image: -moz-linear-gradient(center top, #ccc 0%, #ddd 50%, #ccc 51%, #ccc 100%);
+		}
+
+		.audiojs .loaded {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			height: 14px;
+			width: 0px;
+			background: #000;
+			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(0.5, #333), color-stop(0.51, #222), color-stop(1, #222));
+			background-image: -moz-linear-gradient(center top, #222 0%, #333 50%, #222 51%, #222 100%);
+		}
+
+		.audiojs .time {
+			float: left;
+			height: 36px;
+			line-height: 36px;
+			margin: 0px 0px 0px 6px;
+			padding: 0px 6px 0px 12px;
+			border-left: 1px solid #000;
+			color: #ddd;
+			text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+		}
+
+		.audiojs .time em {
+			padding: 0px 2px 0px 0px;
+			color: #f9f9f9;
+			font-style: normal;
+		}
+
+		.audiojs .time strong {
+			padding: 0px 0px 0px 2px;
+			font-weight: normal;
+		}
+
+		.audiojs .error-message {
+			float: left;
+			display: none;
+			margin: 0px 10px;
+			height: 36px;
+			width: 400px;
+			overflow: hidden;
+			line-height: 36px;
+			white-space: nowrap;
+			color: #fff;
+			text-overflow: ellipsis;
+			-o-text-overflow: ellipsis;
+			-icab-text-overflow: ellipsis;
+			-khtml-text-overflow: ellipsis;
+			-moz-text-overflow: ellipsis;
+			-webkit-text-overflow: ellipsis;
+		}
+
+		.audiojs .error-message a {
+			color: #eee;
+			text-decoration: none;
+			padding-bottom: 1px;
+			border-bottom: 1px solid #999;
+			white-space: wrap;
+		}
+
+		.audiojs .play {
+			background: url("./images/player-graphics.gif") -2px -1px no-repeat;
+			margin-top: 0px;
+		}
+
+		.audiojs .loading {
+			background: url("./images/player-graphics.gif") -2px -31px no-repeat;
+		}
+
+		.audiojs .error {
+			background: url("./images/player-graphics.gif") -2px -61px no-repeat;
+		}
+
+		.audiojs .pause {
+			background: url("./images/player-graphics.gif") -2px -91px no-repeat;
+		}
+
+		.playing .play,
+		.playing .loading,
+		.playing .error {
+			display: none;
+		}
+
+		.playing .pause {
+			display: block;
+			margin-top: 0px;
+		}
+
+		.loading .play,
+		.loading .pause,
+		.loading .error {
+			display: none;
+		}
+
+		.loading .loading {
+			display: block;
+		}
+
+		.error .time,
+		.error .play,
+		.error .pause,
+		.error .scrubber,
+		.error .loading {
+			display: none;
+		}
+
+		.error .error {
+			display: block;
+		}
+
+		.error .play-pause p {
+			cursor: auto;
+		}
+
+		.error .error-message {
+			display: block;
+		}
+	</style>
+	<script type="text/javascript" async="" src="./js/atrk.js"></script>
+	<script type="text/javascript" async="" src="./js/atrk.js"></script>
+	<style type="text/css"></style>
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>八嘎八嘎共和国国歌</title>
+	<meta name="others" content="页面生成时间 2022-1-16 20:10:04">
+	<meta name="keywords"
+		content="国歌、中国国歌、中华人民共和国国歌、义勇军进行曲、国歌下载、中华人民共和国国歌下载、义勇军进行曲下载、国歌歌词、义勇军进行曲歌词、国歌伴奏、义勇军进行曲伴奏、国歌曲谱、义勇军进行曲曲谱、国歌简谱、义勇军进行曲简谱、国歌五线谱、义勇军进行曲五线谱、国歌齐唱版音频、国歌管乐合奏音频、国歌高清视频、国歌标清视频、国歌在线、国歌央视版、国歌法、中华人民共和国国歌法">
+	<meta name="description"
+		content="本页面提供中华人民共和国国歌即《义勇军进行曲》资料，包括国歌简谱、国歌五线谱、国歌齐唱版音频、国歌管乐合奏音频、国歌高清视频、国歌标清视频相关内容在线预览、视听及下载等服务，同时对中华人民共和国国歌法规定的奏唱国歌场合及礼仪、国歌相关法律规定等亦有介绍。">
+	<meta name="lanmu" content="中华人民共和国国歌">
+	<meta name="catalog" content="guoge002">
+	<link rel="stylesheet" type="text/css" href="./styles/base.css">
+	<link href="./styles/bootstrap.min.css" rel="stylesheet" media="only screen and (max-width: 767px)">
+
+	<link rel="stylesheet" type="text/css" href="./styles/shoufengqin.css">
+	<link rel="stylesheet" type="text/css" href="./styles/20210205guoge.css">
+	<!-- 音频播放js -->
+	<script type="text/javascript" src="./js/audio.min.js"></script>
+	<!--加载meta IE兼容文件-->
+	<!--[if lt IE 9]>  
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>  
+<![endif]-->
+	<!--[if lte IE 6]> 
+  <script type="text/javascript" src="/govweb/xhtml/2016gov/js/ie6PNG.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('.wxp_wzimg .btn_up,background');
+</script>
+<![endif]-->
+	<style>
+		/* .zcgg_tsp{
+			margin-bottom: 4px;
+			margin-bottom: 0px\0!important;
+			*margin-bottom: 4px;
+		} */
+		.guide-slider .guide .behind .function-list-wrap P {
+			padding-bottom: 8px\0 !important;
+		}
+
+		.sp-cont {
+			width: 596px;
+			height: 384px;
+			margin: 0 auto;
+		}
+
+		.content {
+			position: relative;
+			width: 1030px;
+			padding: 0 35px 60px;
+			margin: 0 auto;
+			/*background: linear-gradient(transparent 200px, #fff 380px, #fff); */
+
+		}
+
+		.con_part3 li {
+			margin-right: 4px;
+		}
+
+		.guoqi-container-text {
+			width: 510px;
+		}
+
+		.guide-slider .guide .behind {
+			width: 688px;
+			background: #f9f9f9;
+		}
+
+		.spPlay {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 10;
+			width: 596px;
+			height: 384px;
+		}
+
+		.sp-cont .gsf_mdgwy_video {
+			position: relative;
+
+		}
+
+		.sp-cont .gsf_anniu {
+			position: absolute;
+			z-index: 12;
+			width: 38px;
+			height: 38px;
+			left: 50%;
+			top: 50%;
+			margin: -19px 0 0 -19px;
+		}
+
+		.sp-cont .gsf_anniu a {
+			display: block;
+			width: 38px;
+			height: 38px;
+			cursor: pointer;
+			background: url(./images/videoicon.png) 0 0 no-repeat;
+		}
+
+		.gsf_src {
+			display: none;
+		}
+
+		.wxp_wzimg .btn_up {
+			background: url(./images/touminganniu.png) 0 0 no-repeat;
+		}
+
+
+		/* new add css */
+		.audio-cont .jbwxp_ul li {
+			width: 200px;
+			height: 50px;
+			line-height: 50px;
+			background: url(./images/jbwxpUl.png) 0 0 no-repeat;
+			text-align: center;
+			position: relative;
+		}
+
+		.audio-cont .jbwxp_ul span {
+			width: 45%;
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			color: #fff;
+		}
+
+		.audio-cont .jbwxp_ul .downloadBg {
+			position: absolute;
+			right: 0px;
+			top: 10px;
+			background: none;
+			width: auto;
+		}
+
+		.reveal-modal {
+			z-index: 9999;
+			display: none;
+			top: 640px;
+			left: 50%;
+			margin-left: -500px;
+			width: 1000px;
+			background: #fff;
+			position: absolute;
+			/*padding: 30px 40px 34px;*/
+			padding: 0px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			border-radius: 5px;
+			-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+			-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+			-box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+		}
+
+		.audio-cont li img {
+			width: auto;
+		}
+
+		.modal {
+			display: none;
+		}
+
+		.modal-backdrop.in {
+			opacity: 0;
+		}
+
+		.wxp_wzimg .btn_up {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 680px;
+			text-align: center;
+			padding-top: 10px;
+			top: 0px;
+			left: 0;
+		}
+
+		#child1 {
+			top: 0;
+		}
+
+		.guoqi-text p {
+			line-height: 28px;
+		}
+
+		.audiojs .scrubber {
+			width: 155px;
+		}
+
+		@-moz-document url-prefix() {
+			.audiojs .scrubber {
+				width: 167px;
+			}
+		}
+
+		.BreadcrumbNav {
+			font-size: 12px;
+			font-family: "宋体";
+			margin: 13px 0 0;
+		}
+
+		.guide-slider .guide {
+			width: 68px;
+		}
+
+		@media screen and (max-width: 767px) {
+			div.m-guoqi-text-show {
+				max-height: none;
+				overflow: inherit;
+			}
+
+			.audio-cont .jbwxp_ul li {
+				width: 150px;
+				background: url(./images/jbwxpUl.png) 0 0 no-repeat;
+				background-size: 100%;
+				text-align: center;
+				position: relative;
+			}
+
+			.Search .search form .search_mi {
+				width: 83%;
+				height: 30px;
+				padding: 0 40px 0 10px;
+				border: 1px solid #d5d5d5;
+				border-radius: 15px;
+			}
+
+			.con_part3 li img {
+				margin: 18px auto 15px;
+
+			}
+
+			.m-guoqi-text {
+				width: 100%;
+				padding: 4% 0% 3% 0%;
+				border-bottom: none;
+			}
+
+			.guoqi-container-text {
+				width: 100%;
+				padding: 4%;
+			}
+
+			.audio-cont .jbwxp_ul li img {
+				width: 24px;
+			}
+
+			.audio-cont .jbwxp_ul .downloadBg {
+				right: -5px;
+				top: 8px;
+			}
+
+			.audio-cont .jbwxp_ul span {
+				width: 70%;
+				line-height: 40px;
+				padding-left: 33px;
+				font-size: 0.9rem;
+			}
+
+			html {
+				font-size: initial;
+			}
+
+			.modal-open {
+				overflow: auto;
+			}
+
+			.m_content .guoqi-container {
+				width: 93%;
+				margin: 0 auto;
+				padding: 2%;
+				background: #a2e5fb;
+			}
+
+			.audiojs .time {
+				color: #0371d4;
+				width: 39%;
+			}
+
+			.audiojs .scrubber {
+				width: 48%;
+			}
+
+			.audiojs {
+				width: 95%;
+			}
+
+			.mobile_show .guide-slider ul li.current a,
+			.mobile_show .guide-slider ul li.current a span {
+				color: #257cca;
+				text-decoration: none;
+			}
+
+			a {
+				color: #000;
+			}
+
+			.guide-slider ul li {
+				width: 31%;
+				height: 112px;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 0.5rem;
+			}
+
+			.guide-slider p {
+				padding: 0px 8px 0;
+			}
+
+			.titleh2 img.gqffg_m {
+				width: 40%;
+			}
+
+			.guide-slider ul li a span {
+				display: block;
+				font-size: 0.7rem;
+			}
+
+			.guide-slider ul li img {
+				margin-bottom: 0.4rem;
+			}
+		}
+
+		/* @media screen and (max-width: 385px){
+.video-play-1 {
+    margin: 0.5rem 0.5rem 0.5em 5.2rem;
+    width: 13.5rem;
+}
+a{ color:#000;}
+	.guide-slider p {
+    padding: 0px 8px 0;
+}
+
+.titleh2 img.gqffg_m{
+	width:40%;}
+} */
+		/* 安卓机子 */
+		@media screen and (max-width: 360px) {
+			.video-play-1 {
+				margin: 0.5rem 0.5rem 0.5em 5.2rem;
+				width: 13rem;
+			}
+		}
+
+		/* 小米手机 */
+		/* @media screen and (min-width: 390px) and (max-width: 460px){
+	.video-play-1 {
+	    margin: 0.8rem 0.5rem 0.4rem 9rem;
+	    width: 16rem;
+	}
+} */
+	</style>
+	<script type="text/javascript" src="./js/jsencrypt.js"></script>
+	<script type="text/javascript" src="./js/islogin" id="_ssoedit"></script>
+</head>
+
+<body>
+	<div class="pc_show">
+		<div class="banner">
+			<p class="m_title">八嘎八嘎共和国国歌</p>
+		</div>
+		<div class="content">
+			<div class="con_bg">
+			</div>
+			<div class="guoqi-container clearfix">
+				<div class="fl">
+					<div class="guoqi-container-img ">
+						<a class="ggtitle"></a>
+						<a class="autor"></a>
+						<a class="xianpu"></a>
+					</div>
+					<div class="show_all"><a href="javascript:void(0);" class="btn_down"><img
+								src="./images/btn_down.png"></a></div>
+				</div>
+
+				<div class="guoqi-container-text fl">
+					<div class="guoqi-text">
+						<div style="height: 208px;">
+							<p style="margin-top: 39px;">中华人民共和国国歌是《义勇军进行曲》。</p>
+							<p>中华人民共和国国歌是中华人民共和国的象征和标志。</p>
+							<p>一切公民和组织都应当尊重国歌，维护国歌的尊严。</p>
+						</div>
+						<p class="laiyuan">——中华人民共和国国歌法</p>
+					</div>
+					<span>将鼠标移至国歌曲谱表面，查看更多信息</span>
+				</div>
+			</div>
+			<div class="onload-container clearfix">
+				<div class="onload-container-left fl">
+					<h2 class="titleh2"><img src="./images/ggxz.png">
+					</h2>
+
+					<!-- wjh 音频播放 -->
+					<div class="audio-cont">
+						<ul class="clearfix jbwxp_ul">
+							<li class="fl">
+								<span id="jianpu">简谱</span>
+								<a href="http://www.gov.cn/guoqing/2017-06/09/5200994/files/9ee999f97de54b328390260d573dd908.zip"
+									target="_blank" class="downloadBg" eltkf="" eltkstat="true"><img
+										src="./images/downloadBg.png" alt=""></a>
+							</li>
+							<li class="fr">
+								<span id="wuxianpu">五线谱</span>
+								<a href="http://www.gov.cn/guoqing/2017-06/09/5200994/files/9a0522253b864765a967bb4812fa6bce.zip"
+									target="_blank" class="downloadBg" eltkf="" eltkstat="true"><img
+										src="./images/downloadBg.png" alt=""></a>
+							</li>
+						</ul>
+						<div class="video-play">
+							<span>齐唱版</span>
+							<div class="video-play-1">
+								<div class="audiojs " classname="audiojs" id="audiojs_wrapper0"><audio preload="auto"
+										src="./music/八嘎八嘎共和国国歌.mp3"></audio>
+									<div class="play-pause">
+										<p class="play"></p>
+										<p class="pause"></p>
+										<p class="loading"></p>
+										<p class="error"></p>
+									</div>
+									<div class="scrubber">
+										<div class="progress" style="width: 0px;"></div>
+										<div class="loaded" style="width: 155px;"></div>
+									</div>
+									<div class="time"> <em class="played">00:00</em>/<strong
+											class="duration">00:49</strong> </div>
+									<div class="error-message"></div>
+								</div>
+							</div>
+							<a href="#"
+								target="_blank" class="download_btn" eltkf="" eltkstat="true"><img src="./images/downloadBg.png"></a>
+						</div>
+						<div class="video-play video-play-2">
+							<span>管乐合奏版</span>
+							<div class="video-play-1">
+								<div class="audiojs " classname="audiojs" id="audiojs_wrapper1"><audio preload="auto"
+										src="#"></audio>
+									<div class="play-pause">
+										<p class="play"></p>
+										<p class="pause"></p>
+										<p class="loading"></p>
+										<p class="error"></p>
+									</div>
+									<div class="scrubber">
+										<div class="progress" style="width: 0px;"></div>
+										<div class="loaded" style="width: 155px;"></div>
+									</div>
+									<div class="time"> <em class="played">00:00</em>/<strong
+											class="duration">00:49</strong> </div>
+									<div class="error-message"></div>
+								</div>
+							</div>
+							<a href="#"
+								target="_blank" class="download_btn" eltkf="" eltkstat="true"><img src="./images/downloadBg.png"></a>
+						</div>
+						<!-- <div class="video-play">
+							<div class="video-play-1">
+								<audio preload="auto" src="http://www.gov.cn/guoqing/guoge/hc.mp3"></audio>
+							</div>
+							<a href="http://www.gov.cn/guoqing/2017-06/09/content_5200994.htm" class="download_btn"></a>
+						</div>
+						<div class="video-play video-play-2">
+							<div class="video-play-1">
+								<audio preload="auto" src="http://www.gov.cn/guoqing/guoge/gyhz01.mp3"></audio>
+							</div>
+							<a href="http://www.gov.cn/guoqing/2017-06/09/content_5200994.htm" class="download_btn"></a>
+						</div> -->
+
+					</div>
+					<!-- wjhend -->
+				</div>
+				<div class="onload-container-right fr">
+					<a href="#" target="_blank">
+						<!--<img style="cursor: pointer;" src="./images/ggicon_2.png" alt=""> -->
+					</a>
+				</div>
+			</div>
+			<div class="sychjgf">
+				<h2 class="titleh2"><a href="#"
+						target="_blank"><img src="./images/ggfgd.png"></a>
+				</h2>
+					<div class="guide-slider" id="guideSlider">
+						<ul class="guide-list">
+							<li class="guide guideBgcolor01 on">
+								<div class="display">
+									<div class="icon icon1 animated flipInY"></div>
+									<div class="introduction">应当奏唱国歌的场合</div>
+								</div>
+								<div class="behind">
+									<div class="function-list-wrap">
+										<div class="function-list">
+											<p style="font-weight: bold;margin-bottom: 4px;">在下列场合，应当奏唱国歌：</p>
+											<p>（一）全国人民代表大会会议和地方各级人民代表大会会议的开幕、闭幕；</p>
+											<p>中国人民政治协商会议全国委员会会议和地方各级委员会会议的开幕、闭幕；</p>
+											<p>（二）各政党、各人民团体的各级代表大会等；</p>
+											<p>（三）宪法宣誓仪式；</p>
+											<p>（四）升国旗仪式；</p>
+											<p>（五）各级机关举行或者组织的重大庆典、表彰、纪念仪式等；</p>
+											<p>（六）国家公祭仪式；</p>
+											<p>（七）重大外交活动；</p>
+											<p>（八）重大体育赛事；</p>
+											<p>（九）其他应当奏唱国歌的场合。</p>
+											
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="guide guideBgcolor02">
+								<div class="display">
+									<div class="icon  icon3 animated flipInY"></div>
+									<div class="introduction">其他使用国歌的场合</div>
+								</div>
+								<div class="behind">
+									<div class="function-list-wrap">
+										<div class="function-list">
+											<p style="font-weight: bold;">其他使用国歌的场合</p>
+											<p class="line">国家倡导公民和组织在适宜的场合奏唱国歌，表达爱国情感。</p>
+											<p>外交活动中奏唱国歌的场合和礼仪，由外交部规定。</p>
+											<p>军队奏唱国歌的场合和礼仪，由中央军事委员会规定。</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="guide guideBgcolor03">
+								<div class="display">
+									<div class="icon icon2 animated flipInY"></div>
+									<div class="introduction">不得使用国歌的场合</div>
+								</div>
+								<div class="behind">
+									<div class="function-list-wrap">
+										<div class="function-list">
+											<p style="font-weight: bold;">不得使用国歌的场合</p>
+											<p>国歌不得用于或者变相用于商标、商业广告，不得在私人丧事活动等不适宜的场合使用，不得作为公共场所的背景音乐等。</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="guide guideBgcolor04">
+								<div class="display">
+									<div class="icon icon4 animated flipInY"></div>
+									<div class="introduction">国歌奏唱礼仪</div>
+								</div>
+								<div class="behind">
+									<div class="function-list-wrap">
+										<div class="function-list">
+											<p style="font-weight: bold;">国歌奏唱礼仪</p>
+											<p class="line">奏唱国歌，应当按照本法附件所载国歌的歌词和曲谱，不得采取有损国歌尊严的奏唱形式。</p>
+											<p class="line">奏唱国歌时，在场人员应当肃立，举止庄重，不得有不尊重国歌的行为。</p>
+											<p class="line">中小学应当将国歌作为爱国主义教育的重要内容，组织学生学唱国歌，教育学生了解国歌的历史和精神内涵、遵守国歌奏唱礼仪。</p>
+											<p>新闻媒体应当积极开展对国歌的宣传，普及国歌奏唱礼仪知识。</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="guide guideBgcolor05">
+								<div class="display">
+									<div class="icon icon5 animated flipInY"></div>
+									<div class="introduction">标准演奏曲谱和<br>官方录音版本</div>
+								</div>
+								<div class="behind">
+									<div class="function-list-wrap">
+										<div class="function-list">
+											<p style="font-weight: bold;">标准演奏曲谱和官方录音版本</p>
+											<p>在本法第四条规定的场合奏唱国歌，应当使用国歌标准演奏曲谱或者国歌官方录音版本。</p>
+											<p>外交部及驻外外交机构应当向有关国家外交部门和有关国际组织提供国歌标准演奏曲谱和国歌官方录音版本，供外交活动中使用。</p>
+											<p>国务院体育行政部门应当向有关国际体育组织和赛会主办方提供国歌标准演奏曲谱和国歌官方录音版本，供国际体育赛会使用。</p>
+											<p>国歌标准演奏曲谱、国歌官方录音版本由国务院确定的部门组织审定、录制，并在中国人大网和中国政府网上发布。</p>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			<div class="con_part3">
+				<h2 class="titleh2">
+					<a href="#" target="_blank">
+						<img src="./images/xggd.png" alt="">
+					</a></h2>
+				<ul>
+					<li>
+						<a href="#" target="_blank">
+							<img src="./images/gg_1.png" alt="">
+							<span>国歌法</span></a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<img src="./images/1_1.png" alt="">
+							<span>国旗法</span></a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<img src="./images/1_2.png" alt="">
+							<span>刑法修正案（十）</span></a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<img src="./images/1_4.png" alt="">
+							<span>广告法</span></a>
+					</li>
+					<li>
+						<a href="#" target="_blank">
+							<img src="./images/1_5.png" alt="">
+							<span>商标法</span></a>
+					</li>
+					<li class="noMargin">
+						<a href="#" target="_blank">
+							<img style="height: 40px;margin-bottom: 8px;" src="./images/2_1.png" alt="">
+							<span>关于实行宪法宣誓<br>制度的决定</span></a>
+					</li>
+				</ul>
+			</div>
+			<div class="part-xgsp">
+				<h2 class="titleh2">
+					<a href="javascript:void(0);" style="cursor:default;">
+						<img src="./images/xxsp.png" alt="">
+					</a>
+				</h2>
+				<div class="sp-cont">
+					<div class="gsf_mdgwy_video">
+						<span class="dys_close"></span>
+
+						<a href="javascript:;">
+							<img src="./images/1.png" width="596" height="384" style="display: inline;">
+						</a>
+						<div class="gsf_anniu" style="display: none;"><a href="javascript:;"></a></div>
+
+						<span
+							class="gsf_src">https://player.v.news.cn/api/v1/getPlayPage?uuid=1_2bc71bd967c24646b05c3b608b6a3a6f&amp;vid=dabacdc77452ba8a3f7f6e673a93af98&amp;playType=0</span>
+						<div class="spPlay"><iframe width="596" height="384" frameborder="0" scrolling="no"
+								marginheight="0" marginwidth="0" allowscriptaccess="always" allowfullscreen="true"
+								src="./中华人民共和国国歌_中国政府网_files/getPlayPage.html"></iframe></div>
+					</div>
+					<div class="video-desc">
+						<p class="text">来源：</p>
+						<ul class="clearfix">
+							<li class="fl"><a href="#"
+									target="_blank"><span>视频下载：MP4格式</span><i class="loadicon"></i></a></li>
+							<li class="fr"><a href="#"
+									target="_blank"><span>MOV格式</span><i class="loadicon"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="con_part4">
+				<h2 class="titleh2"><a href="#" target="_blank">
+						<img src="./images/xgzl.png">
+					</a></h2>
+				<div class="picScroll-left">
+					<div class="hd">
+						<!--	<a class="prev" href="javascript:void(0)"></a>
+						<a class="next" href="javascript:void(0)"></a>-->
+					</div>
+					<div class="bd">
+						<ul class="picList">
+
+							<li>
+								<div class="pic">
+									<a href="#" target="_blank">
+										<img src="./中华人民共和国国歌_中国政府网_files/739355091f364c9c867af693efd07750.jpg"> </a>
+								</div>
+								<div class="title"><a href="#"
+										target="_blank">XX：唱起这首歌，就会像个战士一样</a></div>
+							</li>
+							<li>
+								<div class="pic">
+									<a href="#" target="_blank">
+										<img src="./中华人民共和国国歌_中国政府网_files/e640f63688124c7db20cc544c95bbff2.jpg"> </a>
+								</div>
+								<div class="title"><a href="#"
+										target="_blank">这些国歌奏唱礼仪你必须牢记</a></div>
+							</li>
+							<li>
+								<div class="pic">
+									<a href="#" target="_blank">
+										<img src="./images/guoqi.jpg"> </a>
+								</div>
+								<div class="title"><a href="../guoqi/index.html"
+										target="rightArea">网络使用的国旗图案标准版本下载</a></div>
+							</li>
+							<li>
+								<div class="pic">
+									<a href="#" target="_blank">
+										<img src="./中华人民共和国国歌_中国政府网_files/11a947544454479481e9d20903ae2c50.jpg"> </a>
+								</div>
+								<div class="title"><a href="#"
+										target="_blank">网站使用的国徽图案标准版本下载</a></div>
+							</li>
+							<li>
+								<div class="pic">
+									<a href="#" target="_blank">
+										<img src="./中华人民共和国国歌_中国政府网_files/70319d4c9b0c4b14a42cdd4bd177a27b.jpg"> </a>
+								</div>
+								<div class="title"><a href="#"
+										target="_blank">中国政府网邀请你同唱这首歌</a></div>
+							</li>
+							<li>
+								<div class="pic">
+									<a href="#" target="_blank">
+										<img src="./中华人民共和国国歌_中国政府网_files/66782c151a014cda8c46dd80338db051.jpg"> </a>
+								</div>
+								<div class="title"><a href="http://www.gov.cn/xinwen/2017-09/28/content_5228037.htm"
+										target="_blank">撤侨亲历者：没护照，唱国歌就放行</a></div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="wxp_wzimg" style="display: none;">
+				<img src="./中华人民共和国国歌_中国政府网_files/guoge_wz2.jpg">
+				<a href="javascript:void(0);" class="btn_up" title="点击可收起"></a>
+			</div>
+		</div>
+	</div>
+
+	<!--点击底部电脑版用的-->
+	<div class="am-mobilize-btn" id="am-mobilize-btn" onclick="towap()"
+		style="display: none;position: fixed;border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: rgb(239, 239, 239); z-index: 1000000000;  width: 86px; height: 86px; right: 0px; bottom: 20px;">
+		<div id="am-btn-icon-return"
+			style="position: absolute; text-align: center; left: 0px; bottom: -6px; background-color: rgb(239, 239, 239); border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; width: 86px; font-size: 12px;">
+			返回手机版</div>
+		<div class="am-mobilize-btn-inner" id="am-mobile-btn-inner"
+			style="position: absolute; width: 69%; height: 69%; left: 50%; top: 50%; margin-top: -40%; margin-left: -34.5%;">
+			<div id="am-btn-icon-red"
+				style="position: absolute; transition-property: all; transition-timing-function: linear; transition-duration: 0.5s; background-color: rgb(254, 135, 94); width: 66%; left: 17%; height: 110%; top: -5%; border-radius: 5px;">
+			</div>
+			<div id="am-btn-icon-blue"
+				style="position: absolute; transition-property: all; transition-timing-function: linear; transition-duration: 0.5s; background-color: rgb(84, 193, 220); width: 8%; right: 46%; height: 8%; bottom: 0px; border-radius: 100%;">
+			</div>
+			<div id="am-btn-icon-green"
+				style="position: absolute; transition-property: all; transition-timing-function: linear; transition-duration: 0.5s; background-color: rgb(169, 218, 91); border-radius: 0px; width: 54%; right: 23%; height: 85%; top: 0px;">
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- pc弹框 -->
+	<!-- 简谱 -->
+	<div id="myModa01" class="reveal-modal">
+		<img src="./images/ggjp03.jpg" alt="线谱图" width="1000" height="1500">
+		<a class="close-reveal-modal">×</a>
+	</div>
+	<!-- 五线谱 -->
+	<div id="myModal02" class="reveal-modal">
+		<img src="./中华人民共和国国歌_中国政府网_files/ggxp03(1).jpg" alt="线谱图" width="1000" height="1500">
+		<a class="close-reveal-modal">×</a>
+	</div>
+	<!-- 移动弹框 -->
+	<!-- 简谱 -->
+	<div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		aria-hidden="false">
+		<div class="modal-backdrop fade in"></div>
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							aria-hidden="true">×</span></button>
+
+				</div>
+				<div class="modal-body">
+					<img src="./images/ggjp03.jpg" class="img-responsive" width="100%">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary">保存</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 五线谱 -->
+	<div class="modal fade in" id="myModa2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		aria-hidden="false">
+		<div class="modal-backdrop fade in" style="height: 667px;"></div>
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							aria-hidden="true">x</span></button>
+
+				</div>
+				<div class="modal-body">
+					<img src="./中华人民共和国国歌_中国政府网_files/ggxp03(1).jpg" class="img-responsive" width="100%">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary">保存</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./js/jquery1.12.4.min.js"></script>
+
+
+	<!--点击底部电脑版用的-->
+	<script type="text/javascript" src="./js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="./js/20190730servicePoliceCommon.js">
+	</script>
+
+
+
+
+	<script src="./js/jquery.SuperSlide.2.1.js" type="text/javascript"></script>
+
+	<!--[if lte IE 6]> 
+  <script type="text/javascript" src="/govweb/xhtml/2016gov/js/ie6PNG.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('.titleh2 img,.onload-btn img,.onload-container-right img,.guide-slider .guide .display .icon,con_part3 li a img');
+</script>
+<![endif]-->
+	<script type="text/javascript">
+		// 相关资料轮播效果 手机
+		jQuery(".m_content .picScroll-left").slide({
+			titCell: ".hd ul",
+			mainCell: ".bd ul",
+			autoPage: true,
+			effect: "leftLoop",
+			autoPlay: false,
+			vis: 1
+		});
+		//相关资料轮播效果  pc
+		/*jQuery(" .pc_show .picScroll-left").slide({
+			titCell: ".hd ul",
+			mainCell: ".bd ul",
+			autoPage: true,
+			effect: "leftLoop",
+			autoPlay: true,
+			vis: 4
+		});*/
+	</script>
+	<script>
+		/*点击视频播放效果*/ ;
+		(function ($) {
+			var isMobile = (/iPad|iPhone|Android|Windows Phone|Nokia/).test(navigator.userAgent);
+
+			var $dys_anniu = $('.dys_anniu');
+
+			var $dys_src = $('.dys_src');
+
+			var $videoPlay = $('.videoPlay');
+
+			var $img = $('.dys_mdgwy_video img');
+
+			var $iframe;
+			var _src = $dys_src.html();
+
+			$iframe =
+				'<iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowscriptaccess="always" allowfullscreen="true"  src="' +
+				_src + '"></iframe>';
+
+			$dys_anniu.on('click', function () {
+
+				var $this = $(this);
+
+				$this.hide();
+
+				$videoPlay.append($iframe);
+
+			});
+
+			$img.hide();
+
+			$img.eq(0).show();
+		})(jQuery);
+	</script>
+
+	<script>
+		/*点击视频播放效果*/ ;
+		(function ($) {
+			var $dys_anniu = $('.gsf_anniu');
+
+			var $dys_src = $('.gsf_src');
+
+			var $videoPlay = $('.spPlay');
+
+			var $img = $('.gsf_mdgwy_video img');
+
+			var $iframe;
+			var _src = $dys_src.html();
+
+			$iframe =
+				'<iframe width="596" height="384" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowscriptaccess="always" allowfullscreen="true"  src="' +
+				_src + '"></iframe>';
+
+			$dys_anniu.on('click', function () {
+
+				var $this = $(this);
+
+				$this.hide();
+
+				$videoPlay.append($iframe);
+
+			});
+
+			$img.hide();
+
+			$img.eq(0).show();
+		})(jQuery);
+	</script>
+	<script type="text/javascript">
+		var $guideSlider = $("#guideSlider").eq(0);
+		$guideSlider.find(".guide-list .guide").on('click', function () {
+			$(this).addClass("on").siblings().removeClass("on");
+		});
+		$(function () {
+			// $('.guoqi-container-img').bind('contextmenu', function () {
+			// 	return false;
+			// });
+
+			var textdesc = '<div style="height: 208px;">' +
+				'<p style="margin-top: 39px;">八嘎八嘎共和国国歌是《》。</p>' +
+				'<p>八嘎八嘎共和国国歌是八嘎八嘎共和国的象征和标志。</p>' +
+				'<p>一切公民和组织都应当尊重国歌，维护国歌的尊严。</p>' +
+				'</div><p class="laiyuan">——八嘎八嘎共和国国歌法</p>';
+			var ggtitledesc = '<div style="height: 201px;">' +
+				'<p style="margin-top: 39px;">八嘎八嘎共和国国歌是《》。</p>' +
+				'<p>八嘎八嘎共和国国歌是中华人民共和国的象征和标志。</p>' +
+				'<p>一切公民和组织都应当尊重国歌，维护国歌的尊严。</p>' +
+				'</div><p class="laiyuan">——八嘎八嘎共和国国歌法</p>';
+			var autordesc = '<div style="height: 201px;">' +
+				'<p style="margin-top: 39px;"><b style="font-weight:bold;">作词</b>&nbsp;&nbsp;&nbsp;&nbsp;田汉（1898年－1968年）</p>' +
+				'<p><b style="font-weight:bold;">作曲</b>&nbsp;&nbsp;&nbsp;&nbsp;聂耳（1912年－1935年）</p>' +
+				'</div>';
+			var gggecidesc =
+				'<div id="parent" style="height: 255px;margin-top:20px;overflow: hidden;position:relative;">' +
+				'<div id="child1" style="position:absolute;left:0;"><p><strong>歌词</strong></p>' +
+				/*'<p>起来！</p>' +
+				'<p>不愿做奴隶的人们！</p>' +
+				'<p>把我们的血肉，筑成我们新的长城！</p>' +
+				'<p>中华民族到了最危险的时候，</p>' +
+				'<p>每个人被迫着发出最后的吼声。</p>' +
+				'<p>起来！</p>' +
+				'<p>起来！</p>' +
+				'<p>起来！</p>' +
+				'<p>我们万众一心，</p>' +
+				'<p>冒着敌人的炮火前进！</p>' +
+				'<p>冒着敌人的炮火前进！</p>' +
+				'<p>前进！</p>' +
+				'<p>前进！进！</p></div>' + */
+				'</div>';
+			/* var gggecidesc = '<div style="height: 201px;margin-top:20px;">' +
+				'<p style="text-align:center;font-weight:bold;margin-top:0;text-indent:0;">歌词</p>'+
+				'<p style="line-height:40px;margin-top:10px;">起来！不愿做奴隶的人们！把我们的血肉，筑成我们新的长城！中华民族到了最危险的时候，每个人被迫着发出最后的吼声。起来！起来！起来！我们万众一心，冒着敌人的炮火前进！冒着敌人的炮火前进！前进！前进！进！</p>' +
+				'</div>'; */
+			$(".guoqi-text").empty().html(textdesc);
+
+			$(".guoqi-container-img .xianpu").hover(function (e) {
+				$(".guoqi-text").empty().html(gggecidesc);
+				scrollFUn();
+				e.stopPropagation();
+			}, function (e) {
+				$(".guoqi-text").empty().html(textdesc);
+				e.stopPropagation();
+			});
+			$(".guoqi-container-img .ggtitle").hover(function (e) {
+				$(".guoqi-text").empty().html(ggtitledesc);
+				e.stopPropagation();
+			}, function (e) {
+				$(".guoqi-text").empty().html(textdesc);
+				e.stopPropagation();
+			});
+			$(".guoqi-container-img .autor").hover(function (e) {
+				$(".guoqi-text").empty().html(autordesc);
+				e.stopPropagation();
+			}, function (e) {
+				$(".guoqi-text").empty().html(textdesc);
+				e.stopPropagation();
+			});
+
+			function scrollFUn() {
+				$('#child1').animate({
+					top: '-422px'
+				}, 12000, 'linear');
+			}
+			//链接
+			urlFun();
+
+			function urlFun() {
+				$(".mobile_show .con_part3 li").each(function () {
+					var urlText = $(this).children('a').attr('href');
+					if (typeof (urlText) != 'undefined' && urlText.length > 1) {
+						$(this).on('click', function () {
+							window.open(urlText);
+						});
+					}
+				});
+			}
+
+
+
+
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			var isMobile = (/iPad|iPhone|Android|Windows Phone|Nokia/).test(navigator.userAgent);
+			if (!isMobile) {
+				// 国歌五线谱完整展示效果
+				$('.btn_down').on('click', function (event) {
+					event.stopPropagation();
+					$('.pc_show .wxp_wzimg').show();
+				});
+
+				$(document).on('click', function () {
+					$('.pc_show .wxp_wzimg').hide();
+				});
+
+
+				var x = 10;
+				var y = 20;
+				var newtitle = '';
+				$('a.wxptitle').mouseover(function (e) {
+					newtitle = this.title;
+					this.title = '';
+					$('body').append('<div id="mytitle" >' + newtitle + '</div>');
+					$('#mytitle').css({
+						'left': (e.pageX + x + 'px'),
+						'top': (e.pageY + y - 0 + 'px')
+					}).show();
+				}).mouseout(function () {
+					this.title = newtitle;
+					$('#mytitle').remove();
+				}).mousemove(function (e) {
+					$('#mytitle').css({
+						'left': (e.pageX + x + 10 + 'px'),
+						'top': (e.pageY + y - 0 + 'px')
+					}).show();
+				});
+				//旗面
+				$('.guoqi-container-img').mouseover(function (e) {
+					newtitle = this.title;
+					this.title = '';
+					$('body').append('<div id="mytitle-qm" >' + newtitle + '</div>');
+					$('#mytitle-qm').css({
+						'left': (e.pageX + x + 'px'),
+						'top': (e.pageY + y - 0 + 'px')
+					}).show();
+				}).mouseout(function () {
+					this.title = newtitle;
+					$('#mytitle-qm').remove();
+				}).mousemove(function (e) {
+					$('#mytitle-qm').css({
+						'left': (e.pageX + x + 10 + 'px'),
+						'top': (e.pageY + y - 0 + 'px')
+					}).show();
+				});
+			}
+
+			if (isMobile) {
+				// 手机展示完整效果
+				$('.add_wz_img').on('click', function (event) {
+					event.stopPropagation();
+					$('.m_content .wxp_wzimg').show();
+				});
+				$(document).on('click', function () {
+					$('.m_content .wxp_wzimg').hide();
+				});
+			}
+		});
+	</script>
+
+	<script type="text/javascript">
+		//视频点击播放
+		// $(".video_con .videoBox .play").on('click',function () {
+		// 	$(this).parent().parent().find(".close").show();
+		// 	var _src = $(this).next().html();
+		// 	var ifrStr = '<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="' + _src + '"></iframe>';
+		// 	$(this).parent().parent().find(".videoPlay").append(ifrStr);
+		// 	$(this).parents("li").siblings().find(".close").click().hide();
+		// 	$(this).parent().parent().find(".videoPlay").css({
+		// 		"z-index": "12"
+		// 	});
+		// });
+	</script>
+	<script type="text/javascript">
+		var isMobile = (/iPad|iPhone|Android|Windows Phone|Nokia/).test(navigator.userAgent);
+		if (!isMobile) {
+			$('.back-box').hide();
+		}
+	</script>
+
+	<script src="./js/bootstrap20180509.js"></script>
+
+	<script type="text/javascript">
+		/*修正简谱预览和五线谱预览*/
+		var pageWidth = $(window).width();
+
+		var pageHeight = $(window).height();
+
+		/* $('#jianpu').on('click', function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			$('#myModa01').show();
+		});
+		$(document).click(function () {
+			$('#myModa01').hide();
+		});
+		
+		$('#wuxianpu').on('click', function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+			$('#myModal02').show();
+		});
+		$(document).click(function () {
+			$('#myModal02').hide();
+		});
+		
+		//移动弹出框
+		$('#myModal').click(function () {
+			$(this).hide();
+		});
+		$('#myModa2').click(function () {
+			$(this).hide();
+		}); */
+
+
+		//wjh 音频播放调用
+
+		audiojs.events.ready(function () {
+			var as = audiojs.createAll();
+		});
+
+		document.addEventListener('touchstart', function () {
+			$('.mobileAudio audio')[0].play();
+			$('.mobileAudio audio')[0].pause();
+			$('.mobileAudio audio')[1].play();
+			$('.mobileAudio audio')[1].pause();
+		}, false);
+
+		var playtimecount = 0;
+		playtimecount++;
+		if (playtimecount == 1) {
+			document.removeEventListener('touchstart', playonetime, false);
+		}
+	</script>
+
+	<div style="display:none">
+		<script type="text/javascript">
+			document.write(unescape("%3Cscript src='//stat.www.gov.cn/webdig.js?z=1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script src="./js/webdig.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			wd_paramtracker("_wdxid=000000000000000000000000000000000000000000")
+		</script>
+	</div>
+	<script type="text/javascript">
+		(function () {
+			var N = 100;
+			var P = 0.9;
+			var R = N * P;
+			var X = Math.floor(Math.random() * N);
+			if (R >= X) {
+				_atrk_opts = {
+					atrk_acct: "noGfn1aMp4107i",
+					domain: "www.gov.cn",
+					dynamic: true
+				};
+				(function () {
+					var as = document.createElement("script");
+					as.type = "text/javascript";
+					as.async = true;
+					as.src = "https://www.gov.cn/alexametrics/atrk.js";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(as, s)
+				})()
+			}
+		})();
+	</script>
+	<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=noGfn1aMp4107i" style="display:none"
+			height="1" width="1" alt="" /></noscript>
+
+	<div style="display:none">
+		<script type="text/javascript">
+			document.write(unescape("%3Cscript src='//stat.www.gov.cn/webdig.js?z=1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script src="./js/webdig.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			wd_paramtracker("_wdxid=000000000000000000000000000000000000000000")
+		</script>
+	</div>
+	<script type="text/javascript">
+		(function () {
+			var N = 100;
+			var P = 0.9;
+			var R = N * P;
+			var X = Math.floor(Math.random() * N);
+			if (R >= X) {
+				_atrk_opts = {
+					atrk_acct: "noGfn1aMp4107i",
+					domain: "www.gov.cn",
+					dynamic: true
+				};
+				(function () {
+					var as = document.createElement("script");
+					as.type = "text/javascript";
+					as.async = true;
+					as.src = "https://www.gov.cn/alexametrics/atrk.js";
+					var s = document.getElementsByTagName("script")[0];
+					s.parentNode.insertBefore(as, s)
+				})()
+			}
+		})();
+	</script>
+	<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=noGfn1aMp4107i" style="display:none"
+			height="1" width="1" alt="" /></noscript>
+
+
+</body>
+
+</html>
