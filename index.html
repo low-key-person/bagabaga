@@ -7,8 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="./Home/icon/S myicon.ico"><!-- 标题图标-->
     <title>登录</title>
-    <link rel="stylesheet" href="./styles/login.css">
+
+    <!-- 登陆样式 -->
+    <link rel="stylesheet" href="./styles/login/login.css">
+
+    <!-- 登陆js -->
     <script src="./login.js"></script>
+
 </head>
 
 <body>
@@ -31,9 +36,9 @@
                             pass.check = true;
                         }
                         if (localStorage.getItem('pass')) {
-                           pass.check = true;
-                           username.value = localStorage.getItem('username');
-                           //pass.value = localStorage.getItem('pass');
+                            pass.check = true;
+                            username.value = localStorage.getItem('username');
+                            //pass.value = localStorage.getItem('pass');
                         }
                         remember.addEventListener('change', function () {
                             if (this.checked) {
@@ -51,6 +56,33 @@
                 </div>
             </div>
         </div>
+        <div class="lan">
+            <h3 class="h3-1">注意</h3>
+            <p>我们的网站主页已经更新，是否体验最新版</p>
+            <a href="./index(new).html" class="a-1">是</a>
+        </div>
+        <style>
+            .a-1{
+                color: blue;
+                width: 20px;
+                height: 20px;
+                background-color: blanchedalmond;
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+            .h3-1{
+                color: aquamarine;
+                margin-left: 75px;
+            }
+            .lan{
+                background-color: brown;
+                width: 200px;
+                height: 120px;
+                margin-top: -300px;
+                margin-left: 1200px;
+                border-radius: 10px;
+            }
+        </style>
     </form>
 </body>
 

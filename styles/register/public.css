@@ -67,16 +67,6 @@ i {
     color: #333
 }
 
-.zto_alert .zto_alert_close {
-    display: block;
-    width: 23px;
-    height: 25px;
-    position: absolute;
-    right: 20px;
-    top: 0;
-    cursor: pointer;
-    background: url(/pc/img/pub/pclose.png) no-repeat
-}
 
 .zto_alert h2 {
     font-size: 22px;
