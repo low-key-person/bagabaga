@@ -114,7 +114,7 @@ body{
 }
 .guoqi-container-text span{
     color: #a92526;
-    background: url(http://www.gov.cn/govweb/xhtml/2019zhuanti/guoqiguohui20201217V1/images/tip.png) no-repeat 40px center;
+    background: url(../images/tip.png) no-repeat 40px center;
     width: 90%;
     margin: 0 auto;
     display: block;
@@ -357,7 +357,7 @@ body{
 .picScroll-left .hd .prev,
 .picScroll-left .hd .next{ 
     display:block;  width:30px; height:30px; float: right;; cursor:pointer; 
-    background: url('http://www.gov.cn/govweb/xhtml/2019zhuanti/guoqiguohui20201217V1/images/icon1.png') -211px -10px;
+    background: url('../images/icon1.png') -211px -10px;
 } 
 .picScroll-left .hd .prev{ background-position:-211px -60px;float: left;  }
 .picScroll-left .hd .prevStop{ background-position:-60px 0; }
@@ -411,7 +411,7 @@ body{
 .con_part3 li {
     width: 168px;
     height: 133px;
-    background: url(http://www.gov.cn/govweb/xhtml/2019zhuanti/guoqiguohui20201217V1/images/part3_li_bg02.jpg) top center no-repeat;
+    background: url(../images/part3_li_bg02.jpg) top center no-repeat;
     margin-right: 6px;
 }
 .con_part3 li img {
@@ -432,7 +432,7 @@ body{
     display: block;
     height: 50px;
     padding-right: 14px;
-    background: url(/govweb/xhtml/2019zhuanti/20210205guoge/images/dld_jp1.png);
+    background: url(../images/dld_jp1.png);
     text-align: center;
     color: #fff;
     line-height: 50px;
@@ -441,7 +441,7 @@ body{
     position: relative;
     width: 412px;
     height: 50px;
-    background: url(/govweb/xhtml/2019zhuanti/20210205guoge/images/dld_audio_bg.png) no-repeat center;
+    background: url(../images/dld_audio_bg.png) no-repeat center;
     margin-top: 12px;
     line-height: 50px;
 }
@@ -521,10 +521,10 @@ margin-right: 2px;
               .audiojs .time strong { padding: 0px 0px 0px 2px; font-weight: normal; color: #1a61b9;}         
               .audiojs .error-message { float: left; display: none; margin: 0px 10px; height: 30px; width: 400px; overflow: hidden; line-height: 30px; white-space: nowrap; color: #fff;           text-overflow: ellipsis; -o-text-overflow: ellipsis; -icab-text-overflow: ellipsis; -khtml-text-overflow: ellipsis; -moz-text-overflow: ellipsis; -webkit-text-overflow: ellipsis; }         
               .audiojs .error-message a { color: #eee; text-decoration: none; padding-bottom: 1px; border-bottom: 1px solid #999; white-space: wrap; }                 
-              .audiojs .play { background: url(http://www.gov.cn/govweb/xhtml/zhuanti/2017guoge/images/yl.png) 0 -2px no-repeat; margin-top:0px; }
-              .audiojs .pause { background: url(http://www.gov.cn/govweb/xhtml/zhuanti/2017guoge/images/yl.png) -1px -31px no-repeat; }                 
-              .audiojs .loading { background: url(http://www.gov.cn/govweb/xhtml/zhuanti/2017guoge/images/yl.png) -2px -98px no-repeat; }         
-              .audiojs .error { background: url(http://www.gov.cn/govweb/xhtml/zhuanti/2017guoge/images/yl.png) -2px -132px no-repeat; }         
+              .audiojs .play { background: url(../images/yl.png) 0 -2px no-repeat; margin-top:0px; }
+              .audiojs .pause { background: url(../images/yl.png) -1px -31px no-repeat; }                 
+              .audiojs .loading { background: url(../images/yl.png) -2px -98px no-repeat; }         
+              .audiojs .error { background: url(../images/yl.png) -2px -132px no-repeat; }         
               /*.audiojs .error { background: url(/govweb/xhtml/"http://www.gov.cn/govweb/xhtml/js/player-graphics.gif") -2px -61px no-repeat; }         */
               .playing .play, .playing .loading, .playing .error { display: none; }         
               .playing .pause { display: block; margin-top:0px; }                 
@@ -558,7 +558,7 @@ margin-right: 2px;
                 display: block;
                 width:40px;
                 height: 40px;
-                background: url(http://www.gov.cn/govweb/xhtml/zhuanti/2017guoge/images/icon_video.png) -50px 0 no-repeat
+                background: url(../images/icon_video.png) -50px 0 no-repeat
             }
             #iframe1{
                 position: absolute;
@@ -569,9 +569,9 @@ margin-right: 2px;
         .ado a:hover{color:#fff;}
         .con{margin:0px;}
         .video_con .videoBox { width: 742px; height: 480px; position: relative; }
-        .video_con .videoBox .close { background: url(http://www.news.cn/2015/img2015/icon_video.png) no-repeat scroll 0 -80px; cursor: pointer; display: none; height: 17px; left: 356px; position: absolute; top: 0; width: 17px; z-index: 11; }
+        .video_con .videoBox .close { background: url(../images/icon_video.png) no-repeat scroll 0 -80px; cursor: pointer; display: none; height: 17px; left: 356px; position: absolute; top: 0; width: 17px; z-index: 11; }
         .video_con .videoBox .con img { height: 480px; width: 100%; }
-        .video_con .videoBox .con .play { background: url(http://www.news.cn/2015/img2015/icon_video.png) no-repeat scroll -50px 0; cursor: pointer; height: 40px; left: 50%; position: absolute; top: 50%; width: 40px; z-index: 10; margin-left: -20px; margin-top: -20px; }
+        .video_con .videoBox .con .play { background: url(../images/icon_video.png) no-repeat scroll -50px 0; cursor: pointer; height: 40px; left: 50%; position: absolute; top: 50%; width: 40px; z-index: 10; margin-left: -20px; margin-top: -20px; }
         .video_con .videoBox .con .play:hover { background-position: -110px 0; }
         .video_con .videoBox .con .play img { border: medium none; height: 40px; width: 40px; }
         .video_con .videoBox iframe { height: 480px; left: 0px; position: absolute; top: 0px; width:754px; z-index: 11; }
@@ -597,7 +597,7 @@ margin-right: 2px;
     display: none;
 }
 .part-xgsp{
-    background: url(/govweb/xhtml/2019zhuanti/20210205guoge/images/xgspBg.png) no-repeat 0 bottom;
+    background: url(../images/xgspBg.png) no-repeat 0 bottom;
     padding-bottom: 120px;
 }
 .video-cont{
@@ -631,7 +631,7 @@ margin-right: 2px;
     width: 38px;
     height: 38px;
     cursor: pointer;
-    background: url(/govweb/xhtml/2019zhuanti/20210205guoge/images/videoicon.png) 0 0 no-repeat;
+    background: url(../images/videoicon.png) 0 0 no-repeat;
 }
 .video-desc .text{
     font-size: 14px;
@@ -656,7 +656,7 @@ margin-right: 2px;
     display: inline-block;
     width: 30px;
     height: 25px;
-    background: url(/govweb/xhtml/2019zhuanti/20210205guoge/images/onload.png) no-repeat center;
+    background: url(../images/onload.png) no-repeat center;
     vertical-align: middle;
 }
 /* wjhend */
