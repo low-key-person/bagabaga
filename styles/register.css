@@ -52,7 +52,7 @@
     text-indent: 33px;
     color: #fff;
     letter-spacing: 1px;
-    background: url(/images/go-login.png) center center no-repeat
+    background: url(../images/go-login.png) center center no-repeat /* 去登录界面 */
 }
 
 .find_back_pwd .register_box .password_form {
