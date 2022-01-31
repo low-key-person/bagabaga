@@ -1,0 +1,24 @@
+/* 轮播界面 */
+.Rotation {
+    width: 75%;
+    height: 400px;
+    margin-left: 180px;
+}
+/* 标题 */
+.tetle{
+    text-align: center;
+    width: 75%;
+    height: 80px;
+    border:2px solid;
+	padding:10px 40px; 
+	resize:both;
+}
+.title-h1{
+    color: red;
+    text-align: center;
+}
+.title-p{
+    color: red;
+    text-align: center;
+
+}
