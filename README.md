@@ -72,7 +72,7 @@
 ## 2022/1/31 ##
 
 1.制作了轮播界面
-![image](https://github.com/low-key-person/bagabaga/video/nrfqv-nby4w.gif)  
+![image](https://github.com/low-key-person/bagabaga/blob/main/video/nrfqv-ndy4w.gif)  
 2.将轮播界面添加到新的界面里  
 3.对新的界面添加了标题  
 4.使用了新的框架bootstrap  
