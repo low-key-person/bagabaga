@@ -2,8 +2,6 @@
 
  这是一个国家的网站
 
-# 功能 #
-
 # 更新 #
 
 ## 2022/1/1 ##
@@ -72,7 +70,7 @@
 ## 2022/1/31 ##
 
 1.制作了轮播界面
-![image](https://github.com/low-key-person/bagabaga/blob/main/video/nrfqv-ndy4w.gif)  
+![image](https://github.com/low-key-person/bagabaga/blob/main/video/Rotation.mp4)  
 2.将轮播界面添加到新的界面里  
 3.对新的界面添加了标题  
 4.使用了新的框架bootstrap  
@@ -91,7 +89,12 @@
 1.删除了老的主界面，现在用新的界面替代  
 2.新的界面添加了顶部的一些图标和跳转等  
 3.新的界面的主界面进行了一些调整  
-4.暂时把bottom（公共底部）给删除  
+4.暂时把bottom（公共底部）给删除
+
+### 2022/3/5 ###
+
+1.对主界面轮播效果进行了更新  
+2.主界面进行了更新  
 
 ## 已完成的更新 ##
 

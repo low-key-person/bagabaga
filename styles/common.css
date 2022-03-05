@@ -81,8 +81,8 @@ body{background:#f2f2f2;}
 
 .fzgn .mf0{ padding-right:0}
 .search{ width:225px; height:22px; position:relative;}
-.search_mi{ border:none; width:188px; height:22px; line-height:22px; position:absolute; left:0; background:url(../images/public/search_bg.jpg) no-repeat 0 0; padding-left:14px; padding-right:23px;}
-.search_fr{ border:none; width:20px; height:20px; position: absolute;right: 2px;top: 1px; background:url(../images/public/search_button.png) no-repeat 0 0; cursor:pointer;}
+.search_mi{ border:none; width:188px; height:22px; line-height:22px; position:absolute; left:0; background:url(../images/index/sousuok.png) no-repeat 0 0; padding-left:14px; padding-right:23px;}
+.search_fr{ border:none; width:20px; height:20px; position: absolute;right: 2px;top: 1px; background:url(../images/index/search_button.png) no-repeat 0 0; cursor:pointer;}
 
 /*导航*/
 .nav{ background:url(../images/index/nav_bg.jpg) repeat-x 0 0; height:37px; width:100%;}

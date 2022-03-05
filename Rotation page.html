@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>轮播</title>
+  <title>轮播界面</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- 样式 -->
-  <!--<link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">-->
-  <link href="./styles/Rotation page/bootstrap.min.css" rel="stylesheet">
+  <link href="./styles/Rotation page/bootstrap.min.css" rel="stylesheet"> <!-- 主要样式 -->
+  <link href="./styles/icon/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet"> <!-- font-awesome样式 -->
 
   <!-- JS -->
-  <!--<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>-->
   <script src="./js/Rotation page/bootstrap.bundle.js"></script>
+
 </head>
+
 <body>
 
-<!-- 旋转 -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
+  <!-- 旋转 -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-  <!-- 旋转幻灯片 -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
-  </div>
-  
-  <!-- 旋转图片和图片的描述 -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="./images/Rotation page/bird-s-eyes.jpg" class="d-block" style="width:100%; height: 400px;">
-      <div class="carousel-caption">
-        <h3>第一张图片描述标题</h3>
-        <p>第一张图片描述内容显示在这里!!!</p>
+    <!-- 旋转幻灯片 -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+    </div>
+
+    <!-- 旋转图片和图片的描述 -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/Rotation page/bird-s-eyes.jpg" class="d-block" style="width:100%; height: 400px;">
+        <div class="carousel-caption">
+          <h3>第一张图片描述标题</h3>
+          <p>第一张图片描述内容显示在这里!!!</p>
+        </div>
       </div>
-    </div>
-    <div class="carousel-item">
-      <img src="./images/Rotation page/golden.jpg" class="d-block" style="width:100%; height: 400px;">
-      <div class="carousel-caption">
-        <h3>金门大桥</h3>
-        <p>金门大桥（Golden Gate Bridge），又称“金门海峡大桥”，是美国境内连接旧金山市区和北部的马林郡的跨海通道，位于金门海峡之上，是美国旧金山市的主要象征。</p>
-      </div> 
-    </div>
-    <div class="carousel-item">
-      <img src="./images/Rotation page/journey.jpg" class="d-block" style="width:100%; height: 400px;">
-      <div class="carousel-caption">
-        <h3>第三张图片描述标题</h3>
-        <p>第三张图片描述内容显示在这里!!!</p>
-      </div>  
-    </div>
-    <div class="carousel-item">
+      <div class="carousel-item">
+        <img src="./images/Rotation page/golden.jpg" class="d-block" style="width:100%; height: 400px;">
+        <div class="carousel-caption">
+          <h3>金门大桥</h3>
+          <p>金门大桥（Golden Gate Bridge），又称“金门海峡大桥”，是美国境内连接旧金山市区和北部的马林郡的跨海通道，位于金门海峡之上，是美国旧金山市的主要象征。</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/Rotation page/journey.jpg" class="d-block" style="width:100%; height: 400px;">
+        <div class="carousel-caption">
+          <h3>第三张图片描述标题</h3>
+          <p>第三张图片描述内容显示在这里!!!</p>
+        </div>
+      </div>
+      <div class="carousel-item">
         <img src="./images/Rotation page/kawaguchigo-station.jpg" class="d-block" style="width:100%; height: 400px;">
         <div class="carousel-caption">
           <h3>富士山</h3>
           <p>富士山（日语：ふじさん；英语：Mount Fuji），位于本州岛中南部，东距东京约80千米</p>
-        </div> 
-    </div>
-    <div class="carousel-item">
+        </div>
+      </div>
+      <div class="carousel-item">
         <img src="./images/Rotation page/seashore.jpg" class="d-block" style="width:100%; height: 400px;">
         <div class="carousel-caption">
           <h3>第五张图片描述标题</h3>
           <p>第五张图片描述内容显示在这里!!!</p>
-        </div> 
+        </div>
+      </div>
     </div>
+
+    <!-- 左右控制 图标 -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <i class="fa fa-angle-double-left" style="font-size:48px;color:red"></i>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <i class="fa fa-angle-double-right" style="font-size:48px;color:red"></i>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <i class="fa fa-angle-double-right" style="font-size:48px;color:red"></i>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <i class="fa fa-angle-double-right" style="font-size:48px;color:red"></i>
+    </button>
   </div>
-  
-  <!-- 左右控制 图标 -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
 
 </body>
+
 </html>
