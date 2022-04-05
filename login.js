@@ -4,7 +4,7 @@ function check() {
   if (name == "admin" && pass == "2007221") //超级管理员 用户名:admin 密码:2007221
   {
     alert("登入成功");
-    window.document.f.action = "./Home/user/index.html";
+    window.document.f.action = "./admin/index.html";
     window.document.f.submit();
   }
   //else {
