@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="no-referrer">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
     <base href="https://low-key-person.github.io/bagabaga/" target="_blank">
-    <meta name="keywords" content="八嘎八嘎共和国政府网"> <!--为搜索引擎定义关键词-->
-    <meta name="description" content="一个处于开发的政府网站"> <!--为网页定义描述内容-->
-    <meta name="author" content="low-key-person"> <!--定义网页作者-->
+    <meta name="keywords" content="八嘎八嘎共和国政府网">
+    <!--为搜索引擎定义关键词-->
+    <meta name="description" content="一个处于开发的政府网站">
+    <!--为网页定义描述内容-->
+    <meta name="author" content="low-key-person">
+    <!--定义网页作者-->
     <title>八嘎八嘎共和国政府</title>
 
     <!-- 样式 -->
@@ -22,6 +26,16 @@
     <script src="./js/jquery-e.min.js"></script> <!-- 导航栏的js动画 -->
     <script type="text/javascript" src="./js/menu.js"></script> <!-- 导航栏的js动画 -->
 
+    <style>
+        .yeslogin ul {
+            top: 20px;
+            left: -20px;
+            position: absolute;
+            display: none;
+            width: 80px;
+            background-image: url("https://user.www.gov.cn/static/images/outborder.png");
+        }
+    </style>
 </head>
 
 <body>
@@ -89,127 +103,125 @@
     </div>
 
     <!--导航-->
-    <div class="content">
-        <div class="nav">
-            <div class="nav_home">
-                <div class="nav_left"><a href="https://low-key-person.github.io/bagabaga/"><i class="fa fa-institution"
-                            style="font-size:30px;color:white"></i></a></div>
-                <div id="menu">
-                    <ul id="nav">
-                        <li class="mainlevel bolf" id="mainlevel_02"><a target="_blank" href="javascript:;">国务院</a>
-                            <ul class="sub_nav_011" style="display: none;">
-                                <li class="li1"><span>总 理</span><a href="javascript:;" target="_blank">XXX</a>
-                                </li>
-                                <li class="li3">
-                                    <span>
-                                        <a href="javascript:;" target="_blank">常务会议</a>
-                                    </span>
-                                </li>
+    <div class="nav">
+        <div class="nav_home">
+            <div class="nav_left"><a href="https://low-key-person.github.io/bagabaga/"><i class="fa fa-institution"
+                        style="font-size:30px;color:white"></i></a></div>
+            <div id="menu">
+                <ul id="nav">
+                    <li class="mainlevel bolf" id="mainlevel_02"><a target="_blank" href="javascript:;">国务院</a>
+                        <ul class="sub_nav_011" style="display: none;">
+                            <li class="li1"><span>总 理</span><a href="javascript:;" target="_blank">XXX</a>
+                            </li>
+                            <li class="li3">
+                                <span>
+                                    <a href="javascript:;" target="_blank">常务会议</a>
+                                </span>
+                            </li>
 
-                                <li class="li4"><span style="padding-right:0px;">副</span><span
-                                        style="padding:0;margin-left:9px; margin-right:5px;">总</span><span
-                                        style="padding:0;margin-left:4px; margin-right:20px;">理</span><a
-                                        href="javascript:;" target="_blank">XXX</a><a href="javascript:;"
-                                        target="_blank">XXX</a><a href="javascript:;" target="_blank">XXX</a><a
-                                        href="javascript:;" target="_blank">XXX</a></li>
-                                <li class="li3"><span><a href="javascript:;" target="_blank">全体会议</a></span>
-                                </li>
-                                <li class="li5"><span>国务委员</span><a href="javascript:;" target="_blank">XXX</a><a
-                                        href="javascript:;" target="_blank">XXX</a><a href="javascript:;"
-                                        target="_blank">XXX</a><a href="javascript:;" target="_blank">XXX</a><a
-                                        href="javascript:;" target="_blank">XXX</a>
-                                </li>
-                                <li class="li2"><span>秘&nbsp;书&nbsp;长</span><a href="javascript:;"
-                                        target="_blank">XXX</a>
-                                </li>
-                                <li class="li3"><span><a href="javascript:;" target="_blank">组织机构</a></span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mainlevel"><a target="_blank" href="javascript:;">总理</a>
-                            <ul style="display: none;" class="sub_nav_022">
-                                <li><a href="javascript:;" target="_blank">最新</a></li>
-                                <li><a href="javascript:;" target="_blank">专题</a></li>
-                                <li><a href="javascript:;" target="_blank">讲话</a></li>
-                                <li><a href="javascript:;" target="_blank">文章</a></li>
-                                <li><a href="javascript:;" target="_blank">音频</a></li>
-                                <li><a href="javascript:;" target="_blank">视频</a></li>
-                                <li><a href="javascript:;" target="_blank">图片库</a></li>
-                                <li><a href="javascript:;" target="_blank">媒体报道</a></li>
+                            <li class="li4"><span style="padding-right:0px;">副</span><span
+                                    style="padding:0;margin-left:9px; margin-right:5px;">总</span><span
+                                    style="padding:0;margin-left:4px; margin-right:20px;">理</span><a href="javascript:;"
+                                    target="_blank">XXX</a><a href="javascript:;" target="_blank">XXX</a><a
+                                    href="javascript:;" target="_blank">XXX</a><a href="javascript:;"
+                                    target="_blank">XXX</a></li>
+                            <li class="li3"><span><a href="javascript:;" target="_blank">全体会议</a></span>
+                            </li>
+                            <li class="li5"><span>国务委员</span><a href="javascript:;" target="_blank">XXX</a><a
+                                    href="javascript:;" target="_blank">XXX</a><a href="javascript:;"
+                                    target="_blank">XXX</a><a href="javascript:;" target="_blank">XXX</a><a
+                                    href="javascript:;" target="_blank">XXX</a>
+                            </li>
+                            <li class="li2"><span>秘&nbsp;书&nbsp;长</span><a href="javascript:;" target="_blank">XXX</a>
+                            </li>
+                            <li class="li3"><span><a href="javascript:;" target="_blank">组织机构</a></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="mainlevel"><a target="_blank" href="javascript:;">总理</a>
+                        <ul style="display: none;" class="sub_nav_022">
+                            <li><a href="javascript:;" target="_blank">最新</a></li>
+                            <li><a href="javascript:;" target="_blank">专题</a></li>
+                            <li><a href="javascript:;" target="_blank">讲话</a></li>
+                            <li><a href="javascript:;" target="_blank">文章</a></li>
+                            <li><a href="javascript:;" target="_blank">音频</a></li>
+                            <li><a href="javascript:;" target="_blank">视频</a></li>
+                            <li><a href="javascript:;" target="_blank">图片库</a></li>
+                            <li><a href="javascript:;" target="_blank">媒体报道</a></li>
 
-                            </ul>
-                        </li>
+                        </ul>
+                    </li>
 
-                        <li class="mainlevel"><a target="_blank" href="javascript:;">新闻</a>
-                            <ul class="sub_nav_033" style="display: none;">
-                                <li><a href="javascript:;" target="_blank">要闻</a></li>
-                                <li><a href="javascript:;" target="_blank">专题</a></li>
-                                <li><a href="javascript:;" target="_blank">政务联播</a></li>
-                                <li><a href="javascript:;" target="_blank">新闻发布</a></li>
-                                <li><a href="javascript:;" target="_blank">图片</a></li>
-                                <li><a href="javascript:;" target="_blank">滚动</a></li>
-                            </ul>
-                        </li>
+                    <li class="mainlevel"><a target="_blank" href="javascript:;">新闻</a>
+                        <ul class="sub_nav_033" style="display: none;">
+                            <li><a href="javascript:;" target="_blank">要闻</a></li>
+                            <li><a href="javascript:;" target="_blank">专题</a></li>
+                            <li><a href="javascript:;" target="_blank">政务联播</a></li>
+                            <li><a href="javascript:;" target="_blank">新闻发布</a></li>
+                            <li><a href="javascript:;" target="_blank">图片</a></li>
+                            <li><a href="javascript:;" target="_blank">滚动</a></li>
+                        </ul>
+                    </li>
 
-                        <li class="mainlevel" style="position: relative;">
-                            <a target="_blank" href="javascript:;">政策</a>
-                            <ul style="display: none;" class="sub_nav_044">
-                                <li><a href="javascript:;" target="_blank">最新</a></li>
-                                <li><a href="javascript:;" target="_blank">国务院政策文件库</a></li>
-                                <li><a href="javascript:;" target="_blank">政府信息公开</a></li>
-                                <li><a href="javascript:;" target="_blank">公报</a></li>
-                                <li><a href="javascript:;" target="_blank">政策解读</a></li>
-                                <li><a href="javascript:;" target="_blank">政策问答</a></li>
-                                <li><a href="javascript:;" target="_blank">政策专题</a></li>
-                            </ul>
-                        </li>
+                    <li class="mainlevel" style="position: relative;">
+                        <a target="_blank" href="javascript:;">政策</a>
+                        <ul style="display: none;" class="sub_nav_044">
+                            <li><a href="javascript:;" target="_blank">最新</a></li>
+                            <li><a href="javascript:;" target="_blank">国务院政策文件库</a></li>
+                            <li><a href="javascript:;" target="_blank">政府信息公开</a></li>
+                            <li><a href="javascript:;" target="_blank">公报</a></li>
+                            <li><a href="javascript:;" target="_blank">政策解读</a></li>
+                            <li><a href="javascript:;" target="_blank">政策问答</a></li>
+                            <li><a href="javascript:;" target="_blank">政策专题</a></li>
+                        </ul>
+                    </li>
 
-                        <li class="mainlevel" style="position: relative;">
-                            <a target="_blank" href="javascript:;">互动</a>
-                            <ul class="sub_nav_055" style="display: none;">
-                                <li><a href="javascript:;" target="_blank">我向总理说句话</a></li>
-                                <li><a href="javascript:;" target="_blank">互联网+督查</a></li>
-                                <li><a href="javascript:;" target="_blank">政务服务投诉与建议</a></li>
-                                <li><a href="javascript:;" target="_blank">政策法规意见征集</a></li>
-                            </ul>
-                        </li>
+                    <li class="mainlevel" style="position: relative;">
+                        <a target="_blank" href="javascript:;">互动</a>
+                        <ul class="sub_nav_055" style="display: none;">
+                            <li><a href="javascript:;" target="_blank">我向总理说句话</a></li>
+                            <li><a href="javascript:;" target="_blank">互联网+督查</a></li>
+                            <li><a href="javascript:;" target="_blank">政务服务投诉与建议</a></li>
+                            <li><a href="javascript:;" target="_blank">政策法规意见征集</a></li>
+                        </ul>
+                    </li>
 
-                        <li class="mainlevel">
-                            <a href="javascript:;" target="_blank">服务</a>
+                    <li class="mainlevel">
+                        <a href="javascript:;" target="_blank">服务</a>
 
-                            <ul class="sub_nav_066" style="display: none;">
-                                <li><a href="javascript:;" target="_blank">国家政务服务平台</a></li>
-                                <li><a href="javascript:;" target="_blank">部门地方大厅</a></li>
-                                <li><a href="" target="_blank">便民服务</a></li>
-                                <li><a href="javascript:;" target="_blank">服务专题</a></li>
-                                <li><a href="" target="_blank">服务搜索</a></li>
+                        <ul class="sub_nav_066" style="display: none;">
+                            <li><a href="javascript:;" target="_blank">国家政务服务平台</a></li>
+                            <li><a href="javascript:;" target="_blank">部门地方大厅</a></li>
+                            <li><a href="" target="_blank">便民服务</a></li>
+                            <li><a href="javascript:;" target="_blank">服务专题</a></li>
+                            <li><a href="" target="_blank">服务搜索</a></li>
 
-                            </ul>
-                        </li>
-                        <li class="mainlevel"><a target="_blank" href="javascript:;">数据</a>
-                            <ul class="sub_nav_077" style="display: none;">
-                                <li><a href="javascript:;" target="_blank">宏观经济运行</a></li>
-                                <li><a href="javascript:;" target="_blank">部门数据</a></li>
-                                <li><a href="javascript:;" target="_blank">数据快递</a></li>
-                                <li><a href="javascript:;" target="_blank">数据解读</a></li>
-                                <li><a href="javascript:;" target="_blank">数据专题</a></li>
-                            </ul>
-                        </li>
-                        <li class="mainlevel"><a target="_blank" href="javascript:;">国情</a>
-                            <ul class="sub_nav_088" style="display: none;">
-                                <li><a href="./Home/guoqing/guoqi/index.html" target="_blank">国旗</a></li>
-                                <li><a href="./Home/guoqing/guoge/index.html" target="_blank">国歌</a></li>
-                                <li><a href="javascript:;" target="_blank">国徽</a></li>
-                                <li><a href="javascript:;" target="_blank">行政区划</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                        </ul>
+                    </li>
+                    <li class="mainlevel"><a target="_blank" href="javascript:;">数据</a>
+                        <ul class="sub_nav_077" style="display: none;">
+                            <li><a href="javascript:;" target="_blank">宏观经济运行</a></li>
+                            <li><a href="javascript:;" target="_blank">部门数据</a></li>
+                            <li><a href="javascript:;" target="_blank">数据快递</a></li>
+                            <li><a href="javascript:;" target="_blank">数据解读</a></li>
+                            <li><a href="javascript:;" target="_blank">数据专题</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainlevel"><a target="_blank" href="javascript:;">国情</a>
+                        <ul class="sub_nav_088" style="display: none;">
+                            <li><a href="./Home/guoqing/guoqi/index.html" target="_blank">国旗</a></li>
+                            <li><a href="./Home/guoqing/guoge/index.html" target="_blank">国歌</a></li>
+                            <li><a href="javascript:;" target="_blank">国徽</a></li>
+                            <li><a href="javascript:;" target="_blank">行政区划</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
-                </div>
             </div>
         </div>
     </div>
     <div class="content">
+
         <!-- 头条 -->
         <div class="tetle">
             <h1 class="title-h1">标题</h1>
@@ -269,10 +281,9 @@
                     <div class="lmtit"><a href="" target="_blank">专题</a></div>
 
 
-                    <a href="" target="_blank"><img class="mt18" src="" width="370" height="58"></a>
-
-
-
+                    <a href="" target="_blank"><img src="./images/zhuanti.jpg"  alt="加载失败" width="370" height="58"></a>
+                    
+                    <!-- class="mt18"   -->
 
                     <ul class="h70">
 
@@ -292,9 +303,12 @@
                 <div class="clear"></div>
                 <!--视听画-->
                 <div class="column3lp_2 fl sth" style="margin-bottom:10px;">
-                    <div class="lmtit lmtit1"><a class="a_line" href="" target="_blank">视 <i class="fa fa-video-camera" style="font-size:24px;color:blue"></i>
-                        <a class="a_line" href="" target="_blank">听 <i class="fa fa-volume-up" style="font-size:24px; color: blue;"></i>
-                        <a href="" target="_blank">画 <i class="fa fa-pencil-square-o" style="font-size:24px; color: blue;"></i>
+                    <div class="lmtit lmtit1"><a class="a_line" href="" target="_blank">视 <i class="fa fa-video-camera"
+                                style="font-size:24px;color:blue"></i>
+                            <a class="a_line" href="" target="_blank">听 <i class="fa fa-volume-up"
+                                    style="font-size:24px; color: blue;"></i>
+                                <a href="" target="_blank">画 <i class="fa fa-pencil-square-o"
+                                        style="font-size:24px; color: blue;"></i>
                     </div>
                     <div class="spyp_main">
                         <div class="spyp_con" id="sp_con" style="display: block; z-index: 11;">
@@ -306,20 +320,104 @@
                             <div class="title">
                                 <a href="" target="_blank">内容</a>
                             </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="column3mi">
+                <!--政策-->
+                <div class="column3mi2 fl">
+                    <div id="zhengcequkuai">
+                        <div class="lmtit dys_policy_search" style="width:285px;margin-bottom: 15px;">
+                            <div class="dys_20190111zhengceNew" style="position: relative;">
+                                <!--<span style="display:block; position:absolute;top:-22px;left:38px;padding: 0;"><img src="/govweb/xhtml/2016gov/zhengce/20181102policy/images/20190111zhengceNewleft.png" ></span>-->
+                                <a class="fl" href="http://www.gov.cn/zhengce/index.htm" target="_blank">政策</a>
+                            </div>
+                            <span class="dys_policy_search20181120">
+                                <a href="http://www.gov.cn/gongbao/currentissue.htm"
+                                    target="_blank">&nbsp;&nbsp;|&nbsp;&nbsp;国务院公报</a>
+                                <a href="http://www.gov.cn/zhengce/xxgk/index.htm" target="_blank">政府信息公开</a>
+                            </span>
 
                         </div>
+                        <div class="clear"></div>
+
+                        <ul class="h120" style="height:196px;_height:197px;margin-bottom: 20px;">
+
+
+                            <li>
+                                <a href="" target="_blank"></a><a href="" target="_blank">内容一</a> | <a href=""
+                                    target="_blank">内容</a> | <a href="" target="_blank">内容</a>时间</li>
+
+
+                            <li>
+                                <a href="" target="_blank">内容</a>时间</li>
+
+
+                            <li>
+                                <a href="" target="_blank"></a><a href="" target="_blank">内容</a> | <a href=""
+                                    target="_blank">内容</a>时间</li>
+
+
+                            <li>
+                                <a href="" target="_blank"></a><a href="" target="_blank">内容</a> | <a href=""
+                                    target="_blank">内容</a>时间</li>
+
+
+                            <li>
+                                <a href="" target="_blank"></a><a href="" target="_blank">内容</a> | <a href=""
+                                    target="_blank">内容</a> | <a href="" target="_blank">内容</a>时间</li>
+
+
+                            <li>
+                                <a href="" target="_blank"></a><a href="" target="_blank">内容</a> | <a href=""
+                                    target="_blank">内容</a>时间</li>
+
+
+                            <li>
+                                <a href="" target="_blank">内容</a>时间</li>
+
+
+
+
+
+                        </ul>
+
                     </div>
+                    <!-- <div id="contain">
+                        <p>这是第一条文本</p>
+                        <p>我是第二条文本！</p>
+                        <p>没错的话，我是第三条文本</p>
+                        <p>我去，我竟然是最后一条文本</p> -->
+                    <!-- 文字轮播 引用homepage.css -->
+                    <!-- <a href="" id="contain-a">内容一内容一内容一</a>
+                        <a href="" id="contain-a">内容二内容二内容二</a>
+                        <a href="" id="contain-a">内容三内容三内容三</a>
+                        <a href="" id="contain-a">内容四内容四内容四</a> -->
+                    <!-- </div>
+                    <script>
+                        function setTime() {
+                            var contain = document.getElementById("contain");
+                            contain.appendChild(contain.firstChild);
+                        }
+                        setInterval("setTime()", 2000);
+                    </script> -->
+                    <div class="kfz" style=" border-radius: 25px;
+                    border: 2px solid #0748c0;
+                    padding: 20px; width: 285px; height: 30px; font-size: 30px; text-align: center;">文字轮播 开发中。</div> 
                 </div>
             </div>
 
 
+            <!--公共尾-->
+            <iframe id="ifr_foot.htm" src="./bottom.html" width="100%" height="525px" scrolling="no" marginheight="0"
+                frameborder="0"></iframe>
+
         </div>
-
-        <!--公共尾-->
-        <iframe id="ifr_foot.htm" src="./bottom.html" width="100%" height="525px" scrolling="no" marginheight="0"
-            frameborder="0"></iframe>
-
-    </div>
 
 </body>
 

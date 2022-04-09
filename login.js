@@ -10,10 +10,10 @@ function check() {
   //else {
   //  alert("用户名或密码错误");
   //}
-  if (name == "1" && pass == "1") //游客 用户名:1 密码:1 
+  if (name == "admin01" && pass == "123456") //管理员 用户名:admin 密码:123456
   {
     alert("登入成功");
-    window.document.f.action = "./Home/user/index 1.html";
+    window.document.f.action = "./admin/index.html";
     window.document.f.submit();
   }
   //else {
