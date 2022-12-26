@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="referrer" content="no-referrer">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
-    <base href="https://low-key-person.github.io/bagabaga/" target="_blank">
+    <!-- <base href="https://low-key-person.github.io/bagabaga/" target="_blank"> -->
     <meta name="keywords" content="八嘎八嘎共和国政府网">
     <!--为搜索引擎定义关键词-->
     <meta name="description" content="一个处于开发的政府网站">
@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="./styles/base.css">
     <link rel="stylesheet" type="text/css" href="./styles/common.css">
     <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <link rel="stylesheet" type="text/css" href="./idangerous.swiper.css">
     <link rel="stylesheet" type="text/css" href="./styles/homepage.css"> <!-- 主要内容样式 -->
     <link rel="stylesheet" href="./styles/icon/font-awesome-4.7.0/css/font-awesome.css"> <!-- font-awesome图标 -->
 
@@ -35,6 +36,146 @@
             width: 80px;
             background-image: url("./images/index/outborder.png");
         }
+
+        .policyDocumentBankTopBg {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .a {
+            text-decoration: none;
+        }
+
+        .gwyzcwjkSearch input {
+            width: 228px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+            border: 1px solid #9bcfed;
+            padding: 0 20px 0 6px;
+            color: #9d9d9d;
+        }
+
+        .gwyzcwjkImg {
+            font-family: '方正准雅宋_GBK';
+            color: #015293;
+            font-size: 20px;
+            position: absolute;
+            top: 16px;
+            left: 57px;
+        }
+
+        .gwyzcwjkSearch {
+            position: absolute;
+            top: 50px;
+            left: 18px;
+            width: 252px;
+            font-family: '微软雅黑';
+        }
+
+        .swiper-container {
+            width: 292px;
+            height: 34px;
+        }
+
+        .policyDocumentBankBottom {
+            background: #dcdcdd;
+            margin-bottom: 10px;
+            width: 292px;
+            text-align: center;
+        }
+
+        .policyDocumentBankTop {
+            position: relative;
+            width: 292px;
+            height: 100px;
+
+        }
+
+        .policyDocumentBank {
+            margin-bottom: 21px;
+        }
+
+        /* 搜索 */
+        .gwyzcwjkSearch {
+            position: absolute;
+            top: 50px;
+            left: 18px;
+            width: 252px;
+            font-family: '微软雅黑';
+        }
+
+        .gwyzcwjkSearch form var {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            color: #9d9d9d;
+            font-size: 14px;
+            font-family: '微软雅黑';
+
+        }
+
+        .gwyzcwjkSearch input {
+            width: 228px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 12px;
+            border: 1px solid #9bcfed;
+            padding: 0 20px 0 6px;
+            color: #9d9d9d;
+        }
+
+        .gwyzcwjkSearch button {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url(./images/searchBtn20191218.png) no-repeat center;
+            top: 5px;
+            right: 5px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .policyDocumentBankBottom {
+            background: #dcdcdd;
+            margin-bottom: 10px;
+            width: 292px;
+            text-align: center;
+        }
+
+        .policyDocumentBankBottom a {
+            /* float: left; */
+            height: 33px;
+            text-align: center;
+            line-height: 33px;
+            font-family: '微软雅黑';
+        }
+
+        .policyDocumentBankBottom span {
+            float: left;
+            margin-top: 8px;
+        }
+
+        .policyDocumentBankBottom_left {
+            width: 150px;
+        }
+
+        .policyDocumentBankBottom_left img {
+            margin: 10px 0 0 20px;
+        }
+
+        .policyDocumentBankBottom_right img {
+            margin: 10px 0 0 20px;
+        }
+
+        .policyDocumentBankBottom_right {
+            width: 125px;
+            float: right;
+        }
+    </style>
+
     </style>
 </head>
 
@@ -231,11 +372,11 @@
         <!-- 轮播界面 -->
         <iframe class="Rotation" src="./Rotation page.html" scrolling="no" marginheight="0" frameborder="0"></iframe>
 
-        <div
+        <!-- <div
             style="height: 300px; width: 100%; box-sizing: 20px; color: brown; background-color: chartreuse; text-align: center;">
             <h1>主要内容</h1>
             <h1 style="font-size: 200px;">开发中</h1>
-        </div>
+        </div> -->
 
         <div class="column3 clearfix">
             <!--左侧-->
@@ -314,18 +455,16 @@
                         <div class="spyp_con" id="sp_con" style="display: block; z-index: 11;">
 
                             <div class="con">
-                                <img width="370" height="243"
-                                    src="./images/index/video.png">
-                                <span class="play"><a
-                                        href=""
-                                        target="_blank"> </a></span>
+                                <img width="370" height="243" src="./images/index/video.png">
+                                <a href="./admin/getPlayPage.html"></a>
+                                <span class="play"><a href="./admin/getPlayPage.html" target="con"> </a></span>
                             </div>
                             <div class="title">
-                                <a href=""
-                                    target="_blank">内容</a>
+                                <a href="" target="_blank">内容</a>
                             </div>
 
                         </div>
+
                         <div class="spyp_con" style="width: 370px; display: none; z-index: 1;">
 
                             <a href="" target="_blank">
@@ -352,8 +491,7 @@
                                 <div class="audio_list" id="audio_list">
                                     <ol style="display:none;">
 
-                                        <li class="playing"><a href=""
-                                                data-src=""></a>
+                                        <li class="playing"><a href="" data-src=""></a>
                                         </li>
 
                                     </ol>
@@ -365,8 +503,7 @@
 
 
                             <div class="title title2">
-                                <a href=""
-                                    target="_blank">内容</a>
+                                <a href="" target="_blank">内容</a>
                             </div>
                         </div>
 
@@ -386,8 +523,7 @@
                                 <a class="fl" href="" target="_blank">政策</a>
                             </div>
                             <span class="dys_policy_search20181120">
-                                <a href=""
-                                    target="_blank">&nbsp;&nbsp;|&nbsp;&nbsp;国务院公报</a>
+                                <a href="" target="_blank">&nbsp;&nbsp;|&nbsp;&nbsp;国务院公报</a>
                                 <a href="" target="_blank">政府信息公开</a>
                             </span>
 
@@ -428,35 +564,50 @@
 
                             <li>
                                 <a href="" target="_blank">内容</a>时间</li>
-
-
-
-
-
                         </ul>
 
                     </div>
-                    <!-- <div id="contain">
+
+                    <div class="policyDocumentBankTop clearfix" id="fgfcyjcgwyzcwjk">
+                        <a href="" target="_blank" class="policyDocumentBankTopBg"><img
+                                src="./images/policyDocumentBank.png"></a>
+                        <!-- <var class="policyDocumentBankNew"><img src="/govweb/xhtml/2016gov/zhengce/20181102policy/images/20190111zhengceNewleft.png"></var> -->
+                        <a href="" target="_blank" class="gwyzcwjkImg"><img src="./images/gwyzcwjkImg20191218.png"></a>
+                        <div class="gwyzcwjkSearch">
+                            <form id="gwyzcwjkSearchForm" action="http://sousuo.bagabaga/s.htm" method="get"
+                                target="_blank">
+                                <var>搜政策......</var>
+                                <input name="q" type="text" value="" autocomplete="off" id="q">
+                                <input name="t" type="hidden" value="zhengcelibrary">
+                                <input name="orpro" type="hidden" id="_orpro" value="">
+                                <button type="submit">&nbsp;</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <marquee style="width: 292px;">
+                        <span style="font-weight: bolder;font-size: 25px;color: rgb(223, 44, 44);">欢迎加入八嘎八嘎共和国</span>
+                    </marquee>
+                    <!--<div id="contain">
                         <p>这是第一条文本</p>
                         <p>我是第二条文本！</p>
                         <p>没错的话，我是第三条文本</p>
-                        <p>我去，我竟然是最后一条文本</p> -->
-                    <!-- 文字轮播 引用homepage.css -->
-                    <!-- <a href="" id="contain-a">内容一内容一内容一</a>
+                        <p>我去，我竟然是最后一条文本</p> 
+                      <a href="" id="contain-a">内容一内容一内容一</a>
                         <a href="" id="contain-a">内容二内容二内容二</a>
                         <a href="" id="contain-a">内容三内容三内容三</a>
-                        <a href="" id="contain-a">内容四内容四内容四</a> -->
-                    <!-- </div>
+                        <a href="" id="contain-a">内容四内容四内容四</a> 
+                    </div>-->
                     <script>
                         function setTime() {
                             var contain = document.getElementById("contain");
                             contain.appendChild(contain.firstChild);
                         }
                         setInterval("setTime()", 2000);
-                    </script> -->
-                    <div class="kfz" style=" border-radius: 25px;
+                    </script>
+                    <!-- <div class="kfz" style=" border-radius: 25px;
                     border: 2px solid #0748c0;
-                    padding: 20px; width: 285px; height: 30px; font-size: 30px; text-align: center;">文字轮播 开发中。</div>
+                    padding: 20px; width: 285px; height: 30px; font-size: 30px; text-align: center;">文字轮播 开发中。</div>-->
                 </div>
             </div>
 
