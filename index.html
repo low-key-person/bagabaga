@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="./idangerous.swiper.css">
     <link rel="stylesheet" type="text/css" href="./styles/homepage.css"> <!-- 主要内容样式 -->
     <link rel="stylesheet" href="./styles/icon/font-awesome-4.7.0/css/font-awesome.css"> <!-- font-awesome图标 -->
+    <link rel="stylesheet" type="text/css" href="./styles/typeface.css">
 
     <!-- js -->
     <script src="./js/jquery-e.min.js"></script> <!-- 导航栏的js动画 -->
@@ -174,6 +175,87 @@
             width: 125px;
             float: right;
         }
+        /* 小新闻开始*/
+        .btn_001 {
+            display: inline;
+            float: left;
+            width: 98px;
+            height: 28px;
+            margin: 0px 24px;
+            line-height: 27px;
+            text-align: center;
+            background-image: url(images/btn0512.png);
+        }
+        .left_right_sroll_father{
+            position: relative;
+            height: 143px;
+            width: 293px;
+            overflow: hidden;
+          }
+          .left_right_sroll .box_0001{
+            float: left;
+            clear: none;
+          }
+          .box_0001 {
+            clear: both;
+            position: relative;
+            width: 281px;
+            height: 109px;
+            margin-bottom: 15px;
+            padding: 12px 5px 5px 5px;
+            border: 1px solid #ccc;
+          }
+          .wenzi_box {
+            float: left;
+            width: 158px;
+            margin-right: 10px;
+          }
+          .wenzi_box h2{
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 4px;
+            color: #015293;
+            font-family: "Microsoft Yahei", 宋体, Arial, Helvetica, sans-serif;
+          }
+          .wenzi_box h2 a{
+            font-weight: bold;
+            font-size: 15px;
+            color: #015293;
+            font-family: "Microsoft Yahei", 宋体, Arial, Helvetica, sans-serif;
+          }
+          .wenzi_box p {
+            color: #1a1a1a;
+            font-size: 13px;
+            line-height: 20px;
+            font-family: "Microsoft Yahei", 宋体, Arial, Helvetica, sans-serif;
+          }
+          .r_pic {
+            float: right;
+            width: 105px;
+            height: 105px;
+    
+          }
+          .wenzi_box p a {
+            color: #2ea0fb;
+          }
+          .box_0001 h3 {
+            position: absolute;
+            left: 100px;
+            top: -12px;
+            width: 77px;
+            height: 24px;
+            text-align: center;
+            background-color: #fff;
+          }
+          .box_0001 h3 a {
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 24px;
+            color: #3c3c3c;
+            font-family: "Microsoft Yahei", 宋体, Arial, Helvetica, sans-serif;
+          }
+          /* 小新闻结束 */
     </style>
 
     </style>
@@ -186,13 +268,13 @@
             <div class="header_left fl">
                 <!--<a href="https://low-key-person.github.io/bagabaga/" target="_blank"><img class="logo" src="" width="44" height="47"></a>-->
                 <a href="https://low-key-person.github.io/bagabaga/" target="_blank"
-                    style="width: 402; height: 49; color: red; font-size: 35px;">八嘎八嘎共和国政府</a>
+                    style="width: 402; height: 49; color: red; font-size: 35px; font-family:包图小白体;">八嘎八嘎共和国政府</a>
                 <!--<img src="" width="402" height="49"></a>-->
             </div>
             <!--logo左侧结束-->
             <!--logo右侧开始-->
             <div class="header_right fr">
-                <div class="fzgn" style="width: 150%;">
+                <div class="fzgn" style="width: 130%;">
                     <ul>
                         <li><a href="./login.html" class="icon1" title="公务邮箱" target="_blank"><i class="fa fa-envelope"
                                     style="font-size:20px"></i></a></li>
@@ -365,8 +447,8 @@
 
         <!-- 头条 -->
         <div class="tetle">
-            <h1 class="title-h1">标题</h1>
-            <p class="title-p">下面的图片是在网上找的 因为我们国家暂时没有什么新闻</p>
+            <h1 class="title-h1" style="font-family:包图小白体;">标题</h1>
+            <p class="title-p" style="font-family: 王汉宗中行书;">下面的图片是在网上找的 因为我们国家暂时没有什么新闻</p>
         </div>
 
         <!-- 轮播界面 -->
@@ -391,7 +473,7 @@
 
 
                         <li class="li_005293">
-                            <a href="" target="_blank">内容一</a>
+                            <a href="./admin/gengxin.html" target="_blank">点我查看八嘎八嘎共和国网更新日志</a>
                         </li>
 
                         <li>
@@ -576,8 +658,8 @@
                         <div class="gwyzcwjkSearch">
                             <form id="gwyzcwjkSearchForm" action="http://sousuo.bagabaga/s.htm" method="get"
                                 target="_blank">
-                                <var>搜政策......</var>
-                                <input name="q" type="text" value="" autocomplete="off" id="q">
+                                <!-- <var>搜政策......</var> -->
+                                <input name="q" type="text" value="" autocomplete="off" id="q" placeholder="搜政策......">
                                 <input name="t" type="hidden" value="zhengcelibrary">
                                 <input name="orpro" type="hidden" id="_orpro" value="">
                                 <button type="submit">&nbsp;</button>
@@ -586,8 +668,10 @@
                     </div>
 
                     <marquee style="width: 292px;">
-                        <span style="font-weight: bolder;font-size: 25px;color: rgb(223, 44, 44);">欢迎加入八嘎八嘎共和国</span>
+                        <span
+                            style="font-weight: bolder;font-size: 30px;color: rgb(223, 44, 44); font-family: 包图小白体;">欢迎加入八嘎八嘎共和国</span>
                     </marquee>
+
                     <!--<div id="contain">
                         <p>这是第一条文本</p>
                         <p>我是第二条文本！</p>
@@ -598,17 +682,101 @@
                         <a href="" id="contain-a">内容三内容三内容三</a>
                         <a href="" id="contain-a">内容四内容四内容四</a> 
                     </div>-->
-                    <script>
+                    <!-- <script>
                         function setTime() {
                             var contain = document.getElementById("contain");
                             contain.appendChild(contain.firstChild);
                         }
                         setInterval("setTime()", 2000);
-                    </script>
+                    </script> -->
                     <!-- <div class="kfz" style=" border-radius: 25px;
                     border: 2px solid #0748c0;
                     padding: 20px; width: 285px; height: 30px; font-size: 30px; text-align: center;">文字轮播 开发中。</div>-->
+
                 </div>
+                <div class="column3mi2 fl" style="width: 292px;">
+                    <div class="lmtit" style="position: relative;">
+                        <a href="" target="_blank">互动</a>
+
+
+                        <span> <a href="" target="_blank">&nbsp;&nbsp;|&nbsp;&nbsp;答题</a><a href=""
+                                target="_blank">国务院大事我知道</a></span>
+                    </div>
+                    <!--专题滚动-->
+                    <div class="flexslider" style="margin:10px auto;" id="demo02">
+                        <ul class="slides" style="text-align: center;">
+
+                            <li style="width: 285px;"><a href="" target="_blank"
+                                    style="font-family: 微软雅黑,宋体;font-size: 18px;"><img
+                                        src="./images/interaction.jpg"></a></li>
+                            <!-- <li style="width: 285px;"><a href="" target="_blank" style="font-family: 微软雅黑,宋体;font-size: 18px;"><img src="./images/wxzlsjh.jpg"></a></li> -->
+
+                        </ul>
+                    </div>
+                    <div class="hd_lb">
+                        <div class="con_01">
+                            <div class="mb_8" style="text-align: center;">
+                                <a href="" target="_blank">
+                                    <img alt="" src="./images/wxzlsjh.jpg">
+                                </a>
+                            </div>
+                            <div class="anniu_box">
+                                <div class="btn_001">
+                                    <a href="" target="_blank" style="color: white;">我要留言</a></div>
+                                <div class="btn_001">
+                                    <a href="" target="_blank" style="color: white;">留言选登</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="left_right_sroll_father">
+                       
+                      <div class="box_0001">
+                        <div class="wenzi_box">
+                          <h2>
+                            <a href="" target="_blank">国务院大事我知道<br>2022年第1期</a>
+                          </h2>
+                          <p>
+                            2022年12月，哪些政府工作是你关心的？来参与趣味小测试测一测吧<a href="" target="_blank">&gt;&gt;&gt;</a></p>
+                        </div>
+                        <div class="r_pic"> <a href="" target="_blank">
+<img src="./images/guoqi.jpg" width="104" height="104" border="0">							</a> </div>
+                      </div>
+                      
+                       <!-- <div class="box_0001">
+                        <div class="wenzi_box">
+                          <h2>
+                            <a href="" target="_blank">国务院大事我知道<br>2022年第3期</a>
+                          </h2>
+                          <p>
+                            2022年2月，哪些政府工作是你关心的？来参与趣味小测试测一测吧<a href="" target="_blank">&gt;&gt;&gt;</a></p>
+                        </div>
+                        <div class="r_pic"> <a href="" target="_blank">
+<img src="./中国政府网_中央人民政府门户网站_files/d6343400be104d15a062a77133d606da.jpg" width="104" height="104" border="0">							</a> </div>
+                      </div>  -->
+                      
+
+                </div>
+                <div class="box_0001">
+                    <h3><a href="" target="_blank">回应关切</a></h3>
+                     
+                    <div>
+                      <div class="wenzi_box">
+                      <h2>
+                        <a href="" target="_blank">八嘎八嘎政府网回应</a>
+                      </h2>
+                      <p>
+                        八嘎八嘎共和国政府网将加速完成网站的建设，为大家提供服务<a href="" target="_blank">&gt;&gt;&gt;</a></p>
+                      </div>
+                      <div class="r_pic"> 
+                        <a href="" target="_blank">
+        <img src="./images/guoqi.jpg" width="104" height="104" border="0">                </a> 
+                      </div>
+                    </div>
+                    
+        
+                  </div>
             </div>
 
 

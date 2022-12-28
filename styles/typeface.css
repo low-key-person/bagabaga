@@ -1,0 +1,12 @@
+@font-face {
+    font-family: '包图小白体'; /*定义字体名称*/
+    src: url('font/包图小白体.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: '王汉宗中行书';
+    src: url('font/王汉宗中行书.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
