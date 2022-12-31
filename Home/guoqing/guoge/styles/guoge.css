@@ -1,7 +1,7 @@
 @charset "utf-8";
 body{
     /* max-width: 1920px; */
-    background: url(http://www.gov.cn/govweb/xhtml/2019zhuanti/guoqiguohui20201217V1/images/banner.jpg) #f3f3f3 center 148px no-repeat;
+    background: url(../images/banner.jpg) #f3f3f3 center 148px no-repeat;
     font: normal 16px/24px  "微软雅黑";
 }
 .pc_show{display: block;}
@@ -321,7 +321,7 @@ body{
     width: 49px;
     height: 49px;
     margin-top: 28px;
-    background-image: url(/govweb/xhtml/2019zhuanti/20210205guoge/images/guoge_icons.png);
+    background-image: url(../images/guoge_icons.png);
 }
 .guide-slider .guide .display .introduction{
     margin-top: 8px;
