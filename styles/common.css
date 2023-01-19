@@ -110,7 +110,7 @@ ul.ej_list .mainlevel:hover{ background:url(..) repeat-x;}
 
 
 
-#nav .mainlevel ul {background:#fff url(../images/public/icon_11.gif) no-repeat 0 0;position:absolute; top:37px; display:none; margin:0px 0px 0px 0px; padding:0px; z-index:999; opacity: 0.9; filter: alpha(opacity=90); height:90px}
+#nav .mainlevel ul {background:#fff url(../images/icon_11.gif) no-repeat 0 0;position:absolute; top:37px; display:none; margin:0px 0px 0px 0px; padding:0px; z-index:999; opacity: 0.9; filter: alpha(opacity=90); height:90px}
 #nav .mainlevel li { float:left;  margin:0px; padding:0px; font-size:18px; font-family:"微软雅黑","宋体";display:block;white-space:nowrap; position:relative; padding-bottom:7px; }
 #nav .mainlevel li span{margin:0px;color:#000; padding-left:20px; font-size:18px; font-family:"微软雅黑"; padding-right:20px;display:inline-block;float:left}
 #nav .mainlevel li span img{ vertical-align:middle}
@@ -280,7 +280,7 @@ ul.ej_list .mainlevel:hover{ background:url(..) repeat-x;}
 
 
 .footer2_1 li{ margin:0; margin-right:0; position:relative; height:auto;float:left; font-size:12px;font-family:"微软雅黑","宋体"; padding-right:9px; *width:119px;}
-.footer2_1 li a{ padding:17px 9px 10px 15px; display:block; padding-right:20px; background:url(../images/public/select_jiantou.jpg) no-repeat right 20px; height:16px;}
+.footer2_1 li a{ padding:17px 9px 10px 15px; display:block; padding-right:20px; background:url(../images/select_jiantou.jpg) no-repeat right 20px; height:16px;}
 .footer2_1 li #select_content6 a{ height:auto}
 .footer2_1 li.asect{ background:#e5e5e5}
 
