@@ -7,13 +7,16 @@
     <meta name="referrer" content="no-referrer">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">  -->
     <!-- <base href="https://low-key-person.github.io/bagabaga/" target="_blank"> -->
-    <meta name="keywords" content="八嘎八嘎共和国政府网">
     <!--为搜索引擎定义关键词-->
-    <meta name="description" content="一个处于开发的政府网站">
+    <meta name="keywords" content="八嘎八嘎共和国政府网">
     <!--为网页定义描述内容-->
-    <meta name="author" content="low-key-person">
+    <meta name="description" content="一个处于开发的政府网站">
     <!--定义网页作者-->
+    <meta name="author" content="low-key-person">
+    <!-- 定义网页标题 -->
     <title>八嘎八嘎共和国政府</title>
+    <!-- 定义网页图标 -->
+    <link rel="shortcut icon" href="./images/guohui.ico">
 
     <!-- 样式 -->
     <link rel="stylesheet" type="text/css" href="./styles/base.css">
@@ -590,19 +593,81 @@
             line-height: 29px;
 
         }
+
+        /* 弹窗 */
+        .zhezhao {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            background: #000;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+        }
+
+        .tankuang {
+            position: relative;
+            background: #fff;
+            width: 25%;
+            height: 25%;
+            margin-left: 35%;
+            border-radius: 5px;
+            /* margin: 5% auto; */
+        }
+
+        #header {
+            height: 40px;
+            color: #2ea0fb;
+            margin: 5% auto;
+        }
+
+        #header-right {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            background: red;
+            color: #fff;
+            right: 5px;
+            top: 5px;
+            text-align: center;
+        }
     </style>
 
-    </style>
+    <!-- 弹窗JS -->
+    <!-- <script>
+        document.getElementById('zhezhao').style.display = "none";
+
+        function dianwo() {
+            document.getElementById('zhezhao').style.display = "";
+        }
+
+        function hidder() {
+            document.getElementById('zhezhao').style.display = "none";
+        }
+    </script> -->
 </head>
 
 <body>
+    <!-- 弹窗 -->
+    <!-- <div class="zhezhao" id='zhezhao'>
+        <div class="tankuang">
+            <div id="header">
+                <span style="font-size: 30px;">欢迎访问八嘎八嘎共和国</span>
+                <p style="width: 270px; font-size: 24px; text-align: center;">距离上次更新已经过去了<iframe
+                        src="./update-djs-index.html" scrolling="no" marginheight="0" frameborder="0"></iframe></p>
+                <div id="header-right" onclick="hidder()">x</div>
+            </div>
+        </div>
+    </div> -->
+
     <div class="header" id="ifr_top">
         <div class="header_top">
             <!--logo左侧开始-->
             <div class="header_left fl">
                 <!--<a href="https://low-key-person.github.io/bagabaga/" target="_blank"><img class="logo" src="" width="44" height="47"></a>-->
                 <a href="https://low-key-person.github.io/bagabaga/" target="_blank"
-                    style="width: 402; height: 49; color: red; font-size: 35px; font-family:包图小白体;">八嘎八嘎共和国政府</a>
+                    style="width: 402; height: 49; color: red; font-size: 35px; font-family:包图小白体;"><img src="./images/guohui.ico" alt="" style="width: 55px;height: 55px;">八嘎八嘎共和国政府</a>
                 <!--<img src="" width="402" height="49"></a>-->
             </div>
             <!--logo左侧结束-->
@@ -881,7 +946,7 @@
                                 <span class="play"><a href="./admin/getPlayPage.html" target="con"> </a></span>
                             </div>
                             <div class="title">
-                                <a href="" target="_blank">内容</a>
+                                <a href="" target="_blank">八嘎八嘎共和国政府宣传视频</a>
                             </div>
 
                         </div>
@@ -1028,7 +1093,7 @@
                             contain.appendChild(contain.firstChild);
                         }
                         setInterval("setTime()", 2000);
-                    </script> -->
+                    </scrip> -->
                     <!-- <div class="kfz" style=" border-radius: 25px;
                     border: 2px solid #0748c0;
                     padding: 20px; width: 285px; height: 30px; font-size: 30px; text-align: center;">文字轮播 开发中。</div>-->
@@ -1074,10 +1139,10 @@
                     <div class="box_0001">
                         <div class="wenzi_box">
                             <h2>
-                                <a href="" target="_blank">国务院大事我知道<br>2022年第1期</a>
+                                <a href="" target="_blank">国务院大事我知道<br>2023年第1期</a>
                             </h2>
                             <p>
-                                2022年12月，哪些政府工作是你关心的？来参与趣味小测试测一测吧<a href="" target="_blank">&gt;&gt;&gt;</a></p>
+                                2023年1月，哪些政府工作是你关心的？来参与趣味小测试测一测吧<a href="" target="_blank">&gt;&gt;&gt;</a></p>
                         </div>
                         <div class="r_pic"> <a href="" target="_blank">
                                 <img src="./images/guoqi.jpg" width="104" height="104" border="0"> </a> </div>
