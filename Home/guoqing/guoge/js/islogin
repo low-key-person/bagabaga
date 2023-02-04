@@ -1,1 +1,0 @@
-idm.callback.call(false,'{"code":"app_fail","desc":"根据servicecode获取资源失败,请检查valisign初始化认证方法是否成功通过","msg":"根据servicecode获取资源失败,请检查valisign初始化认证方法是否成功通过"}')

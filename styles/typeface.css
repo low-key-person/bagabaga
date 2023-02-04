@@ -10,3 +10,9 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'FZYouHK_510M';
+    src: url('font/FZYouHK_510M.TTF');
+    font-weight: normal;
+    font-style: normal;
+}

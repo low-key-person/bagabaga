@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+/*=========宸︿晶绗竴閮ㄥ垎=========*/
+.leftPart{ float:left;width:743px; padding-right:0;    font-family: 微软雅黑;}
+.rightPart{ float:right;width:253px; padding-left:30px; _padding-left:25px; margin-bottom:30px;}
+.gqmainbox1 { width:720px;}
+.cond_tb_txt { width:410px; text-align:justify; margin-top:10px; margin-left:50px; display:inline; overflow:hidden;}
+.cond_tb_txt_01 { width:406px;  display:block; overflow:hidden; _width:395px; }
+.cond_tb_txt_02{ width:410px; overflow:hidden;}
+.cond_tb_txt_02_box{ width:410px;}
+.cond_tb_txt_02 a{ display:inline; height:29px; width:72px; text-align:center; background:url(../images/gq_btn.jpg) no-repeat; float:left;margin-bottom:5px; margin-right:10px; _margin-right:6px; line-height:29px; font-size:14px; overflow:hidden;}
+.cond_tb_txt_02 a:hover{ background-position: 0 -29px; color:#FFF; text-decoration:none;}
+/*=========宸︿晶绗簩閮ㄥ垎涓嬫媺=========*/
+.cond_list_t{ width:230px; _width:227px; float:left; margin-right:17px;}
+.cond_list{ border:1px solid #c9c9c9; border-top:2px solid #004986; width:218px; margin-bottom:10px;}
+.cond_list h1{padding-left:16px; height:30px; line-height:30px; border-top:1px solid #FFF;font-size:16px;   color:#333333; cursor:pointer;   font-weight:normal;  background-color:#eeeeee;}
+.remove .list_txt_a { display:none; }
+.remove { border-top:1px solid #c9c9c9;}
+.list_txt_a ul { width:165px; margin:0 auto;}
+.lssdjt_img_ul { width:230px; margin:0 auto;}
+.list_txt_a ul li, .lssdjt_img_ul li { font-size:14px; line-height:34px; _padding-bottom:10px;}
+.list_txt_a ul li, .lssdjt_img_ul li { background:url(../images/guoqing/yuandian.jpg) no-repeat 0 13px; display:block; padding-left:10px;}
+.list_txt_a ul li a { display:block;color:#333;}
+.list_txt_a ul li a:hover{color:#025194;}
+
+/*=========骞荤伅鐗�=========*/
+.gqhdpbox .title-inner { background:url(../images/guoqing/public_titbg_t6.jpg) no-repeat; width:712px; height:45px; line-height:45px; font-size:20px; text-indent:18px;}
+.gqhdpbox .title-inner span a:hover { color:#025194;}
+.gqhdpbox .title-inner a:hover { color:#fff; }
+.flexslider{position:relative;width:712px;height:306px;overflow:hidden;zoom:1; padding-top:10px; }
+.flexslider .slides li{width:712px;overflow:hidden;float:left;}
+.flexslider .slides li span{ font-size:18px; text-align:center; height:36px; line-height:36px; overflow:hidden;}
+.flex-viewport{max-height:2000px;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;}
+.flexslider .slides{zoom:1;}
+.flexslider .slides li img{ width:712px; height:230px;}
+.flex-direction-nav a,.flex-control-paging li a{background:url(../images/guoqing/slide_ico1.jpg) no-repeat;}
+.flex-direction-nav a{width:28px;height:28px;line-height:99em;overflow:hidden;margin:0;display:block;position:absolute;bottom:18px;z-index:10;cursor:pointer;}
+.flex-direction-nav .flex-next{background-position:-219px 0;right: 205px;}
+.flex-direction-nav .flex-prev{left: 245px;}
+.flex-control-nav{width: 180px;position:absolute;left: 286px;bottom:20px;text-align:center;z-index:11;overflow:hidden; margin:0 auto;}
+.flex-control-nav li{margin:0;display:inline-block;zoom:1;*display:inline;}
+.flex-control-paging li a{background-position:-124px -6px;display:block;height:20px;overflow:hidden;text-indent:-99em;width:20px;cursor:pointer;margin-left:5px; margin-right:5px;}
+.flex-control-paging li a.flex-active{background-position:-53px -5px;margin-left:5px; margin-right:5px;}
+.flex-direction-nav li a.prev-cond{ background:url(../images/guoqing/news_btn_f1.png) no-repeat; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/guoqing/news_btn_f1.png", sizingMethod="crop"); height:38px; width:38px; left:15px; top:115px;}
+.flex-direction-nav li a.next-cond{ background:url(../images/guoqing/news_btn_f2.png) no-repeat; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/guoqing/news_btn_f2.png", sizingMethod="crop"); height:38px; width:38px; right:15px; top:115px;}
+
+/*=========鍥藉姟闄㈢粍缁囨灦鏋�=========*/
+.cond_wyfy{ margin-bottom:26px;}
+.cond_wyfy .title-inner .more { margin-right:10px;}
+.lssdjt_img{ width:253px; padding-top:18px; text-align:center; font-size:12px;}
+.gqimgwd img{ width: 253px; height: 165px;}
+.lssdjt_img p{ height:46px; line-height:46px;}
+.lssdjt_img_ul{ width:230px; padding-top:10px; overflow:hidden; padding-bottom:14px;}
+.lssdjt_img_ul li{ padding-left:14px; background:url(../images/guoqing/arrow_03.jpg) no-repeat 0 15px; }
+.lssdjt_img_ul li a:hover{ text-decoration:none; color:#00468c;}
+.flex-direction-nav{ font-size:0; display:block; height:0; line-height:0;}
+.flex-direction-nav li{ line-height:0;  margin:0;}
+.prev-cond{ font-size:0;}
+#demo01 title{ font-size:0; line-height:0;}
+
+/*鎬荤悊*/
+.gqly { background:#eee;}
+.gqly ul { width:230px; margin:0 auto;}
+.chanel_tab_main2 span, .channel_tab2 span { margin: 0 10px; padding:0;}
+.channel_tab2 span { padding:0 !important;}
+.lyBtn {background: url(../images/public/fw_wyly_icon.jpg) no-repeat left;margin-top: 10px;}
+/*.saySome div.list_1 ul{height: 245px;}*/
+.pt30 .lmtit{ padding-top:30px;}
+
+
+
+/*===鍥芥儏鍐呭椤�==*/
+.article-colum{width:868px;margin:0 auto;position:relative;overflow:hidden; padding-bottom:60px;}
+.pages-title{font-size:39px;font-family:Microsoft Yahei;text-align:center;color:#343434;}
+.pages-date{text-align:center;color:#898989;font-size:13px; overflow:hidden; line-height:40px;}
+.pages-date span.font,.pages_print span.font{margin:0 10px;}
+.pages_print .index_switchsize{float:left;padding-left:240px; color:#898989;}
+.pages_print .printIco{float:left;}
+.pages_print .share{float:left;padding-left:20px;width:auto;margin:0;}
+.pages_print .index_switchsize span{cursor:pointer;}
+.pages_print{text-align:center;font-size:12px;height:30px;overflow:hidden;border-bottom:1px #dcdcdc solid;}
+.pages_print .printIco{color:#898989;}
+.pages_print .share{color:#898989;}
+#btnPrint{cursor:pointer;}
+
+
+.pages_content{line-height:35px;padding:0;margin:20px 0 0 0;font-size:16px;}
+.pages_content .gqcontentimg img { width:405px; height:500px;}
+.pages_content p{	font-family: "宋体";font-size:16px; text-indent:2em;}
+.pages_content .editor{color:#898989;font-size:12px;text-align:right;padding:5px 0;}
+
+
+.pages_content ul li { margin-bottom:20px;}
+.pages_content ul li p { text-align:center; line-height:30px;}
+.pages_content ul li p.gqconname { font-size:20px;}
+.pages_content ul li p.gqcondate { font-size:16px; color:#015293;}
