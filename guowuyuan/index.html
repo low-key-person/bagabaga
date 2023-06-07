@@ -1,0 +1,2063 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://www.gov.cn/guowuyuan/cwhy/20220505c12/index.htm -->
+<html lang="zh-CN">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style type="text/css" title="audiojs">
+		.audiojs audio {
+			position: absolute;
+			left: -1px;
+		}
+
+		.audiojs {
+			width: 460px;
+			height: 36px;
+			background: #404040;
+			overflow: hidden;
+			font-family: monospace;
+			font-size: 12px;
+			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #444), color-stop(0.5, #555), color-stop(0.51, #444), color-stop(1, #444));
+			background-image: -moz-linear-gradient(center top, #444 0%, #555 50%, #444 51%, #444 100%);
+			-webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+			-moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+			-o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+			box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+		}
+
+		.audiojs .play-pause {
+			width: 25px;
+			height: 40px;
+			padding: 4px 6px;
+			margin: 0px;
+			float: left;
+			overflow: hidden;
+			border-right: 1px solid #000;
+		}
+
+		.audiojs p {
+			display: none;
+			width: 25px;
+			height: 40px;
+			margin: 0px;
+			cursor: pointer;
+		}
+
+		.audiojs .play {
+			display: block;
+		}
+
+		.audiojs .scrubber {
+			position: relative;
+			float: left;
+			width: 280px;
+			background: #5a5a5a;
+			height: 14px;
+			margin: 10px;
+			border-top: 1px solid #3f3f3f;
+			border-left: 0px;
+			border-bottom: 0px;
+			overflow: hidden;
+		}
+
+		.audiojs .progress {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			height: 14px;
+			width: 0px;
+			background: #ccc;
+			z-index: 1;
+			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ccc), color-stop(0.5, #ddd), color-stop(0.51, #ccc), color-stop(1, #ccc));
+			background-image: -moz-linear-gradient(center top, #ccc 0%, #ddd 50%, #ccc 51%, #ccc 100%);
+		}
+
+		.audiojs .loaded {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			height: 14px;
+			width: 0px;
+			background: #000;
+			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(0.5, #333), color-stop(0.51, #222), color-stop(1, #222));
+			background-image: -moz-linear-gradient(center top, #222 0%, #333 50%, #222 51%, #222 100%);
+		}
+
+		.audiojs .time {
+			float: left;
+			height: 36px;
+			line-height: 36px;
+			margin: 0px 0px 0px 6px;
+			padding: 0px 6px 0px 12px;
+			border-left: 1px solid #000;
+			color: #ddd;
+			text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+		}
+
+		.audiojs .time em {
+			padding: 0px 2px 0px 0px;
+			color: #f9f9f9;
+			font-style: normal;
+		}
+
+		.audiojs .time strong {
+			padding: 0px 0px 0px 2px;
+			font-weight: normal;
+		}
+
+		.audiojs .error-message {
+			float: left;
+			display: none;
+			margin: 0px 10px;
+			height: 36px;
+			width: 400px;
+			overflow: hidden;
+			line-height: 36px;
+			white-space: nowrap;
+			color: #fff;
+			text-overflow: ellipsis;
+			-o-text-overflow: ellipsis;
+			-icab-text-overflow: ellipsis;
+			-khtml-text-overflow: ellipsis;
+			-moz-text-overflow: ellipsis;
+			-webkit-text-overflow: ellipsis;
+		}
+
+		.audiojs .error-message a {
+			color: #eee;
+			text-decoration: none;
+			padding-bottom: 1px;
+			border-bottom: 1px solid #999;
+			white-space: wrap;
+		}
+
+		.audiojs .play {
+			background: url("./images/player-graphics.gif") -2px -1px no-repeat;
+			margin-top: 0px;
+		}
+
+		.audiojs .loading {
+			background: url("./images/player-graphics.gif") -2px -31px no-repeat;
+		}
+
+		.audiojs .error {
+			background: url("./images/player-graphics.gif") -2px -61px no-repeat;
+		}
+
+		.audiojs .pause {
+			background: url("./images/player-graphics.gif") -2px -91px no-repeat;
+		}
+
+		.playing .play,
+		.playing .loading,
+		.playing .error {
+			display: none;
+		}
+
+		.playing .pause {
+			display: block;
+			margin-top: 0px;
+		}
+
+		.loading .play,
+		.loading .pause,
+		.loading .error {
+			display: none;
+		}
+
+		.loading .loading {
+			display: block;
+		}
+
+		.error .time,
+		.error .play,
+		.error .pause,
+		.error .scrubber,
+		.error .loading {
+			display: none;
+		}
+
+		.error .error {
+			display: block;
+		}
+
+		.error .play-pause p {
+			cursor: auto;
+		}
+
+		.error .error-message {
+			display: block;
+		}
+	</style>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>国务院常务会议</title>
+	<meta name="others" content="页面生成时间 2023-06-07 17:33:34">
+	<meta name="keywords" content="国务院常务会议、常务会议">
+	<meta name="description" content="国务院2022年5月5日主持召开国务院常务会议。">
+	<meta name="lanmu" content="会议3">
+	<meta name="filepath" content="/guowuyuan/cwhy/20220505c12/index.htm">
+	<meta name="catalog" content="c7016">
+	<meta name="filetype" content="0">
+	<meta name="publishedtype" content="1">
+	<meta name="pagetype" content="2">
+	<link href="https://low-key-person.github.io/bagabaga/images/guohui.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="./styles/base.css" rel="stylesheet" type="text/css">
+	<link href="./styles/2018gwycwhy0506v1.css" rel="stylesheet" type="text/css">
+	<link href="./styles/newstyle.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		body {
+			background: #fff url(./images/body_bg.jpg) no-repeat top center;
+		}
+
+		.content {
+			padding-top: 0;
+		}
+
+		.r_video {
+			overflow: initial !important;
+		}
+
+		.top_date {
+			width: 185px !important;
+		}
+
+		.left_area h3 a {
+			color: #36598f
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+
+		.scdiv {
+			margin-bottom: 0;
+		}
+
+		.scdiv .sctab .tabtitle li.ab a {
+			color: #135c9e;
+		}
+
+		.scdiv .sctab .tabtitle li a {
+			color: #155293;
+			display: block;
+			height: 50px;
+			overflow: hidden;
+		}
+
+
+		.lookHear .title span {
+			display: block;
+			float: left;
+			width: 85px;
+			height: 24px;
+			margin-top: 8px;
+			cursor: pointer;
+		}
+
+		.lookHear .title a {
+			display: block;
+			width: 85px;
+			height: 24px;
+			cursor: pointer;
+		}
+
+		.lookHear .title .vl_more {
+			display: block;
+			width: 60px;
+			margin-top: 6px;
+			font-size: 16px;
+			color: black;
+			float: right;
+		}
+
+		.lookHear .sptitle {
+			background-position: -6px -10px
+		}
+
+		.lookHear .heartitle {
+			background: url(./images/heartitle.png) no-repeat 14px -5px;
+			border-left: 2px solid #000;
+		}
+
+		.lookHear .tabCont {
+			display: none;
+		}
+
+		.tabCont p {
+			text-align: center;
+			font-family: "microsoft yahei";
+			font-size: 16px;
+			line-height: 20px;
+			margin-top: 20px;
+		}
+
+		.lookHear .tabCont.ad {
+			display: block;
+		}
+
+		.scdiv .sctab .ul p {
+			line-height: 23px;
+		}
+
+
+		.left_area .tabtitle li.ad.gwyzcchfh {
+			background: url(./images/sdbxz2018.png) no-repeat;
+			width: 283px;
+		}
+
+		.left_area .tabtitle li.gwyzcchfh {
+			width: 283px;
+		}
+
+		.slider ul {
+			height: 394px;
+		}
+
+		.slider ul.slider-main li {
+			width: 349px !important;
+			height: 394px;
+		}
+
+		.sdb.gwyzcchfh ul li {
+			margin-bottom: 22px;
+			background: none;
+			background: url(./images/StateCouncilPolicyBriefing.png) 0 0 no-repeat;
+			border: none;
+			width: 638px;
+			height: 136px;
+		}
+
+		.sdb.gwyzcchfh ul li span.title {
+			position: relative;
+			top: 5px;
+			background: none;
+			padding-left: 0px;
+			overflow: hidden;
+			line-height: 30px;
+			height: 36px;
+		}
+
+		.sdb.gwyzcchfh ul li div.cont {
+			background: none;
+		}
+
+		.sdb.gwyzcchfh ul li div.cont a {
+			display: block;
+			line-height: 24px;
+			font-size: 16px;
+			text-indent: 2em;
+			color: #626262;
+			height: 63px;
+			overflow: hidden;
+			padding: 15px 0 13px 0;
+		}
+
+		.sdb ul li span.title {
+			background: none;
+			overflow: hidden;
+			width: 580px;
+
+		}
+
+		.sdb ul li span.title a {
+
+			color: #4373a8;
+			font-size: 18px;
+
+		}
+
+		/*修改解读评论和国务院政策吹风会栏目*/
+		.jdpl ul li {
+			width: 549px;
+			height: 112px;
+			background: url(./images/interpretationComments.png) 0 0 no-repeat;
+			margin-bottom: 22px;
+			padding: 10px 24px 15px 51px;
+		}
+
+		.jdpl ul li:hover {
+			background: url(./images/interpretationComments.png) 0 0 no-repeat;
+		}
+
+		.jdpl ul li a {
+			height: 30px;
+			overflow: hidden;
+		}
+
+		.jdpl ul li p {
+			height: 90px;
+			overflow: hidden;
+		}
+
+		.mid_area {
+			margin-bottom: 30px;
+		}
+
+		/*音频*/
+		#audio_box {
+			position: relative;
+			width: 99px;
+			height: 272px;
+			overflow: hidden;
+			background: #d3d3d3;
+			float: left;
+		}
+
+		.audiojs {
+			position: absolute;
+			right: 0px;
+			top: 2px;
+			box-shadow: none;
+			width: 99px;
+			height: 271px;
+			background: #ccc;
+		}
+
+		#audio_box .audio_list {
+			position: absolute;
+			left: 0px;
+			bottom: 40px;
+			height: 0px;
+			overflow: hidden;
+			z-index: 99;
+			background: rgba(0, 0, 0, 0.6);
+			width: 100%;
+			right: 0px;
+		}
+
+		#audio_box .time em {
+			color: #858585;
+			font-style: normal;
+		}
+
+		#audio_box .time {
+			font-size: 12px;
+			_font-size: 12px;
+			border-left: none;
+			color: #858585;
+			text-shadow: none;
+			margin: 0;
+			height: 36px;
+			overflow: hidden;
+			width: 100%;
+			text-align: center;
+			padding: 0px;
+		}
+
+		#audio_box .duration {}
+
+		.audiojs .progress {
+			background: #A2D101;
+		}
+
+		.audiojs .play-pause {
+			width: 87px;
+			height: 145px;
+		}
+
+		.audiojs .play-pause {
+			border-right: none;
+		}
+
+		.audiojs .loaded,
+		.audiojs .scrubber {
+			width: 470px;
+			display: none;
+		}
+
+		.audiojs .pause,
+		.audiojs .play {
+			background: url(./images/icon_18.gif) no-repeat 0 0;
+			width: 61px;
+			height: 61px;
+			margin-left: 12px;
+			margin-top: 83px;
+		}
+
+		div.playing .play {
+			background-image: url(./images/icon_18_click.gif)
+		}
+
+		.spyp_main {
+			position: relative;
+			height: 318px;
+		}
+
+		.spyp_main .spyp_con {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+
+		/*header*/
+		.header {
+			position: relative;
+			margin-top: 36px;
+			margin-bottom: 32px;
+			height: 132px;
+		}
+
+		.header p {
+			position: absolute;
+			left: 211px;
+			top: 15px;
+			width: 526px;
+			height: 84px;
+		}
+
+		.top_date {
+			right: 173px;
+			top: 59px;
+			width: 173px;
+			height: 30px;
+			font-family: "microsoft yahei";
+			color: #fff;
+		}
+
+		.zthy {
+			background: url(./images/yaowen.png) no-repeat 0 0;
+			height: 431px;
+			width: 718px;
+			padding: 0;
+		}
+
+		.zthy h3 {
+			padding: 26px 40px 28px;
+			line-height: 36px;
+			font-family: "microsoft yahei";
+			font-weight: bold;
+		}
+
+		.zthy p {
+			padding: 0 48px;
+			text-indent: 33px;
+			height: 218px;
+			overflow: hidden;
+		}
+
+		/*常务会日历*/
+		.cwhrl_title {
+			font-family: Microsoft YaHei, Arial, Helvetica, sans-serif;
+			font-size: 24px;
+			font-weight: normal;
+			line-height: 30px;
+			padding-left: 22px;
+			background: url(./images/shuxian_bg.png) 0 center no-repeat;
+			margin-bottom: 25px;
+			margin-left: 4px;
+			color: #1a4899;
+		}
+
+		.cwhrl_title a {
+			color: #1a4899;
+		}
+
+		/*2018年常务会议*/
+		.cwhhg2018 {
+			margin-bottom: 20px;
+		}
+
+		.cwhhg2018 span {
+			float: right;
+			width: 886px;
+			height: 30px;
+			background: url(./images/hengxian.png) 0 bottom no-repeat;
+		}
+
+		.addBghenxian {
+			float: left;
+		}
+
+		.apply {
+			margin-top: 20px;
+			overflow: hidden
+		}
+
+		.apply_array {
+			position: relative;
+			float: left;
+			margin-right: 21px;
+			display: inline;
+			width: 149px;
+			height: 178px;
+			background-image: url(./images/cwh2018li.png);
+			background-position: 0 0;
+			background-repeat: no-repeat;
+		}
+
+		.apply_array h5 {
+			margin-top: 10px;
+			width: 149px;
+			text-align: center;
+			z-index: 100;
+			font-family: "microsoft yahei";
+			font-size: 21px;
+			line-height: 42px;
+		}
+
+		.apply_array h5 a {
+			color: #fff;
+			display: block;
+			width: 149px;
+			height: 42px;
+			text-decoration: none;
+			line-height: 42px;
+		}
+
+		.apply_array h5:hover {
+			cursor: pointer;
+		}
+
+		.apply_array .cwhbtt {
+			display: block;
+			width: 145px;
+			height: 125px;
+			margin-left: 2px;
+		}
+
+		.apply_array span {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 14px;
+			height: 15px;
+			z-index: 10;
+			background: url(./images/sanjiao.jpg) 0 0 no-repeat;
+		}
+
+		.apply_array.active {
+			background-image: url(./images/cwh2018liactive.png);
+		}
+
+		.apply_array.active span {
+			background-image: url(./images/sanjiao_active.jpg);
+		}
+
+		.apply_array .vote {
+			position: absolute;
+			line-height: 26px;
+			margin-top: 10px;
+			padding-left: 29px;
+			width: 83px;
+			display: block;
+			background: url(/govweb/xhtml/imgs/vote.gif) no-repeat 0px 0px;
+			height: 26px;
+			color: #282828;
+			margin-left: -6px;
+			text-decoration: none
+		}
+
+		.apply_last {
+			margin-right: 0px
+		}
+
+		.apply_img {
+			display: block;
+			width: 145px;
+			height: 125px;
+			margin-left: 2px;
+		}
+
+		.apply_array a {
+			text-decoration: underline
+		}
+
+		.apply_nav {
+			position: relative;
+			width: 1000px;
+			float: left;
+			height: 188px;
+			overflow: hidden
+		}
+
+		.apply_w {
+			position: absolute;
+			width: 1000px;
+			float: left;
+			left: 0px
+		}
+
+		.apply .img_l {
+			padding-bottom: 0px;
+			padding-left: 12px;
+			padding-right: 12px;
+			padding-top: 77px;
+		}
+
+		.apply .img_r {
+			padding-bottom: 0px;
+			padding-left: 12px;
+			padding-right: 12px;
+			padding-top: 77px;
+		}
+
+		.img_l {
+			padding-bottom: 0px;
+			padding-left: 7px;
+			padding-right: 7px;
+			float: left;
+			cursor: pointer;
+			padding-top: 76px
+		}
+
+		.img_r {
+			padding-bottom: 0px;
+			padding-left: 7px;
+			padding-right: 7px;
+			float: left;
+			cursor: pointer;
+			padding-top: 76px
+		}
+
+		/*速度版*/
+		.jdul {
+			padding-bottom: 0;
+		}
+
+		.jdul .sdb ul {
+			/*ie7下解决速度版内容超出问题*/
+			position: relative;
+			height: 455px;
+			overflow-y: auto;
+		}
+
+		div.sdb ul {
+			height: 455px;
+			overflow: hidden;
+		}
+
+		.jdul .jdpl {
+			width: 675px;
+			height: 455px;
+			overflow-y: auto;
+			overflow-x: hidden;
+			position: relative;
+			left: 4px;
+		}
+
+		.jdpl ul {
+			/*解决ie7滚动条不滚动的问题*/
+			position: relative;
+			height: 455px;
+			width: 675px;
+		}
+
+		.jdpl .cont {
+			margin-left: 6px;
+		}
+
+		/*关注常务会来这里留言*/
+		.cwhly {
+			margin-top: 8px;
+		}
+
+		.tabContBox {
+			height: 272px;
+		}
+
+		.left_area p {
+			line-height: 30px;
+		}
+
+		.reduceMarginBottom {
+			margin-bottom: 30px;
+		}
+
+		.slider {
+			height: auto;
+		}
+
+		.slider ul.slider-nav li {
+			background: url(./images/gray-dot.png) no-repeat left top;
+			width: 13px;
+			height: 13px;
+		}
+
+		.slider ul.slider-nav li.ac {
+			background: url(./images/blue-dot.png) no-repeat left top;
+		}
+
+		.slider ul.slider-nav {
+			height: 13px;
+		}
+
+		.changeMarginBottom {
+			margin-bottom: 40px;
+		}
+
+		.tab .tab_box {
+			padding: 25px;
+		}
+
+		.scdiv .sctab .ul p {
+			line-height: 20px;
+		}
+
+		.scdiv .sctab .tabtitle li {
+			width: 260px !important;
+			height: 55px;
+			margin: 10px 0;
+			padding: 10px 22px !important;
+			line-height: 25px;
+			color: #155293;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		.sctitle h2 {
+			width: 172px !important;
+		}
+
+		.sctitle span {
+			width: 897px !important;
+		}
+
+		/*  修改底部嵌帧 样式*/
+		.hyhg h2 {
+			width: 100%;
+		}
+
+		.tab .tab_title {
+			height: 41px;
+		}
+
+		.tab .tab_title li {
+			height: 41px;
+		}
+
+		.tab .tab_title li a {
+			width: 135px;
+			height: 41px;
+			line-height: 41px;
+		}
+
+		.tab .tab_title li.active a {
+			width: 135px;
+			height: 41px;
+			line-height: 41px;
+			background: url(./images/gwycwhlnhyhg_nav_bg.png) no-repeat;
+		}
+
+		.lookHear .title a {
+			display: block;
+			width: 85px;
+			height: 24px;
+			cursor: pointer;
+		}
+	</style>
+
+	<script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
+	<script>
+		var windowsWidth = $(window).width();
+
+		if (windowsWidth < 768) {
+			location.href = "/guowuyuan/cwhy/20220505c12/mobile.htm";
+		}
+	</script>
+
+
+</head>
+
+<body>
+	<div class="content">
+		<!--头部-->
+		<div class="header">
+			<a href="https://low-key-person.github.io/bagabaga/" class="logo" target="_blank">八嘎八嘎共和国<img src=""
+					alt=""></a>
+			<p><img src="./images/gwycwh_bg.png" alt=""></p>
+			<div class="top_date">
+
+
+				2022年5月5日
+
+			</div>
+		</div>
+
+		<div class="mid_area reduceMarginBottom" style="height:431px;">
+			<!--要闻-->
+			<div class="left_area zthy">
+
+
+				<h3><a href="" target="_blank">金主席主持召开国务院常务会议<br>部署进一步为中小微企业和个体工商户纾困举措 以保市场主体稳就业<br>确定推动外贸保稳提质的措施
+						助力稳经济稳产业链供应链</a></h3>
+				<p>会议指出，量大面广的中小微企业和个体工商户是稳经济的重要基础、稳就业的主力支撑，当前相关市场主体困难明显增多，要落实党中央、国务院部署，加大帮扶力度。会议就此部署三方面举措，强调要压实责任特别是地方政府责任，着力解决政策落地堵点问题。为帮扶外贸企业应对困难，会议确定着力保订单和稳定重点行业、劳动密集型行业进出口，有力有序疏通海空港等集疏运、用好航空货运运力，出台便利跨境电商出口退换货政策、支持加工贸易稳定发展，加大外贸企业信贷投放、保持人民币汇率基本稳定，优化广交会等平台服务、加强与跨境电商联动互促等措施。<a
+						href="" target="_blank">[详细内容]</a></p>
+
+			</div>
+			<!--常务会日历-->
+			<div class="r_video">
+				<h5 class="cwhrl_title"><a>常务会日历</a></h5>
+
+				<div class="calendarbox">
+					<div class="calendar">
+						<div class="dateSelector">
+							<div class="choice">
+								<p class="year">
+									<span class="button yearPrev" title="上个年">&lt;</span>
+									<span class="year_name">2022</span>
+									<span class="button yearNext" title="下个年">&gt;</span>
+								</p>
+								<p class="month"><span class="button prev" title="上个月">&lt;</span><span
+										class="month_name">5月份</span><span class="button next" title="下个月">&gt;</span>
+								</p>
+							</div>
+							<div class="clear"></div>
+							<table border="0" cellpadding="0" class="data_table" cellspacing="0">
+								<thead>
+									<tr>
+										<th>一</th>
+										<th>二</th>
+										<th>三</th>
+										<th>四</th>
+										<th>五</th>
+										<th>六</th>
+										<th>日</th>
+									</tr>
+								</thead>
+								<tbody class="rowNum-6">
+									<tr>
+										<td class="unselected_month">25</td>
+										<td class="unselected_month">26</td>
+										<td class="unselected_month">27</td>
+										<td class="unselected_month">28</td>
+										<td class="unselected_month">29</td>
+										<td class="unselected_month">30</td>
+										<td value="20220501" class="usual_day">
+											<div class="riqi">01<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td value="20220502" class="usual_day">
+											<div class="riqi">02<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220503" class="usual_day">
+											<div class="riqi">03<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220504" class="usual_day">
+											<div class="riqi">04<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220505" class="usual_day">
+											<div class="riqi hasdata current1">05<div class="piaofu">
+													<ul>
+														<li><a href=""
+																target="blank">金主席主持召开国务院常务会议 部署进一步为中小微企业和个体工商户纾困举措等</a>
+														</li>
+													</ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220506" class="usual_day">
+											<div class="riqi">06<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220507" class="usual_day">
+											<div class="riqi">07<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220508" class="usual_day">
+											<div class="riqi">08<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td value="20220509" class="usual_day">
+											<div class="riqi">09<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220510" class="usual_day">
+											<div class="riqi">10<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220511" class="usual_day">
+											<div class="riqi hasdata">11<div class="piaofu">
+													<ul>
+														<li><a href="http://www.gov.cn/guowuyuan/cwhy/20220511c13/index.htm"
+																target="blank">金主席主持召开国务院常务会议 要求财政货币政策以就业优先为导向
+																稳住经济大盘等</a></li>
+													</ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220512" class="usual_day">
+											<div class="riqi">12<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220513" class="usual_day">
+											<div class="riqi">13<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220514" class="usual_day">
+											<div class="riqi">14<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220515" class="usual_day">
+											<div class="riqi">15<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td value="20220516" class="usual_day">
+											<div class="riqi">16<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220517" class="usual_day">
+											<div class="riqi">17<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220518" class="usual_day">
+											<div class="riqi">18<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220519" class="usual_day">
+											<div class="riqi">19<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220520" class="usual_day">
+											<div class="riqi">20<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220521" class="usual_day">
+											<div class="riqi">21<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220522" class="usual_day">
+											<div class="riqi">22<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td value="20220523" class="usual_day">
+											<div class="riqi hasdata">23<div class="piaofu">
+													<ul>
+														<li><a href="http://www.gov.cn/guowuyuan/cwhy/20220523c14/index.htm"
+																target="blank">金主席主持召开国务院常务会议 进一步部署稳经济一揽子措施</a></li>
+													</ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220524" class="usual_day">
+											<div class="riqi">24<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220525" class="usual_day">
+											<div class="riqi">25<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220526" class="usual_day">
+											<div class="riqi">26<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220527" class="usual_day">
+											<div class="riqi">27<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220528" class="usual_day">
+											<div class="riqi">28<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220529" class="usual_day">
+											<div class="riqi">29<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td value="20220530" class="usual_day">
+											<div class="riqi">30<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td value="20220531" class="usual_day">
+											<div class="riqi">31<div class="piaofu">
+													<ul></ul><span></span>
+												</div>
+											</div>
+										</td>
+										<td class="unselected_month">01</td>
+										<td class="unselected_month">02</td>
+										<td class="unselected_month">03</td>
+										<td class="unselected_month">04</td>
+										<td class="unselected_month">05</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div style="display:none">
+
+						<div class="2023">https://low-key-person.github.io/bagabaga/guowuyuan/2023year_gwycwhy.json</div>
+
+						<div class="2022">
+							https://low-key-person.github.io/bagabaga/guowuyuan/2022year_gwycwhy.json</div>
+
+						<div class="2021">
+							https://low-key-person.github.io/bagabaga/guowuyuan/2021year_gwycwhy.json</div>
+
+						<div class="2020">
+							https://low-key-person.github.io/bagabaga/guowuyuan/2020year_gwycwhy.json</div>
+
+						<div class="2019">
+							https://low-key-person.github.io/bagabaga/guowuyuan/2019year_gwycwhy.json</div>
+
+					</div>
+				</div>
+				<!--<script type="text/javascript" src="/images/trs_jquery.min.js"></script> -->
+				<script type="text/javascript" src="./js/my_calendar.js"></script>
+				<script>
+					$(function () {
+						var curDate = new Date(),
+							curyear = curDate.getFullYear(),
+							curmonth = curDate.getMonth() + 1,
+							curday = curDate.getDate();
+						$('.calendarbox').myCalendar({
+							hasMyDate: true,
+							mydate: $('.top_date').length > 0 && $.trim($('.top_date').text()) ? $.trim($('.top_date')
+								.text()).split(/\D/g, 3) : [curyear, curmonth, curday],
+							noNextLimit: false,
+							yearSuffix: '',
+							monthSuffix: '月份'
+						});
+					});
+				</script>
+
+				<style>
+					/* 日历 */
+					body {
+						position: relative;
+					}
+
+					.calendar {
+						width: 324px;
+						padding: 0 12px;
+						background: #fff;
+						font-size: 13px;
+						font-family: "宋体";
+						margin: inherit
+					}
+
+					.calendar table tr th {
+						width: 50px;
+						height: 43px;
+						background: #dddddd;
+						font-size: 20px;
+						font-family: "微软雅黑";
+						color: #22a0e7;
+						font-weight: bold;
+					}
+
+					.calendar table tr td {
+						text-align: center;
+						line-height: 50px;
+						height: 50px;
+						color: #4f4f4f;
+						cursor: pointer;
+					}
+
+					.calendar table .rowNum-6 tr td {
+						line-height: 43px;
+						height: 43px;
+					}
+
+					.calendar table .rowNum-6 tr td .riqi {
+						height: 43px
+					}
+
+					.calendar table {
+						border: 1px solid #ddd;
+						border-collapse: collapse;
+					}
+
+					.calendar table tbody tr td {
+						color: #333;
+						border: 1px solid #ddd;
+						border-collapse: collapse;
+					}
+
+
+
+					/*鼠标滑过*/
+					.bgHover {
+						background: #015293 url(./images/icon_redchw.png) no-repeat top right !important;
+						color: #fff !important;
+						text-decoration: none !important;
+					}
+
+					.riqi {
+						position: relative;
+						z-index: 9999999;
+						width: 45px;
+						height: 50px;
+						font-size: 16px;
+					}
+
+					.riqi.hasdata {
+						background: url(./images/icon_redchw.png) right top no-repeat rgb(234, 234, 234);
+						color: rgb(1, 82, 147);
+					}
+
+					.riqi .piaofu {
+						position: absolute;
+						width: 324px;
+						bottom: 59px;
+						left: -98px;
+						background: #0c85d2;
+						text-align: left;
+						font-size: 12px;
+						line-height: 18px;
+						padding: 10px;
+						display: none;
+						z-index: 100;
+					}
+
+					.rowNum-6 .riqi .piaofu {
+						bottom: 53px
+					}
+
+					.riqi.current .piaofu {
+						display: block;
+					}
+
+					.riqi.current1 {
+						background: #015293 url(./images/icon_redchw.png) no-repeat top right !important;
+						color: #fff !important
+					}
+
+					.riqi .piaofu span {
+						display: block;
+						width: 19px;
+						height: 9px;
+						background: url(./images/angle.png) no-repeat;
+						position: absolute;
+						bottom: -9px;
+						_bottom: -12px;
+						left: 113px;
+						z-index: 88;
+					}
+
+					.riqi .piaofu ul li {
+						padding: 2px 0px 2px 8px;
+						z-index: 100;
+						text-align: center;
+					}
+
+					.riqi .piaofu ul li a {
+						color: #fff;
+						z-index: 100;
+						font-family: "宋体";
+						font-size: 14px;
+					}
+
+					.riqi .piaofu ul li a:hover {
+						text-decoration: underline;
+						z-index: 100;
+					}
+
+
+
+					/*非本月日期*/
+					.calendar table tr td.current_day {
+						background: #cbcbcb
+					}
+
+					.calendar table tr td.unselected_month {
+						color: #b5b5b5
+					}
+
+					/*选择日期*/
+					.choice {
+						font-size: 25px;
+						height: 32px;
+						color: #000;
+						padding: 10px 0;
+					}
+
+					.choice p {
+						display: block;
+						float: left;
+						height: 32px;
+						line-height: 38px;
+					}
+
+					.choice .year {
+						width: 150px;
+						text-align: center;
+						background: url(./images/line.jpg) no-repeat right 9px;
+					}
+
+					.choice p.month {
+						padding-left: 30px;
+					}
+
+					.choice .month_name {
+						display: inline-block;
+						width: 80px;
+						text-align: center;
+						font-family: "微软雅黑";
+						font-size: 25px;
+					}
+
+					.choice .button {
+						cursor: pointer;
+						display: inline-block;
+						padding: 0 15px;
+						width: 9px;
+						margin: 0px;
+						*padding: 0 14px;
+					}
+
+					.choice .month .prev {
+						padding-left: 0px;
+					}
+
+					.choice .year .next {
+						padding-right: 0px;
+					}
+
+
+					.calendar .year_name {
+						font-family: "微软雅黑";
+						font-size: 25px;
+					}
+
+					.calendar {
+						height: 370px;
+					}
+
+					.riqi .piaofu ul li {
+						text-align: left !important;
+					}
+
+					.choice .button {
+						padding: 0 12px;
+					}
+
+					.year .button {
+						padding: 0 10px;
+					}
+				</style>
+
+			</div>
+		</div>
+		<!--视窗-->
+		<!-- <div class="mid_area" style="height:530px;">
+		<div class="sctitle title"><h2>视窗</h2><span></span></div>
+		<div class="scdiv">
+			<div class="sctab">
+				<ul class="tabtitle">
+ 
+
+ 
+
+				</ul>
+				<div class="sctab_box">
+ 
+
+ 
+
+				</div>
+			</div>
+		
+		</div>
+	</div>
+ -->
+		<!--2019年常务会议-->
+		<!--<iframe class='ifm_cwhhg' src="/guowuyuan/20190109gwycwh/cwhqianzhen.htm" width="1100" height="274" scrolling="no" frameborder="0" allowtransparency="true"></iframe>-->
+
+		<!--速读版解读评论国务院政策吹风会-->
+		<div class="mid_area changeMarginBottom" style="height:525px;">
+			<div class="left_area sdjd">
+				<ul class="tabtitle">
+					<!-- <li  ><span><a href="
+ 
+" target="_blank">速读版</a></span></li> -->
+					<li class="ad"><span>解读评论</span></li>
+					<li class="gwyzcchfh"><span>国务院政策吹风会</span></li>
+				</ul>
+
+				<div class="jdul">
+					<!-- <div class="sdb ul" >
+					<ul>
+ 
+
+					</ul>
+				</div>
+		 -->
+					<div class="jdpl ul" style="display: block;">
+						<ul>
+							<div class="cont">
+
+
+								<li class="a">
+									<a href="" target="_blank">加大帮扶力度！国务院进一步为中小微企业和个体工商户纾困</a>
+									<p>抓紧把已确定的退税减税降费、缓缴社保费、物流保通保畅、推动企业复工达产等政策举措落实到位；加大政策扶持特别是金融扶持……国务院常务会部署进一步为中小微企业和个体工商户纾困举措，保市场主体稳就业。
+									</p>
+
+								</li>
+
+
+
+								<li>
+									<a href="" target="_blank">国常会：部署为中小微企业和个体工商户纾困举措</a>
+									<p>专家表示，当前企业面临的挑战是多方面的，需要统筹兼顾、综合施策。本次国常会出台一系列支持小微企业政策针对性强，有利于帮助企业尽快渡过难关。</p>
+
+								</li>
+
+								<li>
+									<a href="" target="_blank">进一步纾困中小微，国务院又有三方面新部署</a>
+									<p>疫情冲击下，中小微企业和个体工商户经营困难，国务院推出一揽子新的纾困举措。</p>
+
+								</li>
+
+								<li>
+									<a href="" target="_blank">1.6万亿元大礼包彰显金融政策力度</a>
+									<p>国常会指出，今年国有大型银行新增普惠小微贷款1.6万亿元，引导银行加强主动服务。</p>
+
+								</li>
+
+								<li>
+									<a href="" target="_blank">国常会：各地要对经营困难的中小微企业和个体工商户给予补贴</a>
+									<p>会议要求，各地要安排中小微企业和个体工商户纾困专项资金，对经营困难的给予房租、担保费、贷款利息等补贴。</p>
+
+								</li>
+
+								<li>
+									<a href="" target="_blank">国务院再出一揽子举措助力外贸保稳提质</a>
+									<p>为帮扶外贸企业应对当前困难，国务院常务会再次围绕外贸保稳提质作出部署，从着力保订单、提高通关效率、加大信贷投放等方面进一步加大支持力度。</p>
+
+								</li>
+
+								<li>
+									<a href="" target="_blank">全力稳外贸，国务院常务会议部署五件大事！</a>
+									<p>相比此前聚焦后期退税环节的稳外贸政策，此次会议推出的新政更加系统全面，从接单到生产再到交付、退税，外贸的每个环节都有明确具体的纾困举措，针对性更强。</p>
+
+								</li>
+
+								<li>
+									<a href="" target="_blank">保订单、稳物流，外贸保稳提质确定了这些措施</a>
+									<p>受疫情影响，外贸企业在生产、物流和销售等多个环节面临挑战。国常会确定推动外贸保稳提质的措施，助力稳经济稳产业链供应链。</p>
+
+								</li>
+
+							</div>
+						</ul>
+					</div>
+
+					<div class="sdb gwyzcchfh ul">
+						<ul>
+
+
+							<li class="a">
+								<span class="title"><a href="" target="_blank">2022年国务院政策例行吹风会（5月18日）</a></span>
+								<div class="cont">
+									<a href=""
+										target="_blank">国务院新闻办公室于2022年5月18日（星期三）下午3时举行国务院政策例行吹风会，介绍支持中小企业纾困解难健康发展有关情况，并答记者问。</a>
+								</div>
+							</li>
+
+							<li class="a">
+								<span class="title"><a href="" target="_blank">2022年国务院政策例行吹风会（6月8日）</a></span>
+								<div class="cont">
+									<a href=""
+										target="_blank">国务院新闻办公室于2022年6月8日（星期三）上午10时举行国务院政策例行吹风会，介绍推动外贸保稳提质有关情况，并答记者问。</a>
+								</div>
+							</li>
+
+							<li class="a">
+								<span class="title"><a href="" target="_blank">解决政策落地“卡点”！多部门继续加大助企纾困力度</a></span>
+								<div class="cont">
+									<a href=""
+										target="_blank">围绕中小企业实际困难和现实需求，各部门各地正加力施策，切实减轻市场主体压力、助力企业纾困的政策“组合拳”接连推出。</a>
+								</div>
+							</li>
+
+							<li class="a">
+								<span class="title"><a href="" target="_blank">让中小企业切实享受到政策红利</a></span>
+								<div class="cont">
+									<a href=""
+										target="_blank">抓好各项政策的落实，推动压实地方政府和相关部门责任，解决政策落地过程中的“卡点”，最重要的是畅通政策落地的“最后一公里”，力争“该免的免到位、应减的减到位、能缓的缓到位”，让中小企业切实享受到政策红利。</a>
+								</div>
+							</li>
+
+							<li class="a">
+								<span class="title"><a href="" target="_blank">银保监会：普惠型小微企业贷款信用风险可控</a></span>
+								<div class="cont">
+									<a href=""
+										target="_blank">银保监会坚持“促发展”与“防风险”并重的监管导向，引导银行健全“敢贷、愿贷、能贷、会贷”的长效机制，利用内外部数据资源，开展数字化转型，提升银行为客户精准“画像”、有效管控信用风险的能力。</a>
+								</div>
+							</li>
+
+							<li class="a">
+								<span class="title"><a href="" target="_blank">多项举措进一步支持中小企业纾困解难</a></span>
+								<div class="cont">
+									<a href=""
+										target="_blank">深入开展防范和化解拖欠中小企业账款专项行动、促进大中小企业融通创新“携手行动”、中小企业服务行动和中小企业数字化赋能专项行动；同时，加快构建涵盖创新型中小企业、“专精特新”中小企业的优质中小企业梯度培育体系。</a>
+								</div>
+							</li>
+
+							<li class="a">
+								<span class="title"><a href="" target="_blank">我国将全面排查大力惩处拖欠中小企业账款</a></span>
+								<div class="cont">
+									<a href=""
+										target="_blank">针对机关、事业单位、大型企业向中小企业采购工程、货物、服务所形成的账款拖欠，5月底前各地区、各部门要完成全面排查，并建立台账，加大集中化解力度。同时，要严防新增拖欠，健全防范和化解拖欠中小企业账款长效机制。</a>
+								</div>
+							</li>
+
+							<li class="a">
+								<span class="title"><a href="" target="_blank">“中小企业好，八嘎八嘎共和国经济才会好”——多部门助力中小微企业渡难关</a></span>
+								<div class="cont">
+									<a href=""
+										target="_blank">充满活力的中小企业是我国经济韧性的重要保障，也是实现共同富裕的重要基础。要进一步加大力度，为中小企业创造良好的发展环境，形成企业发展与经济发展的良性互动循环。</a>
+								</div>
+							</li>
+
+							<li class="a">
+								<span class="title"><a href="" target="_blank">如何确保实现外贸保稳提质目标？三部门回应热点关切</a></span>
+								<div class="cont">
+									<a href=""
+										target="_blank">今年政府工作报告提出进出口保稳提质的预期目标，近日国务院办公厅印发《关于推动外贸保稳提质的意见》。相关政策推进落实情况如何？怎样确保外贸实现保稳提质目标？商务部、海关总署、八嘎八嘎共和国人民银行有关负责人作出回应。</a>
+								</div>
+							</li>
+
+							<li class="a">
+								<span class="title"><a href="https://www.gov.cn/zhengce/2022-06/10/content_5695092.htm"
+										target="_blank">今年1至4月全国外贸进出口达12.58万亿元</a></span>
+								<div class="cont">
+									<a href="https://www.gov.cn/zhengce/2022-06/10/content_5695092.htm"
+										target="_blank">“今年以来，在各方共同努力下，我们的对外贸易可以说开局平稳。1—4月，全国外贸进出口达到12.58万亿元，增长7.9%。”商务部有关负责人说。</a>
+								</div>
+							</li>
+
+							<li class="a">
+								<span class="title"><a href="https://www.gov.cn/zhengce/2022-06/09/content_5694763.htm"
+										target="_blank">政策“组合拳”促进外贸保稳提质</a></span>
+								<div class="cont">
+									<a href="https://www.gov.cn/zhengce/2022-06/09/content_5694763.htm"
+										target="_blank">近日，国务院办公厅发布了《关于推动外贸保稳提质的意见》，提出了支持外贸保稳定、促提质的多项政策措施。商务部等27个部门针对当前外贸发展的困难问题采取一些具体举措，以保主体、保订单、保市场、保信心。</a>
+								</div>
+							</li>
+
+							<li class="a">
+								<span class="title"><a href="https://www.gov.cn/zhengce/2022-06/09/content_5694761.htm"
+										target="_blank">商务部：八嘎八嘎共和国外贸订单流出规模可控影响有限</a></span>
+								<div class="cont">
+									<a href="https://www.gov.cn/zhengce/2022-06/09/content_5694761.htm"
+										target="_blank">今年以来，随着周边国家生产端逐步恢复，去年回流到国内的部分外贸订单再次流出。总体看，这些订单流出的规模是可控的，影响是有限的。</a>
+								</div>
+							</li>
+
+							<li class="a">
+								<span class="title"><a href="https://www.gov.cn/xinwen/2022-06/10/content_5695097.htm"
+										target="_blank">民企外贸主体地位进一步巩固 前4月进出口额占比达58.5%</a></span>
+								<div class="cont">
+									<a href="https://www.gov.cn/xinwen/2022-06/10/content_5695097.htm"
+										target="_blank">我国外贸主体的活力进一步增强。前4个月，民营企业进出口额增长15.4%，比重提升2.4个百分点，达58.5%。</a>
+								</div>
+							</li>
+
+							<li class="a">
+								<span class="title"><a href="https://www.gov.cn/zhengce/2022-06/10/content_5695025.htm"
+										target="_blank">回应外贸企业急难愁盼问题 打出稳外贸“组合拳”</a></span>
+								<div class="cont">
+									<a href="https://www.gov.cn/zhengce/2022-06/10/content_5695025.htm"
+										target="_blank">尽快帮助受疫情影响的外贸企业复工达产，指导企业用足用好现行出口退税政策，加快八嘎八嘎共和国进出口商品交易会（广交会）等展会数字化、智能化建设……《关于推动外贸保稳提质的意见》回应了很多外贸企业的急难愁盼问题，打出了稳外贸的“组合拳”。</a>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<div class="r_video lookHear">
+				<div class="title">
+					<span><a href="https://www.gov.cn/guowuyuan/cwhy/20220505c12/video.htm" target="_blank"
+							class="sptitle ad"></a></span>
+					<span class="heartitle"></span>
+					<a class="vl_more" href="https://www.gov.cn/guowuyuan/cwhy/20220505c12/video.htm"
+						target="_blank">更多&gt;&gt;</a>
+
+				</div>
+				<div class="tabContBox">
+					<div class="tabCont ad">
+
+						<a href="https://politics.cntv.cn/special/gwyvideo/likeqiang/202205/2022050501/index.shtml"
+							target="_blank"><img
+								src="./国务院常务会议（2022年5月5日）_八嘎八嘎共和国政府网_files/b1c14b127c4c460bb12846a95062ec13.jpg" border="0"
+								width="351" height="272"></a>
+
+					</div>
+					<div class="tabCont">
+
+						<a href="https://www.gov.cn/premier/2022-05/06/content_5689089.htm" target="_blank">
+							<img class="fl" width="250" height="272"
+								src="./国务院常务会议（2022年5月5日）_八嘎八嘎共和国政府网_files/a885928989e14909a2d1705e23e0bb44.jpg"> </a>
+
+
+						<div id="audio_box">
+							<div class="audiojs  " classname="audiojs" id="audiojs_wrapper0"><audio preload=""
+									src="/govweb/c7019/202205/5689090/files/1f89fb46597a4449971c1a1e4fb99f56.mp3"></audio>
+								<div class="play-pause">
+									<p class="play"></p>
+									<p class="pause"></p>
+									<p class="loading"></p>
+									<p class="error"></p>
+								</div>
+								<div class="scrubber">
+									<div class="progress" style="width: 0px;"></div>
+									<div class="loaded" style="width: 0px;"></div>
+								</div>
+								<div class="time"> <em class="played">00:00</em>/<strong class="duration">03:05</strong>
+								</div>
+								<div class="error-message"></div>
+							</div>
+							<div class="audio_list" id="audio_list">
+								<ol style="display:none;">
+
+									<li class="playing"><a href=""
+											data-src="/govweb/c7019/202205/5689090/files/1f89fb46597a4449971c1a1e4fb99f56.mp3"></a>
+									</li>
+
+								</ol>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+
+				</div>
+				<div class="cwhly"><a href="" target="_blank"><img src="" alt=""></a></div>
+
+			</div>
+		</div>
+
+		<!--历年会议-->
+		<div class="mid_area" style="margin-bottom:0px;">
+			<div class="mid_area" style="margin-bottom:0px;">
+				<div class="hyhg title">
+					<h2>历年会议回顾</h2>
+				</div>
+				<div class="tab">
+					<div class="tab_title">
+						<ul>
+							<li class="active"><a href="">2021年</a></li>
+							<li><a href="">2020年</a></li>
+							<li><a href="">2019年</a></li>
+							<li><a href="">2018年</a></li>
+							<li><a href="">2017年</a></li>
+							<li><a href="">2016年</a></li>
+							<li><a href="">2015年</a></li>
+							<li><a href="">2014年</a></li>
+						</ul>
+					</div>
+					<div class="tab_box">
+						<div class="tab_box_content" style="display:block;">
+							<div>
+								<iframe allowtransparency="true" frameborder="0" height="280" scrolling="no"
+									src="./cwhwqhgqr2021.html" id="time" name="time" width="1025"></iframe>
+							</div>
+						</div>
+						<div class="tab_box_content">
+							<div>
+								<iframe allowtransparency="true" frameborder="0" height="280" scrolling="no"
+									src="./cwhwqhgqr2020.html" id="time" name="time" width="1025"></iframe>
+							</div>
+						</div>
+						<div class="tab_box_content">
+							<div>
+								<iframe allowtransparency="true" frameborder="0" height="280" scrolling="no"
+									src="./cwhwqhgqr2019.html" id="time" name="time" width="1025"></iframe>
+							</div>
+						</div>
+						<div class="tab_box_content">
+							<div>
+								<iframe allowtransparency="true" frameborder="0" height="280" scrolling="no"
+									src="./cwhwqhg2018.html" id="time" name="time" width="1025"></iframe>
+							</div>
+						</div>
+						<div class="tab_box_content">
+							<div>
+								<iframe allowtransparency="true" frameborder="0" height="280" scrolling="no"
+									src="./cwhwqhg2017.html" id="time" name="time" width="1025"></iframe>
+							</div>
+						</div>
+						<div class="tab_box_content">
+							<div>
+								<iframe allowtransparency="true" frameborder="0" height="280" scrolling="no"
+									src="./cwhwqhg2016.html" id="time" name="time" width="1025"></iframe>
+							</div>
+						</div>
+						<div class="tab_box_content">
+							<div>
+								<iframe allowtransparency="true" frameborder="0" height="280" scrolling="no"
+									src="./cwhwqhg2015.html" id="time" name="time" width="1025"></iframe>
+							</div>
+						</div>
+						<div class="tab_box_content">
+							<div style="text-align:center; margin-top:5px;"><a href="" target="_blank"><img
+										src="./images/2014cwhyhg.jpg"></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!--公共尾开始-->
+	<div class="iframe_bottom"><iframe id="ifr_foot.htm" src="./bottom.html" width="100%" height="525" scrolling="no"
+			marginheight="0" frameborder="0"></iframe></div>
+	<!--公共尾结束-->
+
+	<script type="text/javascript" src="./js/audio.min.js"></script>
+	<script type="text/javascript" src="./js/flexslider.js"></script>
+
+
+	<script type="text/javascript">
+		function AutoScroll(obj) {
+			$(obj).find("ul:first").animate({
+				top: "-85px"
+			}, 3000, function () {
+				$(this).css({
+					top: "0px"
+				}).find("li:first").appendTo(this);
+			});
+		}
+		$(function () {
+			setInterval('AutoScroll("#s1")', 1000);
+		});
+	</script>
+	<script type="text/javascript">
+		$(function () {
+			$(".tab .tab_title li").mouseover(function () {
+				$(this).addClass('active');
+				$(this).siblings().removeClass('active');
+				var _index = $(this).index();
+				$(this).parent().parent().parent().find('.tab_box_content').eq(_index).show().siblings()
+				.hide();
+			})
+		})
+		$(function () {
+			tabFun(".sctab .tabtitle li", ".sctab .ul");
+			tabFun(".r_video .title span", ".r_video .tabCont", ".r_video .title .vl_more");
+		});
+
+		/*选项卡*/
+		function tabFun(butn, cont, more) {
+			$(butn).mousemove(function () {
+				$(this).addClass("ab").siblings().removeClass("ab");
+				var index = $(this).index();
+				$(cont).eq(index).show().siblings($(cont)).hide();
+				if (more && index == 0) {
+					$(more).show();
+				} else {
+					$(more).hide();
+				}
+			});
+		}
+		//视窗个数判断
+		$(function () {
+			var li = $(".sctab .tabtitle li");
+			var ul = $(".sctab .tabtitle");
+			var jt = $(".sctab_box .ul .scxzjt");
+			if (li.length == 1) {
+				ul.css({
+					"margin-top": "120px"
+				});
+				jt.css({
+					"top": "150px"
+				});
+			} else if (li.length == 2) {
+				ul.css({
+					"margin-top": "60px"
+				});
+				jt.eq(0).css({
+					"top": "88px"
+				});
+				jt.eq(1).css({
+					"top": "173px"
+				});
+			} else if (li.length == 3) {
+				ul.css({
+					"margin-top": "30px",
+					"margin-left": "10px"
+				});
+				jt.eq(0).css({
+					"top": "55px"
+				});
+				jt.eq(1).css({
+					"top": "140px"
+				});
+				jt.eq(2).css({
+					"top": "225px"
+				});
+			}
+		})
+		$(function () {
+
+			$(".sdjd .tabtitle li").mousemove(function () {
+				$(this).addClass("ad").siblings().removeClass("ad");
+				var index = $(this).index();
+				$(".sdjd .jdul .ul").eq(index).show().siblings().hide();
+			})
+
+
+			var i = 0;
+			var timer;
+
+			$(document).ready(function () {
+				//用jquery方法设置第一张图片显示，其余隐藏
+				$('.slider-main li').eq(0).show().siblings('.slider-main li').hide();
+
+				//调用showTime()函数（轮播函数）
+				showTime();
+
+				//当鼠标经过下面的数字时，触发两个事件（鼠标悬停和鼠标离开）
+				$('.slider-nav li').hover(function () {
+					//获取当前i的值，并显示，同时还要清除定时器
+					i = $(this).index();
+					Show();
+					clearInterval(timer);
+				}, function () {
+					//
+					showTime();
+				});
+
+			});
+
+
+			//创建一个showTime函数
+			function showTime() {
+				//定时器
+				timer = setInterval(function () {
+					//调用一个Show()函数
+					Show();
+					i++;
+					//当图片是最后一张的后面时，设置图片为第一张
+					if (i == $('.slider-nav li').length) {
+						i = 0;
+					}
+				}, 4000);
+			}
+
+
+			function Show() {
+				$('.slider-main li').eq(i).fadeIn(300).siblings('.slider-main li').fadeOut(300);
+				$('.slider-nav li').eq(i).addClass('ac').siblings('.slider-nav li').removeClass('ac');
+
+			}
+			if ($('.slider-nav li').length < 2) {
+				$('.slider-nav').hide();
+			}
+
+			/*速读版展开关闭效果*/
+			panelSwitch();
+
+			function panelSwitch() {
+				$(".zksq").on('click', function () {
+					var switchButn = $(this),
+						panel = switchButn.parents("li"),
+						panelHeight = panel.height();
+					if (panelHeight == 163) {
+						panel.css({
+							height: 'auto'
+						});
+						switchButn.text('收起>>');
+					} else {
+						panel.css({
+							height: '163px'
+						});
+						switchButn.text('展开>>');
+					}
+				});
+			}
+		})
+	</script>
+	<!--音频-->
+	<script type="text/javascript">
+		var a = audiojs.createAll({
+			trackEnded: function () {
+				var next = $('ol li.playing').next();
+				if (!next.length) next = $('ol li').first();
+				next.addClass('playing').siblings().removeClass('playing');
+				audio.load($('a', next).attr('data-src'));
+				//audio.play();
+			}
+		});
+		var audio = a[0];
+		first = $('ol a').attr('data-src');
+		$('ol li').first().addClass('playing');
+		audio.load(first);
+		$('ol li').click(function (e) {
+			e.preventDefault();
+			$(this).addClass('playing').siblings().removeClass('playing');
+			audio.load($('a', this).attr('data-src'));
+			audio.play();
+		});
+		$('#audio_box .next').click(function () {
+			var next = $('li.playing').next();
+			if (!next.length) next = $('ol li').first();
+			next.click();
+		})
+		$('#audio_box .prev').click(function () {
+			var prev = $('li.playing').prev();
+			if (!prev.length) prev = $('ol li').last();
+			prev.click();
+		})
+		$(document).keydown(function (e) {
+			var unicode = e.charCode ? e.charCode : e.keyCode;
+			if (unicode == 39) {
+				$('#audio_box .next').click()
+			} else if (unicode == 37) {
+				$('#audio_box .next').click()
+			}
+		})
+		$('.close_audio').click(function () {
+			startMove(document.getElementById('audio_list'), {
+					height: 0
+				},
+				1e3, "bounceOut",
+				function () {
+					$('#audio_box').fadeOut();
+					$('.open_music').fadeIn()
+				})
+		})
+		var audio_list = $('#audio_list');
+		$('.open_music').click(function () {
+			$(this).hide();
+			$('#audio_box').fadeIn(300, function () {
+				startMove(audio_list[0], {
+						height: audio_list.find('li').length * 30 + 60
+					},
+					1e3, "bounceOut")
+			})
+		})
+	</script>
+	<!--2018常务会回顾-->
+	<script type="text/javascript">
+		(function ($) {
+			$li1 = $(".apply_nav .apply_array");
+			$window1 = $(".apply .apply_w");
+			$left1 = $(".apply .img_l");
+			$right1 = $(".apply .img_r");
+			$li1.on('mouseenter', function () {
+
+
+				var $this = $(this);
+
+				var index = $this.index();
+
+				$this.addClass('active').find('span').addClass('active').parent().siblings().removeClass('active')
+					.find('span').removeClass('active');
+
+				$this.stop().animate({
+					marginTop: '-10px'
+				}).siblings().stop().animate({
+					marginTop: '0'
+				});
+
+			});
+
+			$window1.css("width", $li1.length * 170);
+			var lc1 = 0;
+			var rc1 = $li1.length - 6;
+			$left1.click(function () {
+				if (lc1 < 1) {
+					return;
+				}
+				lc1--;
+				rc1++;
+				$window1.animate({
+					left: '+=170px'
+				}, 1000);
+			});
+
+			$right1.click(function () {
+				if (rc1 < 1) {
+					return;
+				}
+				lc1++;
+				rc1--;
+				$window1.animate({
+					left: '-=170px'
+				}, 1000);
+			});
+
+			$('.apply').on('mouseleave', function () {
+				$li1.removeClass('active').find('span').removeClass('active');
+
+				$li1.animate({
+					marginTop: 0
+				});
+
+			});
+
+		})(jQuery)
+	</script>
+	<div style="display:none">
+		<script type="text/javascript">
+			document.write(unescape("%3Cscript src='//stat.www.gov.cn/webdig.js?z=1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script src="./js/webdig.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			wd_paramtracker("_wdxid=000000000000000000000000000000000000000000")
+		</script>
+	</div>
+</body>
+
+</html>

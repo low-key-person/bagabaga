@@ -1,0 +1,200 @@
+﻿
+
+
+.gov_head_title{ height: 36px; line-height: 36px; background:#e1e8ef;position:relative;}
+.gov_head_title .gov_head_inner{ background:#818a99; color:#FFF; padding:0 14px; font-family: "微软雅黑"; font-size:18px;height: 36px; line-height: 36px;position:absolute;}
+.gov_hml{width: 1025px;margin:0 auto;}
+.gov_hml_con{ background: url(../images/gwy/gov_mhsl_img_23.jpg) no-repeat 10px 0; height: 560px;}
+.gov_hml_c_l{ width:110px; float:left;}
+.gov_hml_c_l_txt{ width:50px; height: 60px; color:#FFF; font-size:18px; line-height: 24px; font-family: "微软雅黑";}
+.gov_hml_c_l_txt1{ margin-top:60px; margin-left:36px; height: 200px;}
+.gov_hml_c_l_txt2{ margin-top:60px; margin-left:36px;}
+.gov_hml_c_l_ul{ width:850px; padding:9px 0; padding-left:37px;}
+.gov_hml_c_l_ul p{ font-size:14px; font-family: "微软雅黑";  color:#333333; padding-left:11px; line-height:30px;  color:#000; background: url(../images/gwy/gov_mhsl_img_21.jpg) no-repeat 0 14px;}
+.gov_hml_c_l_ul_b{ padding-bottom: 20px; border-bottom: 2px solid #cccccc;}
+
+/* scrolltab */
+.scrolltab{position:relative;width: 1025px;margin:0 auto;}
+.scrolltab .ulBigPic{width: 1025px;height:100px;overflow:hidden;}
+.scrolltab .ulBigPic li{width: 1025px;height:100px;display:none;}
+.scrolltab .ulBigPic .liSelected{display:block;}
+.scrolltab .ulBigPic img{border:1px solid #dedede;padding:2px;background-color:#fff;}
+.scrolltab .ulBigPic .sPic{width:570px;float:left;overflow:hidden;}
+.scrolltab .ulBigPic .sSideBox{width:290px;float:right;overflow:hidden;}
+.scrolltab .sSideBox span{width:290px;display:block;overflow:hidden;}
+.scrolltab .ulBigPic .sTitle{height:32px;line-height:32px;font-size:14px;font-weight:700;color:#333;}
+.scrolltab .ulBigPic .sIntro{line-height:24px;color:#666;word-wrap:break-word;word-break:break-all;}
+.scrolltab .ulBigPic .sMore{height:24px;line-height:24px;}
+.scrolltab .ulBigPic .sMore a{color:#841;}
+.scrolltab .ulBigPic .sTitle a{color:#333;}
+.scrolltab .ulBigPic .sTitle a:hover{color:#840;}
+.scrolltab .sLeftBtnA,.scrolltab .sLeftBtnASel,.scrolltab .sLeftBtnABan,.scrolltab .sRightBtnA,.scrolltab .sRightBtnASel,.scrolltab .sRightBtnABan{width:59px;height: 59px;display:block;position:absolute;top: 50%;margin-top: -26px;background: url(../images/public/jt.jpg) no-repeat;}
+.scrolltab .sLeftBtnA,.scrolltab .sLeftBtnASel,.scrolltab .sRightBtnA,.scrolltab .sRightBtnASel{cursor:pointer;}
+.scrolltab .sLeftBtnA,.scrolltab .sLeftBtnASel,.scrolltab .sLeftBtnABan{left:0px;}
+.scrolltab .sLeftBtnA{background-position:0 0;}
+.scrolltab .sLeftBtnASel{background-position:0 0;}
+.scrolltab .sLeftBtnABan{background-position: 0 0;}
+.scrolltab .sRightBtnA,.scrolltab .sRightBtnASel,.scrolltab .sRightBtnABan{right:0px;}
+.scrolltab .sRightBtnA{background-position: -60px 0;}
+.scrolltab .sRightBtnASel{background-position:-60px 0;}
+.scrolltab .sRightBtnABan{background-position:-60px 0;}
+.scrolltab .dSmallPicBox{width: 1025px;height: 128px;position:relative;background: url(../images/public/line02.jpg) repeat-x 0 6px;}
+.scrolltab .dSmallPic{width: 890px;height: 129px;position:absolute;left: 87px;top:5px;overflow:hidden;}
+.scrolltab .dSmallPic ul{position:absolute;}
+.scrolltab .dSmallPic li{width: 60px;height: 90px;/* border-right:1px solid #c9c9c9; */padding: 0;float:left;display:inline;cursor:pointer;overflow:visible;background: url(../images/ptpic01.jpg) no-repeat;margin-top: 35px;margin-right: 17px;}
+.scrolltab .dSmallPic .sPic{width:141px;height:106px;display:block;}
+.scrolltab .dSmallPic .sPic img{border:1px solid #ddd;padding:2px;}
+
+.scrolltab .dSmallPic .sTitle {
+    color: #888888;
+    display: block;
+    font-family: 宋体,Arial,Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    overflow: hidden;
+    padding: 10px 0px;
+    text-align: center;
+    width: 34px;
+    margin: 0 auto;
+}
+
+.scrolltab .dSmallPic .liSelected{background: url(../images/jdpic.jpg) no-repeat; color:#ffffff;}
+.scrolltab .dSmallPic .liSelected .sPic img{border-color:#fff;}
+
+.scrolltab .dSmallPic .liSelected .sTitle {
+    color: #fff;
+    line-height: 19px;
+    margin: 0 auto;
+    text-align: center;
+}
+.scrolltab .dSmallPic .liSelected .sTitle a{
+display:block;
+	color:#ffffff;
+}
+.scrolltab .sLeftBtnB,.scrolltab .sLeftBtnBSel,.scrolltab .sLeftBtnBBan,.scrolltab .sRightBtnB,.scrolltab .sRightBtnBSel,.scrolltab .sRightBtnBBan{width:18px;height:37px;display:block;position:absolute;top:45px;background:url(../images/public/bgArt.png) no-repeat;}
+.scrolltab .sLeftBtnB,.scrolltab .sLeftBtnBSel,.scrolltab .sRightBtnB,.scrolltab .sRightBtnBSel{cursor:pointer;}
+.scrolltab .sLeftBtnB,.scrolltab .sLeftBtnBSel,.scrolltab .sLeftBtnBBan{left:20px;}
+.scrolltab .sLeftBtnB{background-position:0 -87px;}
+.scrolltab .sLeftBtnBSel{background-position:-36px -87px;}
+.scrolltab .sLeftBtnBBan{background-position:-73px -87px;}
+.scrolltab .sRightBtnB,.scrolltab .sRightBtnBSel,.scrolltab .sRightBtnBBan{right:20px;}
+.scrolltab .sRightBtnB{background-position:-16px -87px;}
+.scrolltab .sRightBtnBSel{background-position:-52px -87px;}
+.scrolltab .sRightBtnBBan{background-position:-88px -87px;}
+
+.gov_seven{ width: 1000px; height:486px; position:relative;}
+.gov_sevenb{ position:absolute; font-family: "微软雅黑";}
+.gov_seven1{top:0; left:471px;}
+.gov_seven3{top:81px; left:471px;}
+.gov_seven5{top: 211px; left:492px;}
+.gov_seven7{top: 325px; left:492px;}
+
+
+.gov_seven2{top:40px; right:455px;}
+.gov_seven4{top: 140px; right: 434px;}
+.gov_seven6{top: 268px; right:434px;}
+.gov_seven8{top: 383px; right:434px;}
+/*.gov_seven_le.gov_seven2 .gov_seven_name,.gov_seven_le.gov_seven4 .gov_seven_name{background: url(http://www.gov.cn/2014xinban/static/images/gov_mhsl_bot15.png) no-repeat 0 center;}*/
+
+
+.gov_seven_name{ margin-top:7px; font-size: 14px; width:74px;  text-align: center}
+.gov_seven_box{ position: relative;}
+.gov_seven_box_sj{ position:absolute; top: 7px;}
+.gov_seven_box_t{ font-size:0; line-height:0;}
+.gov_seven_ri .gov_seven_name{ float:left; background: url(../images/public/gov_mhsl_bot15.png) no-repeat 0 center;}
+.gov_seven_ri .gov_seven_box{ padding-left: 12px; float:left;}
+.gov_seven_ri .gov_seven_box_sj{ background: url(../images/public/gov_mhsl_bot10.png) no-repeat; width:36px; height: 27px; left:0; z-index:1;}
+.gov_seven_ri .gov_seven_box_t{ background: url(../images/public/gov_mhsl_bot7.png) no-repeat; width:422px; height: 11px;}
+.gov_seven_ri .gov_seven_box_con{background: url(../images/public/gov_mhsl_bot08.png) repeat-y; width: 398px;  padding-left: 12px;padding-right: 12px;}
+.gov_seven_ri .gov_seven_box_b{background: url(../images/public/gov_mhsl_bot9.png) no-repeat; width:422px; height: 12px;}
+
+.gov_seven_le .gov_seven_name{ float:right; background: url(../images/public/gov_mhsl_bot15.png) no-repeat 0 center;}
+.gov_seven_le .gov_seven_box{ padding-right: 12px; float:right;}
+.gov_seven_le .gov_seven_box_sj{ background: url(../images/public/gov_mhsl_bot14.png) no-repeat; width:18px; height: 27px; right:0; z-index:1;}
+.gov_seven_le .gov_seven_box_t{ background: url(../images/public/gov_mhsl_bot11.png) no-repeat; width:422px; height: 11px;}
+.gov_seven_le .gov_seven_box_con{background: url(../images/public/gov_mhsl_bot12.png) repeat-y; width: 398px;  padding-left: 12px;padding-right: 12px;}
+.gov_seven_le .gov_seven_box_b{background: url(../images/public/gov_mhsl_bot13.png) no-repeat; width:422px; height: 12px;}
+
+
+.ccrolltab .ulBigPic{ height: 100px;}
+.ccrolltab .ulBigPic li{ height: 100px;}
+
+
+*html gov_seven_ri .gov_seven_name{background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/public/gov_mhsl_bot15.png", sizingMethod="crop");}
+*html .gov_seven_ri .gov_seven_box_sj{background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/public/gov_mhsl_bot10.png", sizingMethod="crop");}
+*html .gov_seven_ri .gov_seven_box_t{background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/public/gov_mhsl_bot7.png", sizingMethod="crop");}
+*html .gov_seven_ri .gov_seven_box_con{background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/public/gov_mhsl_bot08.png", sizingMethod="crop");}
+*html .gov_seven_ri .gov_seven_box_b{background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/public/gov_mhsl_bot9.png", sizingMethod="crop");}
+
+*html .gov_seven_le .gov_seven_name{background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/public/gov_mhsl_bot15.png", sizingMethod="crop");}
+*html .gov_seven_le .gov_seven_box_sj{background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/public/gov_mhsl_bot14.png", sizingMethod="crop");}
+*html .gov_seven_le .gov_seven_box_t{background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/public/gov_mhsl_bot11.png", sizingMethod="crop");}
+*html .gov_seven_le .gov_seven_box_con{background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/public/gov_mhsl_bot12.png", sizingMethod="crop");}
+*html .gov_seven_le .gov_seven_box_b{background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/public/gov_mhsl_bot13.png", sizingMethod="crop");}
+/****/
+.carousel-01 {width:100px;margin:0 0 0 20px;float:left;_display:inline;}
+.carousel-01 .prev , .carousel-01 .next {height:17px;width:86px;overflow:hidden;display:block;margin-left:0;text-decoration:none;cursor:pointer;}
+.carousel-01 .prev{background:url(../images/public/gov_mhsl_img_50.jpg) no-repeat center 0;}
+.carousel-01 .next{background:url(../images/public/gov_mhsl_img_51.jpg) no-repeat center 0;}
+.jCarouselLite-01 {height:400px;width:100px;overflow:hidden;margin:0;/*蹇呰鍏冪礌*/}
+.jCarouselLite-01 li{height:57px;width:100px;text-align:center;padding:0;color:#FFFFFF;background:url(../images/public/gov_mhsl_img_54.jpg) no-repeat;font-family:Arial;}
+
+.jCarouselLite-01 li span{width:86px;margin:0;display:block;height:45px;line-height:45px;overflow:hidden;}
+.jCarouselLite-01 li.selected{background:url(../images/public/gov_mhsl_img_53.jpg) no-repeat;}
+.dateconList{width:805px;height:433px;overflow:hidden;float:left;margin:0 0 0 20px;background:#e1e8ef;_display:inline;padding:10px 10px 0 15px;}
+.dateconList .abox{display:none;}
+.dateconList .abox li{background:url(../images/public/gov_mhsl_img_52.jpg) no-repeat 0 12px;padding:0 0 0 15px;line-height:30px;color:#333333;}
+.dateconList .abox li span{color:#333366;}
+
+/****/
+#tab{ width:100%; overflow:hidden;}
+#tab .tab_title{ width:1000px; height:160px; overflow:hidden;margin-top:-10px;clear:both; overflow:hidden; position:relative;}
+#tab .tab_title .u{ width:908px;height: 160px; overflow:hidden; position:relative;float:left;}
+#tab .tab_title ul{ margin:0;padding:0; float:left; width:1392px;padding:0 0 0 11px;position:absolute;}
+#tab .tab_title .vright,#tab .tab_title .vleft{ float:left;width: 38px;height: 120px;cursor: pointer;margin-top: 58px;overflow:hidden;}
+#tab .tab_title .vright{background:url(../images/public/gov_mhsl_img_22.jpg) no-repeat;height: 120px;}
+#tab .tab_title .vleft{background:url(../images/public/gov_mhsl_img_20.jpg) no-repeat;height: 120px;}
+#tab .tab_title li{ float:left; width: 138px;display: inline;height: 120px;padding:30px 6px 0 6px;margin:0;}
+#tab .tab_title li img {width: 136px;height: 100px;}
+#tab .tab_title li.selected{  width:140px; height: 134px;padding:31px 0 0 4px;display: block; background: url(../images/public/gov_mhsl_bot2.png) no-repeat; }
+#tab .tab_title li.selected img {width: 132px;height: 97px;}
+#tab .tab_content{ width:1000px;  overflow:hidden; }
+#tab .tab_content .none{ display:none;}
+#tab .tab_content .image img{width:700px;}
+*html #tab .tab_title li.selected{background: url(../images/public/gov_mhsl_bot2.gif) no-repeat; }
+
+/*3.28鏂板鏍峰紡*/
+.tcrolltab .ulBigPic {height:271px;}
+.gov_hml .dateconList{height:272px;overflow:hidden;}
+.gov_hml_con{height:271px;}
+.gov_hml_con2{background: url(../images/public/gov_mhsl_img_23.jpg) no-repeat 10px -322px;height: 130px;overflow: hidden; display:none;}
+.gov_image_a1{display:block;}
+.gov_image_a1 p{width:700px;}
+.ccrolltab .ulBigPic li,.gov_seven{overflow:hidden;}
+.gov_hml_c_l_ul_b{height:240px;overflow:hidden;}
+.gov_hml_c_l_txt1 {margin-top: 112px;}
+.gov_hml_c_l_txt2 {margin-top: 43px;}
+#tab .tab_title ul {padding: 0 0 0 8px;}
+.gov_seven{height:326px;}
+.gov_seven_ri .gov_seven_name{left: 0;    padding-left: 19px;    position: relative;    text-align: left;}
+.gov_seven_le .gov_seven_name{left: 13px;    padding-left: 13px;    position: relative;    text-align: left;}
+*html .gov_seven_le .gov_seven_box_con{background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/public/gov_mhsl_bot012.png", sizingMethod="crop");}
+#tab .tab_title ul{width:14000px;}
+#none{display:none;}
+.gov_hml_c_l_ul_b{	border-bottom:0px;}
+.gov_pos{ width:1000px; position:relative; height:0; line-height:0; font-size:0;}
+.gov_pos_img{background:url(../images/public/auto_mhsl_btn1.png) no-repeat; width:208px; height:44px; position:absolute; top:-44px; right:0;}
+*html .gov_pos_img{background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/public/auto_mhsl_btn1.png", sizingMethod="crop");}
+
+
+
+
+
+
+
+
+
+
+
+
+	
