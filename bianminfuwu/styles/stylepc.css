@@ -1,0 +1,258 @@
+
+
+body{
+		margin: 0;
+		padding:0;
+	}
+body{
+	background: #f3f3f9;
+	color: #000;
+}
+body,div,ul,li,h1,h2,h3,h4{
+	padding: 0;
+	margin: 0;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,ul,ol,li,p ,img,table,tr,td,ul,ol,li{margin:0px;padding:0px;}	
+ul,ol,li{
+	list-style:none;}
+	.container{
+		width:1028px;
+		font-family: 微软雅黑;
+		background: #fff;
+		padding: 0px 36px 0px 36px;
+		margin:0px auto;
+        overflow: hidden;
+	}
+
+	.container .menu{
+		width: 260px;
+		margin-left:0px;
+		float: left;
+
+	}
+.banner{ margin-top:34px;}
+/*position 菜单背景图标*/
+	.positionIicon{
+		display: inline block;
+		width: 32px;
+		height: 32px;
+		margin: 0px 4px;
+		float: left;
+		margin-right: 10px;
+	}
+/*menu图标*/
+	.q-menu-img{
+		background: url("../img/iconfont-kuaisulu.png");
+	}
+	
+	.q-menu-doit{
+		background: url("../img/iconfont-0bangzhushouce.png");
+	}
+
+	.q-menu-three{
+		background: url("../img/iconfont-wenti.png");
+	}
+
+.cb_title{
+	cursor: default;
+	font-size: 30px;
+	height: 46px;
+	line-height: 46px;
+	margin:0px 0px 20px 0px;
+}
+	.container .menu h3{
+		position:relative;
+	display: inline-block;
+		width:250px;
+        height: 48px;
+		padding-left:10px;	
+		cursor: pointer;
+    color: #000;
+    font-size: 16px;
+    line-height: 48px;
+	
+
+	}
+	.container .menu h3 i{
+		position:absolute;
+		top:15px;
+		right:5px;
+		width:16px;
+		height:16px;
+		background:url(images/addition.png) no-repeat top right;
+		}
+		.container .menu h3 i.active{
+					position:absolute;
+		top:15px;
+		right:5px;
+		width:16px;
+		height:16px;
+		background:url(images/jian.png) no-repeat top right;
+			}
+	.container .menu h3.active{
+		position:relative;
+    display: inline-block;
+	width:250px;
+    height: 46px;
+	padding-left:10px;
+	border-top: 1px solid #e6e4f0;
+
+	cursor: pointer;
+    color: #000;
+    font-size: 16px;
+    line-height: 46px;
+	background: #f4f3f9;
+	}
+    .container .menu ul{
+        display: none;
+		background:#f4f3f9;
+			border-bottom: 1px solid #e6e4f0;	
+    }
+	.container .menu ul li{
+padding-left:0px;
+	list-style: none;
+	height: 35px;
+	}
+
+
+
+	ul{
+		list-style: none;
+	}
+	.container .menu ul li a{
+		text-decoration: none;
+		color: #000;
+		font-size: 16px;
+		display: block;
+		width: 245px;
+		height: 35px;
+		line-height:35px;
+		padding-left:15px;
+			background:url(images/dot.jpg) no-repeat 5px 18px;
+
+
+	}
+	.container .menu .selected{
+		text-decoration: none;
+		font-size: 16px;
+		display: block;
+		width: 245px;
+		height: 35px;
+		line-height:35px;
+		padding-left:15px;
+			background:url(images/squa.jpg) no-repeat 5px 18px;
+
+	}
+
+
+
+	.container .content{
+	background: #f4f3f9;
+	float: right;
+	width: 720px;
+padding:50px 24px 40px;
+	}
+
+	.container .content .get-menu{
+		margin-left: -10px;
+	}
+
+	.container .content .get-menu a{
+		display: inline-block;
+		font-size: 15px;
+	    height: 40px;
+	}
+
+	.container .content .get-menu a:last-child{
+		margin-left: -8px;
+		color: #7D9EC0;
+	}
+
+	.container .content .get-menu span{
+		display: inline-block;
+	    height: 40px;
+	    margin-left: -110px;
+	}
+
+	.container .content .menu1 .tab {
+		display: none;
+	}
+
+	.container .content .menu1 .active{
+		display: block;
+	}
+
+	.content p{
+		color: #015294;
+		font-size: 16px;
+		line-height: 45px;
+        word-break:break-all;
+		border-bottom:1px solid #e7e7f1;
+	}
+	.content p span{	font-size: 14px;
+	color: #b0b0b0;
+	margin-left: 6px;
+	display:inline-block;}
+.container .content .menu1 .tab p a{	font-size: 16px;}
+.container .content .menu_tab .tab p a:hover{
+	color: #015294;
+}
+	.content p.tt{
+cursor: default;
+	font-size: 26px;
+	line-height: 46px;
+	color: #005195;
+	margin-bottom: 10px;
+		font-weight: bold;
+
+	}
+/*第二个菜单下的文档内容*/
+	.container .content .menu2 .tab {
+		display: none;
+	}
+
+	.container .content .menu2 .active{
+		display: block;
+	}
+
+	
+/*第三个菜单下的文档内容*/
+	.container .content .menu3 .tab {
+		display: none;
+	}
+
+	.container .content .menu3 .active{
+		display: block;
+	}
+
+	
+/*第三个菜单下的文档内容*/
+	.container .content .menu4 .tab {
+		display: none;
+	}
+
+	.container .content .menu4 .active{
+		display: block;
+	}
+.BreadcrumbNav{padding-left:0px!important;}
+.rightFiximg {
+    position: fixed;
+    right: 0;
+    top: 204px;
+    width: 131px;
+    height: 236px;
+}
+.rightFiximg a {
+    display: block;
+    margin-bottom: 8px;
+}
+.three_blue_ban{ display:none;}
+.three_blue_ban img{ display:none;}
+.container .menu ul li a.selected{
+	color: #005195;
+	font-weight: bold;
+}
