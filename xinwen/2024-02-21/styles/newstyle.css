@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background-color:#fff;}
+.iframe_bottom {
+	width: 1100px;
+	margin: 0 auto
+}
+/*面包屑开始*/
+div.BreadcrumbNav {
+	width: 1220px;
+	margin: 0 auto;
+	padding: 0;
+	background: none;
+	line-height: 44px;
+	height: 44px;
+	font-size: 0;
+	font-family: "宋体";
+	color: #000;
+}
+.BreadcrumbNav a {
+	color: #000;
+}
+/*中间部分*/
+.w1100 {
+	width: 1220px;
+	margin:0px auto;
+	background: #fff;
+}
+.wrap {
+	width: 1220px;
+	border: 1px solid #dddddd;
+	margin: auto;
+	box-sizing: border-box;
+}
+.frame-top, .frame-pane, .frame-bot, .wrap {
+	background: none;
+}
+.padd10 {
+	padding: 10px;
+}
+/*2023.03.30 添加*/
+.back_top{margin-left: 630px!important;}
+#ifr_top{height: 150px!important;} 
+.channel_tab{display:none;} 
+.phone_hide{height:305px;}
+.changewhite iframe{height: 200px;width: 100%;}
+.BreadcrumbNav .comment{padding-right:30px;}

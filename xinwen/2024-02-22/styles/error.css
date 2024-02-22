@@ -1,0 +1,24 @@
+BODY {
+	OVERFLOW-X: hidden
+}
+.content {
+	FONT-SIZE: 14px; FONT-FAMILY: "微锟斤拷锟脚猴拷"; WIDTH: 1004px; TEXT-ALIGN: left; margin:20px auto 0 auto; background:#fff; border:1px #f0f0f0 solid; padding-bottom:50px
+}
+.column1 {
+	TEXT-ALIGN: center; PADDING-TOP: 85px
+}
+.column2 {
+	FONT-SIZE: 28px; FONT-FAMILY: "微锟斤拷锟脚猴拷"; COLOR: #777777; TEXT-ALIGN: center; PADDING-TOP: 40px
+}
+.column3 {
+	COLOR: #959595; TEXT-ALIGN: center; PADDING-TOP: 30px
+}
+.column4 {
+	COLOR: #7e7e7e; TEXT-ALIGN: center; PADDING-TOP: 18px
+}
+.column4 A {
+	TEXT-DECORATION: underline; COLOR: #002ec3
+}
+.column5 {
+	PADDING-BOTTOM: 105px
+}
